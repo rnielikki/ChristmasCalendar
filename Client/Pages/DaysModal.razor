@@ -1,0 +1,10 @@
+﻿<h3>Title for @Day</h3>
+
+@code {
+    [CascadingParameter]
+    ModalParameters modalParams { get; set; }
+    private int Day { get; set; }
+    protected override void OnParametersSet() {
+        Day = modalParams.Get<int>("Day");
+    }
+}

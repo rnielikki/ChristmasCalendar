@@ -1,19 +1,32 @@
 ﻿@page "/"
+@inject IModalService Modal
+
+@*
+    more abot blazor modal from here <3    
+    https://github.com/Blazored/Modal
+*@
 
 <h1>Joulukalenteri</h1>
 
 <div class="calendar">
-@for(int i=1;i<26;i++){
-    <div>@i</div>
-}
+    @{
+        int[] shuffled = ShuffleDays();
+        for (int i = 0; i < 25; i++)
+        {
+            int dayValue = shuffled[i];
+            <div @onclick="(()=>OpenDialog(dayValue))">@dayValue</div>
+        }
+    }
 </div>
 
 @functions{
-    public int[] ShuffleDays() {
+    public int[] ShuffleDays()
+    {
         Random random = new Random(DateTime.Now.Year);
         int[] result = Enumerable.Range(1, 25).ToArray();
-        for (int i = 0; i < 25; i++) {
-            Swap(ref result[i], ref result[random.Next(i,24)]);
+        for (int i = 0; i < 25; i++)
+        {
+            Swap(ref result[i], ref result[random.Next(i, 24)]);
         }
         return result;
     }
@@ -22,6 +35,11 @@
         int temp = x;
         x = y;
         y = temp;
+    }
+    private void OpenDialog(int value) {
+        ModalParameters modalParams = new ModalParameters();
+        modalParams.Add("Day", value);
+        Modal.Show<DaysModal>("Test", modalParams);
     }
     /*public bool IsOpen(int day) {
         if (DateTime.Now.Date)

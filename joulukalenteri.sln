@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "joulukalenteri.Client", "Cl
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "joulukalenteri.Shared", "Shared\joulukalenteri.Shared.csproj", "{DA408E24-4F97-4515-A034-A38639FF4D00}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "joulukalenteriTest", "joulukalenteriTest\joulukalenteriTest.csproj", "{E4169C7D-47E5-4318-89EA-BE2501A9D2F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "joulukalenteriTest", "joulukalenteriTest\joulukalenteriTest.csproj", "{E4169C7D-47E5-4318-89EA-BE2501A9D2F7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
