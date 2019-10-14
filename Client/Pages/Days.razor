@@ -1,0 +1,14 @@
+﻿@page "/day/{Day:int}"
+
+<h1>Joulukalenteri</h1>
+<h2>@Day</h2>
+
+<div class="calendar">
+</div>
+@functions{
+    [Parameter]
+    public int Day { get; set; }
+    public int Test() {
+        return Day;
+    }
+}

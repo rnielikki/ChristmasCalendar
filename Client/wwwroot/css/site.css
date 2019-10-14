@@ -1,0 +1,18 @@
+﻿html, body {
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+.calendar {
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+}
+.calendar > div {
+    height:18vw;
+    box-sizing:border-box;
+    border:1px solid #999;
+    font-size:10vw;
+}
+    .calendar > div:hover {
+        background-color:rgba(250,125,125,0.3);
+        cursor:pointer;
+    }
