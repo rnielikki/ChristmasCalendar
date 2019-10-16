@@ -1,17 +1,19 @@
 using System;
 using Xunit;
 using System.Linq;
+using System.Collections.Generic;
 using joulukalenteri.Client.Pages;
+using Pose;
 
 namespace joulukalenteriTest
 {
-    public class UnitTest1
+    public class CalendarTest
     {
+        joulukalenteri.Client.Pages.Index indexpage = new joulukalenteri.Client.Pages.Index();
         [Fact]
-        public void Test1()
+        public void ShuffleTest()
         {
             //System.Index exists : must be written explicitly.
-            joulukalenteri.Client.Pages.Index indexpage = new joulukalenteri.Client.Pages.Index();
             Assert.Equal(indexpage.ShuffleDays(), indexpage.ShuffleDays());
 
             int[] shuffled = indexpage.ShuffleDays();
@@ -22,7 +24,7 @@ namespace joulukalenteriTest
             //1-25
             Assert.Equal(1, shuffled.Min());
             Assert.Equal(25, shuffled.Max());
-            
+
             //make sure that not shuffled. very rarely not succeeded.
             Assert.NotEqual(shuffled, Enumerable.Range(1, 25).ToArray());
 
@@ -42,5 +44,30 @@ namespace joulukalenteriTest
             Archive not supported :)
              */
         }
+        [Theory]
+        [MemberData(nameof(OpenByDateData))]
+        //[InlineData(new DateTime(2020, 12, 21), 23, false)]
+        public void OpenByDateTest(DateTime fakeday, int openday, bool isOpen)
+        {
+            bool? result=null;
+            Shim shim = Shim.Replace(() => DateTime.Now).With(() => fakeday);
+            PoseContext.Isolate(() =>
+            {
+                result=indexpage.IsOpenToday(openday);
+            }, shim);
+            //Assert.False(result);
+            Assert.Equal(isOpen, result);
+        }
+
+        //-------------memberdata
+        public static TheoryData<DateTime, int, bool> OpenByDateData() =>
+            new TheoryData<DateTime, int, bool>() {
+                { new DateTime(2020, 11, 11), 12, false },
+                { new DateTime(2020, 12, 22), 21, true },
+                { new DateTime(2019, 12, 15), 15, true },
+                { new DateTime(2021, 12, 5), 1, true },
+                { new DateTime(2021, 12, 26), 25, true },
+                { new DateTime(2021, 6, 1), 1, false }
+            };
     }
 }

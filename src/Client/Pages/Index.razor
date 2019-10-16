@@ -14,7 +14,14 @@
         for (int i = 0; i < 25; i++)
         {
             int dayValue = shuffled[i];
-            <div @onclick="(()=>OpenDialog(dayValue))">@dayValue</div>
+            if (IsOpenToday(dayValue))
+            {
+                <div class="calendar-open" @onclick="(()=>OpenDialog(dayValue))">@dayValue</div>
+            }
+            else
+            {
+                <div class="calendar-closed">@dayValue</div>
+            }
         }
     }
 </div>
@@ -30,20 +37,27 @@
         }
         return result;
     }
+
     private void Swap(ref int x, ref int y)
     {
         int temp = x;
         x = y;
         y = temp;
     }
+
     private void OpenDialog(int value) {
         ModalParameters modalParams = new ModalParameters();
         modalParams.Add("Day", value);
         Modal.Show<DaysModal>("Test", modalParams);
     }
-    /*public bool IsOpen(int day) {
-        if (DateTime.Now.Date)
+
+    public bool IsOpenToday(int targetDay) {
+        if (DateTime.Now.Month != 12 || DateTime.Now.Day < targetDay)
         {
+            return false;
         }
-    } */
+        else{
+            return true;
+        }
+    }
 }
