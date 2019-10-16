@@ -1,21 +1,31 @@
 ﻿html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    height:100%;
+}
+body {
+    background:transparent url('../imgs/cshrap_blazor_nuget.svg') right bottom no-repeat fixed;
+    background-size:40%;
 }
 
+.calendar-wrapper {
+    text-align: center;
+}
 .calendar {
-    display: grid;
+    display: inline-grid;
     grid-template-columns: repeat(5, 1fr);
+    background-color: rgba(255,255,255,0.7);
 }
 
     .calendar > div {
         box-sizing: border-box;
         border: 1px solid #999;
-        font-size: 10vw;
+        font-size: 4.5rem;
         text-align:center;
-        padding: 0.3em 0;
+        padding: .3em .5em;
     }
 
 .calendar-open {
+    background-color:rgba(255,255,255,0.3);
 }
 
     .calendar-open:hover {
@@ -24,5 +34,21 @@
     }
 
 .calendar-closed {
-    color:#606060;
+    color: #606060;
+    background-color: rgba(105,105,105,0.5);
+}
+@media screen and (max-width:800px)
+{
+    .calendar {
+        width:100%;
+    }
+    .calendar > div {
+        font-size:2.5rem;
+        padding: .3em .2em;
+    }
+}
+@media screen and (max-aspect-ratio:8/5) {
+    body {
+        background-size:100%;
+    }
 }

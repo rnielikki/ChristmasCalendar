@@ -6,8 +6,9 @@
     https://github.com/Blazored/Modal
 *@
 
-<h1>Joulukalenteri</h1>
 
+<div class="calendar-wrapper">
+<h1>Joulukalenteri</h1>
 <div class="calendar">
     @{
         int[] shuffled = ShuffleDays();
@@ -24,6 +25,7 @@
             }
         }
     }
+</div>
 </div>
 
 @functions{
