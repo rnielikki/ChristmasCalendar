@@ -1,10 +1,17 @@
-﻿<h3>Title for @Day</h3>
+﻿@inject IModalService ModalService
 
+<div class="dialog-content">
+        hello world.<br />
+        And... this is my world.<br />
+        Want to see more? <br />
+        <a class="linkbtn" href="/day/@(Day)" @onclick="ModalService.Cancel">See more</a>
+</div>
 @code {
     [CascadingParameter]
     ModalParameters modalParams { get; set; }
     private int Day { get; set; }
-    protected override void OnParametersSet() {
+    protected override void OnParametersSet()
+    {
         Day = modalParams.Get<int>("Day");
     }
 }

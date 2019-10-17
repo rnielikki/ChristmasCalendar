@@ -1,9 +1,22 @@
 ﻿@page "/day/{Day:int}"
 
-<h1>Joulukalenteri</h1>
-<h2>@Day</h2>
-
-<div class="calendar">
+<div class="wrapper">
+<h1>Christmas calendar</h1>
+<h2 class="day-header">Day @Day : Content</h2>
+<div class="day-content">
+    Lorem ipsum dolor sit amet, this text is dummy.
+    <br />
+    <ul>
+    <li>Rose is red,</li>
+    <li>Violet is blue,</li>
+    <li>Baba is you,</li>
+    <li>Flag is win,</li>
+    <li>C# is love,</li>
+    <li>Unexpected }</li>
+    <li>On line 32.</li>
+    </ul>
+    <NavLink class="linkbtn" href="/">Back to the main</NavLink>
+</div>
 </div>
 @functions{
     [Parameter]

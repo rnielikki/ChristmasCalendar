@@ -1,31 +1,30 @@
 ﻿@page "/"
 @inject IModalService Modal
-
 @*
-    more abot blazor modal from here <3    
+    more abot blazor modal from here <3
     https://github.com/Blazored/Modal
 *@
 
 
-<div class="calendar-wrapper">
-<h1>Joulukalenteri</h1>
-<div class="calendar">
-    @{
-        int[] shuffled = ShuffleDays();
-        for (int i = 0; i < 25; i++)
-        {
-            int dayValue = shuffled[i];
-            if (IsOpenToday(dayValue))
+<div class="calendar-wrapper wrapper">
+    <h1>Christmas Calendar️</h1>
+    <div class="calendar">
+        @{
+            int[] shuffled = ShuffleDays();
+            for (int i = 0; i < 25; i++)
             {
-                <div class="calendar-open" @onclick="(()=>OpenDialog(dayValue))">@dayValue</div>
-            }
-            else
-            {
-                <div class="calendar-closed">@dayValue</div>
+                int dayValue = shuffled[i];
+                if (IsOpenToday(dayValue))
+                {
+                    <div class="calendar-open" @onclick="(()=>OpenDialog(dayValue))">@dayValue</div>
+                }
+                else
+                {
+                    <div class="calendar-closed">@dayValue</div>
+                }
             }
         }
-    }
-</div>
+    </div>
 </div>
 
 @functions{
@@ -47,18 +46,21 @@
         y = temp;
     }
 
-    private void OpenDialog(int value) {
+    private void OpenDialog(int value)
+    {
         ModalParameters modalParams = new ModalParameters();
         modalParams.Add("Day", value);
-        Modal.Show<DaysModal>("Test", modalParams);
+        Modal.Show<DaysModal>($"Day {value}", modalParams);
     }
 
-    public bool IsOpenToday(int targetDay) {
-        if (DateTime.Now.Month != 12 || DateTime.Now.Day < targetDay)
+    public bool IsOpenToday(int targetDay)
+    {
+        if (/*DateTime.Now.Month != 12 ||*/ DateTime.Now.Day < targetDay)
         {
             return false;
         }
-        else{
+        else
+        {
             return true;
         }
     }
