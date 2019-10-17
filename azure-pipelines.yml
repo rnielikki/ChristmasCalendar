@@ -22,14 +22,3 @@ steps:
 #Building *-('v')-*
 - script: dotnet build src/ --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
-
-#Deployment \(_' \)---( )))))
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Jumalan selän takana(a2b7df33-216c-4d62-8ec0-ca420e0bf182)'
-    appType: 'webApp'
-    WebAppName: 'christmascalendar'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
-    enableCustomDeployment: true
-    DeploymentType: 'webDeploy'
