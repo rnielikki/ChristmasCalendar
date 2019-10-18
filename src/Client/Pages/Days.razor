@@ -1,27 +1,44 @@
 ﻿@page "/day/{Day:int}"
+@inject HttpClient client
+@inject joulukalenteri.Client.SharedCode.Validator validator
+@inject joulukalenteri.Client.SharedCode.DayReader reader
+@using Markdig
 
 <div class="wrapper">
-<h1>Christmas calendar</h1>
-<h2 class="day-header">Day @Day : Content</h2>
-<div class="day-content">
-    Lorem ipsum dolor sit amet, this text is dummy.
-    <br />
-    <ul>
-    <li>Rose is red,</li>
-    <li>Violet is blue,</li>
-    <li>Baba is you,</li>
-    <li>Flag is win,</li>
-    <li>C# is love,</li>
-    <li>Unexpected }</li>
-    <li>On line 32.</li>
-    </ul>
-    <NavLink class="linkbtn" href="/">Back to the main</NavLink>
-</div>
+    <h1>Christmas calendar</h1>
+    <div class="day-wrapper">
+        @if (validator.IsOpenToday(Day)) {
+        <h2 class="day-header">Day @Day : Content</h2>
+        <div class="day-content">
+            <p>@reader.GetContent(Day).Result</p>
+            Lorem ipsum dolor sit amet, this text is dummy.
+            <br />
+            <ul>
+                <li>Rose is red,</li>
+                <li>Violet is blue,</li>
+                <li>Baba is you,</li>
+                <li>Flag is win,</li>
+                <li>C# is love,</li>
+                <li>Unexpected }</li>
+                <li>On line 32.</li>
+            </ul>
+            <NavLink class="linkbtn" href="/">Back to the main</NavLink>
+        </div>
+         }
+        else {
+            <p>Wrong day detected!</p>
+        }
+    </div>
 </div>
 @functions{
     [Parameter]
     public int Day { get; set; }
-    public int Test() {
+    /*protected override void OnParametersSet() {
+        if (!validator.IsOpenToday(Day)) {
+        }
+    }*/
+    public int Test()
+    {
         return Day;
     }
 }

@@ -2,7 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.0</TargetFramework>
-    <LangVersion>7.3</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +20,12 @@
   <ItemGroup>
     <ProjectReference Include="..\Client\joulukalenteri.Client.csproj" />
     <ProjectReference Include="..\Shared\joulukalenteri.Shared.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="contents\day1.md">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
 
 </Project>

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Collections.Generic;
 using joulukalenteri.Client.Pages;
 using Pose;
+using joulukalenteri.Client.SharedCode;
 
 namespace joulukalenteriTest
 {
@@ -50,10 +51,11 @@ namespace joulukalenteriTest
         public void OpenByDateTest(DateTime fakeday, int openday, bool isOpen)
         {
             bool? result=null;
+            Validator validator = new Validator();
             Shim shim = Shim.Replace(() => DateTime.Now).With(() => fakeday);
             PoseContext.Isolate(() =>
             {
-                result=indexpage.IsOpenToday(openday);
+                result=validator.IsOpenToday(openday);
             }, shim);
             //Assert.False(result);
             Assert.Equal(isOpen, result);

@@ -48,22 +48,13 @@ h1 {
     color: #606060;
     background-color: rgba(105,105,105,0.5);
 }
-@media screen and (max-width:800px)
-{
-    .calendar {
-        width:100%;
-    }
-    .calendar > div {
-        font-size:2.5rem;
-        padding: .3em .2em;
-    }
-}
-@media screen and (max-aspect-ratio:8/5) {
-    body {
-        background-size: 100%, auto auto, 100%;
-    }
-}
 /* days.razor */
+.day-wrapper {
+    width: 80%;
+    display: inline-block;
+    border-radius: 1rem;
+    overflow: auto;
+}
 .day-header {
     font-size: 1.8rem;
     background: rgba(114, 136, 96, 0.9);
@@ -105,3 +96,24 @@ h1 {
     .linkbtn:hover {
         background-color: #863e98;
     }
+/* for mobile and vertical screen */
+@media screen and (max-width:800px)
+{
+    .calendar {
+        width:100%;
+    }
+    .calendar > div {
+        font-size:2.5rem;
+        padding: .3em .2em;
+    }
+    .day-wrapper {
+        width: 100%;
+        display:block;
+    }
+}
+@media screen and (max-aspect-ratio:8/5) {
+    body {
+        background-size: 100%, auto auto, 100%;
+    }
+}
+

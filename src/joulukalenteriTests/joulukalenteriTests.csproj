@@ -16,6 +16,8 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Client\joulukalenteri.Client.csproj" />
+    <ProjectReference Include="..\Server\joulukalenteri.Server.csproj" />
+    <ProjectReference Include="..\Shared\joulukalenteri.Shared.csproj" />
   </ItemGroup>
 
 </Project>
