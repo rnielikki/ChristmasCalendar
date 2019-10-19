@@ -52,7 +52,7 @@ namespace joulukalenteriTest
         {
             bool? result=null;
             Validator validator = new Validator();
-            Shim shim = Shim.Replace(() => DateTime.Now).With(() => fakeday);
+            Shim shim = Shim.Replace(() => DateTime.Today).With(() => fakeday);
             PoseContext.Isolate(() =>
             {
                 result=validator.IsOpenToday(openday);

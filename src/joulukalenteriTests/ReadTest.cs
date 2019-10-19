@@ -25,6 +25,13 @@ namespace joulukalenteriTests
             //Assert.Equal("In A nutshell!", day1.Summary);
             //Assert.Equal("Here's some Content...", day1.Content);
         }
+        ///<summary>
+        ///This mocks "Handler", not client itself.
+        ///HttpClient.GetStringAsync has no interface, so it cannot be mocked.
+        ///but the Handler mock has some problem - the Client is sometimes disposed, which makes error, thus test fails.
+        ///it's like a schrödinger cat test... even if not fifty-fifty.
+        ///</summary>
+        /*
         [Fact]
         public async Task ClientDataTest() {
             var handlerMock = new Mock<HttpMessageHandler>(MockBehavior.Strict);
@@ -50,6 +57,18 @@ namespace joulukalenteriTests
             DayReader reader = new DayReader(httpClient);
             string daydata = await reader.GetContent(1, "http://localhost:49522/");
             Assert.Equal("asdf", daydata);
+        }
+        */
+        [Theory]
+        [InlineData(1, "#asdf\n", "asdf")]
+        [InlineData(1, "notitle\nasdf", "Day 1")]
+        [InlineData(1, "aaa\n#asdf\n", "asdf")]
+        public async Task DataParserTest(int day, string input, string result) {
+            //will replaced ot IDayReader...... Yea we need interface.
+            var ReaderMock = new Mock<DayReader>();
+            ReaderMock.Setup(reader => reader.Generate(day, It.IsAny<string>())).ReturnsAsync(input);
+            string parseResult = (await ReaderMock.Object.GetContent(day, It.IsAny<string>())).Title;
+            Assert.Equal(result, parseResult);
         }
     }
 }

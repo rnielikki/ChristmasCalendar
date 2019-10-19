@@ -9,7 +9,7 @@ namespace joulukalenteri.Client.SharedCode
     {
         public bool IsOpenToday(int targetDay)
         {
-            if (/*DateTime.Now.Month != 12 ||*/ DateTime.Now.Day < targetDay || targetDay<=0 )
+            if (/*DateTime.Today.Month != 12 ||*/ DateTime.Today.Day < targetDay || targetDay<=0 )
             {
                 return false;
             }

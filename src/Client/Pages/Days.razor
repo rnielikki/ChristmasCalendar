@@ -46,12 +46,8 @@
     string Content;
     protected override async Task OnInitializedAsync()
     {
-        Content = await reader.GetContent(Day, nav.BaseUri);
+        Content = (await reader.GetContent(Day, nav.BaseUri)).Title;
     }
-    /*protected override void OnParametersSet() {
-        if (!validator.IsOpenToday(Day)) {
-        }
-    }*/
     public int Test()
     {
         return Day;

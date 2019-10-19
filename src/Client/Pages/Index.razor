@@ -31,7 +31,7 @@
 @functions{
     public int[] ShuffleDays()
     {
-        Random random = new Random(DateTime.Now.Year);
+        Random random = new Random(DateTime.Today.Year);
         int[] result = Enumerable.Range(1, 25).ToArray();
         for (int i = 0; i < 25; i++)
         {

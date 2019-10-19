@@ -1,11 +1,18 @@
-﻿using Microsoft.AspNetCore.Components;
+﻿using joulukalenteri.Shared;
+using Microsoft.AspNetCore.Components;
 using System;
+using System.Collections.Generic;
 using System.Net.Http;
 using System.Threading.Tasks;
 
 namespace joulukalenteri.Client.SharedCode
 {
-    public class DayReader
+    interface IDayReader
+    {
+        Task<DayInfoData> GetContent(int day, string baseUri);
+        Task<string> Generate(int day, string baseUri);
+    }
+    public class DayReader : IDayReader
     {
         private readonly HttpClient _client;
 
@@ -14,26 +21,22 @@ namespace joulukalenteri.Client.SharedCode
             _client = client;
         }
 
-        private string[] dataList = null;
-        public async Task<string> GetContent(int day, string baseUri)
+        private Dictionary<int, DayInfoData> dataList = new Dictionary<int, DayInfoData>();
+        public async Task<DayInfoData> GetContent(int day, string baseUri)
         {
-            if (dataList == null)
+            if (!dataList.ContainsKey(day))
             {
-                await Generate(baseUri);
+                dataList.Add(day, Parse(await Generate(day, baseUri)));
             }
-            return dataList[day - 1];
-            //return await client.GetStringAsync($"{baseUri}WeatherForecast");
-            //return await new Task<string>(()=>"asdf");
-            //return await new Task<string>(()=>(nav==null)?"null":"not null");
+            return dataList[day];
         }
-        private async Task Generate(string baseUri)
+        public async Task<string> Generate(int day, string baseUri)
         {
-            int today = DateTime.Now.Day;
-            dataList = new string[today];
-            for (int i = 0; i < today; i++)
-            {
-                dataList[i] = await _client.GetStringAsync($"{baseUri}api/DayReader?day={i + 1}");
-            }
+            int today = DateTime.Today.Day;
+            return await _client.GetStringAsync($"{baseUri}api/DayReader?day={day}");
+        }
+        private DayInfoData Parse(string input) {
+            return new DayInfoData();
         }
     }
 }
