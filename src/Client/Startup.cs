@@ -2,6 +2,7 @@ using Blazored.Modal;
 using Microsoft.AspNetCore.Components.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using joulukalenteri.Client.SharedCode;
+using System.Net.Http;
 
 namespace joulukalenteri.Client
 {
@@ -12,6 +13,7 @@ namespace joulukalenteri.Client
             services.AddBlazoredModal();
             services.AddSingleton<Validator>();
             services.AddSingleton<DayReader>();
+            services.AddTransient<HttpClient>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)
