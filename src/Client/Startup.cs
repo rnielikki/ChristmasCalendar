@@ -14,6 +14,7 @@ namespace joulukalenteri.Client
             services.AddSingleton<Validator>();
             services.AddSingleton<DayReader>();
             services.AddTransient<HttpClient>();
+            services.AddTransient<IDataReceiver, DataReceiver>();
         }
 
         public void Configure(IComponentsApplicationBuilder app)
