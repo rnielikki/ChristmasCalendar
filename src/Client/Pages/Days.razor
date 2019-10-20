@@ -2,6 +2,7 @@
 @inject joulukalenteri.Client.SharedCode.Validator validator
 @inject joulukalenteri.Client.SharedCode.DayReader reader
 @inject NavigationManager nav
+@using joulukalenteri.Shared
 @using Markdig
 
 <div class="wrapper">
@@ -11,20 +12,10 @@
         {
             if (Content != null)
             {
-                <h2 class="day-header">Day @Day : Content</h2>
+                <h2 class="day-header">@Title</h2>
                 <div class="day-content">
-                    <p>@Content</p>
-                    Lorem ipsum dolor sit amet, this text is dummy.
+                    @((MarkupString)Content)
                     <br />
-                    <ul>
-                        <li>Rose is red,</li>
-                        <li>Violet is blue,</li>
-                        <li>Baba is you,</li>
-                        <li>Flag is win,</li>
-                        <li>C# is love,</li>
-                        <li>Unexpected }</li>
-                        <li>On line 32.</li>
-                    </ul>
                     <NavLink class="linkbtn" href="/">Back to the main</NavLink>
                 </div>
 
@@ -43,10 +34,13 @@
 @functions{
     [Parameter]
     public int Day { get; set; }
+    string Title;
     string Content;
     protected override async Task OnInitializedAsync()
     {
-        Content = (await reader.GetContent(Day, nav.BaseUri)).Title;
+        DayInfoData data = await reader.GetContent(Day, nav.BaseUri);
+        Title = data.Title;
+        Content = data.Content;
     }
     public int Test()
     {

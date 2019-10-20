@@ -13,22 +13,12 @@ using System.IO;
 
 namespace joulukalenteri.Client.SharedCode
 {
-    public interface IDayReader
-    {
-        Task<DayInfoData> GetContent(int day, string baseUri);
-        Task<string> Generate(int day, string baseUri);
-    }
     public class DayReader
     {
         private readonly IDataReceiver receiver;
         public DayReader(IDataReceiver _receiver) {
             receiver = _receiver;
         }
-        public DayReader(HttpClient client)
-        {
-            receiver = new DataReceiver(client);
-        }
-
         private Dictionary<int, DayInfoData> dataList = new Dictionary<int, DayInfoData>();
         public async Task<DayInfoData> GetContent(int day, string baseUri)
         {

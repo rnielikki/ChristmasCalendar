@@ -1,17 +1,17 @@
 ﻿@inject IModalService ModalService
+@using joulukalenteri.Shared;
 
 <div class="dialog-content">
-        hello world.<br />
-        And... this is my world.<br />
-        Want to see more? <br />
-        <a class="linkbtn" href="/day/@(Day)" @onclick="ModalService.Cancel">See more</a>
+        @(DayInfo.Summary)
+        <br />
+        <a class="linkbtn" href="/day/@(DayInfo.Day)" @onclick="ModalService.Cancel">See more</a>
 </div>
 @code {
     [CascadingParameter]
     ModalParameters modalParams { get; set; }
-    private int Day { get; set; }
+    private DayInfoData DayInfo { get; set; }
     protected override void OnParametersSet()
     {
-        Day = modalParams.Get<int>("Day");
+        DayInfo = modalParams.Get<DayInfoData>("DayInfo");
     }
 }
