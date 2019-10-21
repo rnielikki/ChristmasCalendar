@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using Newtonsoft.Json.Serialization;
 using System.Linq;
+using SystemWrapper.IO;
 
 namespace joulukalenteri.Server
 {
@@ -20,6 +20,8 @@ namespace joulukalenteri.Server
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
                     new[] { "application/octet-stream" });
             });
+
+            services.AddTransient<IFileWrap, FileWrap>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

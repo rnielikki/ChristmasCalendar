@@ -1,11 +1,7 @@
-﻿using System;
+﻿using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.Mvc;
-using joulukalenteri.Shared;
-using Markdig;
+using SystemWrapper.IO;
 
 namespace joulukalenteri.Server.Controllers
 {
@@ -16,20 +12,27 @@ namespace joulukalenteri.Server.Controllers
         private const string WrongDateMessage = "You have wrong date.";
         private const string NotFoundMessage = "Sorry, the message is not ready!";
         private Dictionary<int, string> dataList = new Dictionary<int, string>();
+        private readonly IFileWrap _filewrap;
+
+        public DayReaderController(IFileWrap wrap)
+        {
+            _filewrap = wrap;
+        }
+
         private string ReadData(int day) {
             if (!dataList.ContainsKey(day)) {
                 string textPath = $"contents/day{day}.md";
-                if (!System.IO.File.Exists(textPath))
+                if (!_filewrap.Exists(textPath))
                     dataList[day] = NotFoundMessage;
 
                 else
-                    dataList[day] = System.IO.File.ReadAllText(textPath);
+                    dataList[day] = _filewrap.ReadAllText(textPath);
             }
             return dataList[day];
         }
         //public DayInfoData GetDayInfoData(int day) => data.Where(dayinfo => dayinfo.Day == day).FirstOrDefault();
         [HttpGet]
-        public string Get(int day) => (day>0 && day<DateTime.Today.Day)?ReadData(day):WrongDateMessage;
+        public string Get(int day) => (day>0 && day<DateTime.Today.Day && day<26)?ReadData(day):WrongDateMessage;
 
     }
 }
