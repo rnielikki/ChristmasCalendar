@@ -8,13 +8,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="wwwroot\contents\**" />
-    <Content Remove="wwwroot\contents\**" />
-    <EmbeddedResource Remove="wwwroot\contents\**" />
-    <None Remove="wwwroot\contents\**" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Blazored.Modal" Version="2.3.0" />
     <PackageReference Include="Markdig" Version="0.17.1" />
     <PackageReference Include="Microsoft.AspNetCore.Blazor" Version="3.0.0-preview9.19465.2" />

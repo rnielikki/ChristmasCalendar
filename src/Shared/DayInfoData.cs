@@ -6,7 +6,7 @@ namespace joulukalenteri.Shared
 {
     public class DayInfoData
     {
-        private const int SummaryLength = 30;
+        public const int SummaryLength = 80;
         public int Day { get; set; }
         public string Title { get; set; }
         private string _summary;

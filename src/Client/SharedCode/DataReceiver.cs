@@ -22,7 +22,13 @@ namespace joulukalenteri.Client.SharedCode
         public async Task<string> Generate(int day, string baseUri)
         {
             int today = DateTime.Today.Day;
-            return await _client.GetStringAsync($"{baseUri}api/DayReader?day={day}");
+            return await _client.GetStringAsync($"{baseUri}api/DayReader/{day}");
         }
+        public async Task<string> Generate(int year, int day, string baseUri)
+        {
+            int today = DateTime.Today.Day;
+            return await _client.GetStringAsync($"{baseUri}api/DayReader/{year}/{day}");
+        }
+
     }
 }

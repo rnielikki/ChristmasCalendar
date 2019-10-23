@@ -5,6 +5,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
 using SystemWrapper.IO;
+using SystemWrapper;
 
 namespace joulukalenteri.Server
 {
@@ -22,6 +23,7 @@ namespace joulukalenteri.Server
             });
 
             services.AddTransient<IFileWrap, FileWrap>();
+            services.AddTransient<IDateTimeWrap, DateTimeWrap>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

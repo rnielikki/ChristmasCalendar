@@ -32,11 +32,12 @@ namespace joulukalenteriTests
             Assert.NotEqual(shuffled, Enumerable.Range(1, 25).ToArray());
 
             //Different years, different days.
-            int[] shuffled2 = new int[] { };
-            Shim shim = Shim.Replace(() => DateTime.Today).With(()=>new DateTime(DateTime.Today.Year-1,1,1));
+            int[] shuffled2 = null;
+            Shim shim =  Shim.Replace(() => DateTime.Today).With(() => new DateTime(DateTime.Today.Year-1,1,1));
             PoseContext.Isolate(() => {
                 shuffled2 = indexpage.ShuffleDays();
             }, shim);
+            Assert.NotNull(shuffled2);
             Assert.NotEqual(shuffled, shuffled2);
         }
     }

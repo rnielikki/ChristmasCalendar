@@ -1,4 +1,5 @@
 ﻿@page "/day/{Day:int}"
+@page "/day/{Year:int}/{Day:int}"
 @inject joulukalenteri.Client.SharedCode.Validator validator
 @inject joulukalenteri.Client.SharedCode.DayReader reader
 @inject NavigationManager nav
@@ -33,9 +34,17 @@
 </div>
 @functions{
     [Parameter]
+    public int? Year { get; set; }
+    [Parameter]
     public int Day { get; set; }
     string Title;
     string Content;
+    protected override void OnParametersSet()
+    {
+        if (Year == null) {
+            Year = DateTime.Today.Year;
+        }
+    }
     protected override async Task OnInitializedAsync()
     {
         DayInfoData data = await reader.GetContent(Day, nav.BaseUri);

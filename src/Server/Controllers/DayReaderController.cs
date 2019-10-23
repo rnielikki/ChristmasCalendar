@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using SystemWrapper.IO;
+using SystemWrapper;
 
 namespace joulukalenteri.Server.Controllers
 {
@@ -9,30 +10,38 @@ namespace joulukalenteri.Server.Controllers
     [ApiController]
     public class DayReaderController : ControllerBase
     {
-        private const string WrongDateMessage = "You have wrong date.";
-        private const string NotFoundMessage = "Sorry, the message is not ready!";
-        private Dictionary<int, string> dataList = new Dictionary<int, string>();
+        public const string WrongDateMessage = "You have wrong date.";
+        public const string NotFoundMessage = "Sorry, the message is not ready!";
+        private Dictionary<ValueTuple<int, int>, string> dataList = new Dictionary<ValueTuple<int, int>, string>();
         private readonly IFileWrap _filewrap;
+        private readonly IDateTimeWrap _datewrap;
 
-        public DayReaderController(IFileWrap wrap)
+        [HttpGet("{day}")]
+        public string Get(int day) => Get(_datewrap.Today.Year, day);
+        [HttpGet("{year}/{day}")]
+        public string Get(int year, int day){
+            IDateTimeWrap today = _datewrap.Today;
+            if ((day > 0 && day < 26) && ((year < today.Year) || (year == today.Year && day <= today.Day)))
+            {
+                return ReadData(year, day);
+            }
+            return WrongDateMessage;
+        }
+        public DayReaderController(IFileWrap wrap, IDateTimeWrap datewrap)
         {
             _filewrap = wrap;
+            _datewrap = datewrap;
         }
-
-        private string ReadData(int day) {
-            if (!dataList.ContainsKey(day)) {
-                string textPath = $"contents/day{day}.md";
+        private string ReadData(int year, int day) {
+            if (!dataList.ContainsKey((year, day))) {
+                string textPath = $"contents/{year}/day{day}.md";
                 if (!_filewrap.Exists(textPath))
-                    dataList[day] = NotFoundMessage;
+                    dataList[(year, day)] = NotFoundMessage;
 
                 else
-                    dataList[day] = _filewrap.ReadAllText(textPath);
+                    dataList[(year, day)] = _filewrap.ReadAllText(textPath);
             }
-            return dataList[day];
+            return dataList[(year, day)];
         }
-        //public DayInfoData GetDayInfoData(int day) => data.Where(dayinfo => dayinfo.Day == day).FirstOrDefault();
-        [HttpGet]
-        public string Get(int day) => (day>0 && day<DateTime.Today.Day && day<26)?ReadData(day):WrongDateMessage;
-
     }
 }

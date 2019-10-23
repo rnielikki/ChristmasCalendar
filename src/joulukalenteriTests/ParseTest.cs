@@ -11,6 +11,7 @@ using Moq.Protected;
 using System.Threading.Tasks;
 using System.Threading;
 using System.Net;
+using System.Linq;
 
 namespace joulukalenteriTests
 {
@@ -21,7 +22,7 @@ namespace joulukalenteriTests
         [InlineData(1, "notitle\n\nasdf", "Day 1", "notitle", "<p>notitle</p>\n<p>asdf</p>\n")]
         [InlineData(1, "aaa\n# asdf\n", "asdf", "aaa", "<p>aaa</p>\n")]
         [InlineData(1, "aaa\n# asdf\nghi\n", "asdf", "aaa", "<p>aaa</p>\n<p>ghi</p>\n")]
-        [InlineData(1, "12345678901234567890123456789012345\n# asdf\n", "asdf", "123456789012345678901234567890...", "<p>12345678901234567890123456789012345</p>\n")]
+        [MemberData(nameof(TestData))]
         public async Task DataParserTest(int day, string input, string title, string summary, string content) {
             var ReceiverMock = new Mock<IDataReceiver>(MockBehavior.Strict);
             ReceiverMock.Setup(receiver => receiver.Generate(day, It.IsAny<string>())).ReturnsAsync(input);
@@ -32,6 +33,13 @@ namespace joulukalenteriTests
             Assert.Equal(title, data.Title);
             Assert.Equal(summary, data.Summary);
             Assert.Equal(content, data.Content);
+        }
+        public static TheoryData<int, string, string, string, string> TestData() {
+            string repeat = string.Concat(Enumerable.Repeat("a",DayInfoData.SummaryLength));
+            string content = repeat + "asdfg";
+            TheoryData<int, string, string, string, string> data =  new TheoryData<int, string, string, string, string>();
+            data.Add(1, $"{content}\n# mytitle", "mytitle", repeat + "...", $"<p>{content}</p>\n");
+            return data;
         }
     }
 }
