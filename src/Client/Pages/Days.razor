@@ -4,7 +4,6 @@
 @inject joulukalenteri.Client.SharedCode.DayReader reader
 @inject NavigationManager nav
 @using joulukalenteri.Shared
-@using Markdig
 
 <div class="wrapper">
     <h1>Christmas calendar</h1>
@@ -50,9 +49,5 @@
         DayInfoData data = await reader.GetContent(Day, nav.BaseUri);
         Title = data.Title;
         Content = data.Content;
-    }
-    public int Test()
-    {
-        return Day;
     }
 }

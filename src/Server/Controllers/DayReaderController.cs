@@ -12,7 +12,6 @@ namespace joulukalenteri.Server.Controllers
     {
         public const string WrongDateMessage = "You have wrong date.";
         public const string NotFoundMessage = "Sorry, the message is not ready!";
-        private Dictionary<ValueTuple<int, int>, string> dataList = new Dictionary<ValueTuple<int, int>, string>();
         private readonly IFileWrap _filewrap;
         private readonly IDateTimeWrap _datewrap;
 
@@ -32,16 +31,14 @@ namespace joulukalenteri.Server.Controllers
             _filewrap = wrap;
             _datewrap = datewrap;
         }
-        private string ReadData(int year, int day) {
-            if (!dataList.ContainsKey((year, day))) {
-                string textPath = $"contents/{year}/day{day}.md";
-                if (!_filewrap.Exists(textPath))
-                    dataList[(year, day)] = NotFoundMessage;
+        private string ReadData(int year, int day)
+        {
+            string textPath = $"contents/{year}/day{day}.md";
+            if (!_filewrap.Exists(textPath))
+                return NotFoundMessage;
 
-                else
-                    dataList[(year, day)] = _filewrap.ReadAllText(textPath);
-            }
-            return dataList[(year, day)];
+            else
+                return _filewrap.ReadAllText(textPath);
         }
     }
 }
