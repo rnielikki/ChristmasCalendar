@@ -25,7 +25,7 @@ namespace joulukalenteriTests
         [MemberData(nameof(TestData))]
         public async Task DataParserTest(int day, string input, string title, string summary, string content) {
             var ReceiverMock = new Mock<IDataReceiver>(MockBehavior.Strict);
-            ReceiverMock.Setup(receiver => receiver.Generate(day, It.IsAny<string>())).ReturnsAsync(input);
+            ReceiverMock.Setup(receiver => receiver.Generate(It.IsAny<int>(), day, It.IsAny<string>())).ReturnsAsync(input);
             DayReader reader = new DayReader(ReceiverMock.Object);
             DayInfoData data = (await reader.GetContent(day, It.IsAny<string>()));
             string parseResult = (await reader.GetContent(day, It.IsAny<string>()))?.Title;

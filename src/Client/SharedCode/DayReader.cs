@@ -1,15 +1,12 @@
 ﻿using joulukalenteri.Shared;
-using Microsoft.AspNetCore.Components;
-using System;
 using System.Collections.Generic;
-using System.Net.Http;
 using System.Threading.Tasks;
 using Markdig;
 using Markdig.Syntax;
 using System.Linq;
-using System.Text;
 using Markdig.Renderers;
 using System.IO;
+using System;
 
 namespace joulukalenteri.Client.SharedCode
 {
@@ -19,14 +16,15 @@ namespace joulukalenteri.Client.SharedCode
         public DayReader(IDataReceiver _receiver) {
             receiver = _receiver;
         }
-        private Dictionary<int, DayInfoData> dataList = new Dictionary<int, DayInfoData>();
-        public async Task<DayInfoData> GetContent(int day, string baseUri)
+        private Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
+        public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(DateTime.Today.Year, day, baseUri);
+        public async Task<DayInfoData> GetContent(int year, int day, string baseUri)
         {
-            if (!dataList.ContainsKey(day))
+            if (!dataList.ContainsKey((year, day)))
             {
-                dataList.Add(day, Parse(day, await receiver.Generate(day, baseUri)));
+                dataList.Add((year, day), Parse(day, await receiver.Generate(year, day, baseUri)));
             }
-            return dataList[day];
+            return dataList[(year, day)];
         }
         private DayInfoData Parse(int day, string input) {
             MarkdownDocument markdown = Markdown.Parse(input);

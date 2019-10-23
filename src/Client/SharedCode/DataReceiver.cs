@@ -8,7 +8,7 @@ namespace joulukalenteri.Client.SharedCode
 {
     //for testing purpose, it's outside of the part of the DayReader.
     public interface IDataReceiver {
-        Task<string> Generate(int day, string baseUri);
+        Task<string> Generate(int year, int day, string baseUri);
     }
     public class DataReceiver:IDataReceiver
     {
@@ -18,11 +18,6 @@ namespace joulukalenteri.Client.SharedCode
         }
         public DataReceiver(HttpClient client) {
             _client = client;
-        }
-        public async Task<string> Generate(int day, string baseUri)
-        {
-            int today = DateTime.Today.Day;
-            return await _client.GetStringAsync($"{baseUri}api/DayReader/{day}");
         }
         public async Task<string> Generate(int year, int day, string baseUri)
         {
