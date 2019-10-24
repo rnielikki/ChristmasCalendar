@@ -1,6 +1,7 @@
-﻿html, body {
+﻿@import url("common.css");
+
+html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    min-height:100%;
     margin:0; padding:0;
     overflow: auto; /* css is weird. really weird. */
 }
@@ -9,6 +10,7 @@ body {
     background-size: 40%, auto auto, 100%;
     background-size: 40%;
 }
+
 h1 {
     font-size: 2.5rem;
     margin-top: 3.1rem;
@@ -94,6 +96,21 @@ h1 {
     .linkbtn:hover {
         background-color: #863e98;
     }
+.footer {
+    background-color: #2b1f6a96;
+    color: #fff;
+    font-size: 125%;
+    font-family: Calibri, sans-serif;
+}
+    .footer a {
+        color: #adf6f9;
+    }
+        .footer a:hover {
+            color: #ffc9fe;
+            background-color: #281d60;
+        }
+
+
 /* for mobile and vertical screen */
 @media screen and (max-width:800px)
 {
@@ -114,4 +131,3 @@ h1 {
         background-size: 100%, auto auto, 100%;
     }
 }
-
