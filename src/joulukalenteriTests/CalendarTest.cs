@@ -12,7 +12,7 @@ namespace joulukalenteriTests
         //[InlineData(new DateTime(2020, 12, 21), 23, false)]
         public void OpenByDateTest(DateTime fakeday, int openday, bool isOpen)
         {
-            Shim shim = Shim.Replace(() => DateTime.Now).With(()=>fakeday);
+            Shim shim = Shim.Replace(() => DateTime.Today).With(()=>fakeday);
             bool? result=null;
             Validator validator = new Validator();
             PoseContext.Isolate(() =>
@@ -26,7 +26,7 @@ namespace joulukalenteriTests
         [MemberData(nameof(OpenByYearData))]
         public void OpenByYearTest(DateTime fakeday, int openyear, int openday, bool isOpen)
         {
-            Shim shim = Shim.Replace(() => DateTime.Now).With(()=>fakeday);
+            Shim shim = Shim.Replace(() => DateTime.Today).With(()=>fakeday);
             bool? result=null;
             Validator validator = new Validator();
             PoseContext.Isolate(() =>
