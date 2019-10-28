@@ -8,7 +8,6 @@ using Moq;
 using joulukalenteri.Server;
 using System.Linq;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
 
 namespace joulukalenteriTests
 {
@@ -39,21 +38,14 @@ namespace joulukalenteriTests
             daymock.Setup(day => day.Today.Year).Returns(2020);
 
             ArchiveCheckController controller = new ArchiveCheckController(dirmock.Object, daymock.Object);
-            string dataJson = controller.GetArchive();
-            var deserialized = JsonConvert.DeserializeObject<Dictionary<int, IEnumerable<string>>>(dataJson);
-            Assert.Equal(new int []{ 1991,2015}, deserialized.Keys.ToArray());
-            Assert.Equal(new string []{ "day5.md", "day7.md", "day25.md"}, deserialized[2015]);
+            var dataJson = controller.GetArchive();
+            Assert.Equal(new int []{ 1991,2015}, dataJson.Keys.ToArray());
+            Assert.Equal(new string []{ "day5.md", "day7.md", "day25.md"}, dataJson[2015]);
         }
         [Fact]
         public async Task ClientSideTest()
         {
-            Dictionary<int, IEnumerable<string>> entries = new Dictionary<int, IEnumerable<string>>()
-            {
-                {2000, new string[] { "day1.md", "day5.md", "day24.md" }},
-                {2015, new string[] { "day5.md", "day7.md", "day9.md", "day24.md" }},
-            };
-
-            string raw = JsonConvert.SerializeObject(entries);
+            string raw = "{ \"2010\": [\"day1.md\", \"day5.md\", \"day24.md\"], \"2015\": [\"day5.md\", \"day7.md\",\"day9.md\",\"day24.md\"]}";
             var ReceiverMock = new Mock<IDataReceiver>(MockBehavior.Strict);
             ReceiverMock.Setup(receiver => receiver.ReceiveArchive(It.IsAny<string>())).ReturnsAsync(raw);
             ArchiveReader reader = new ArchiveReader(ReceiverMock.Object);
@@ -61,7 +53,7 @@ namespace joulukalenteriTests
             IEnumerable<int> years = await reader.GetYears("whatever");
             IEnumerable<int> days = await reader.GetDays(2015, "meh");
 
-            Assert.Equal(new int[] { 2000, 2015 }, years);
+            Assert.Equal(new int[] { 2010, 2015 }, years);
             Assert.Equal(new int[] { 5, 7, 9, 24 }, days);
         }
     }

@@ -10,18 +10,17 @@ namespace joulukalenteriTests
     public class ReadTest
     {
         private const string testText = "Lorem ipsum dolor sit amet";
-        [Fact]
-        public void ServerReadDayTest()
+        [Theory]
+        [InlineData(9, true)]
+        [InlineData(10, true)]
+        [InlineData(0, false)]
+        [InlineData(11, false)]
+        [InlineData(26, false)]
+        public void ServerReadDayTest(int day, bool success)
         {
             DayReaderController controller = mockedController(new DateTimeWrap(DateTime.Today.Year, 12, 10));
-
-            string result = controller.Get(1);
-            string failedResult1 = controller.Get(0);
-            string failedResult2 = controller.Get(26);
-
-            Assert.Equal(testText, result);
-            Assert.Equal(DayReaderController.WrongDateMessage, failedResult1);
-            Assert.Equal(DayReaderController.WrongDateMessage, failedResult2);
+            string result = controller.Get(day);
+            Assert.Equal(success?testText:DayReaderController.WrongDateMessage, result);
         }
         [Theory]
         [MemberData(nameof(ServerReadYearTestData))]

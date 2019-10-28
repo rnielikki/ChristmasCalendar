@@ -20,7 +20,7 @@ namespace joulukalenteri.Server.Controllers
             dirwrap = _dirwrap;
             datewrap = _datewrap;
         }
-        public string GetArchive() {
+        public Dictionary<int,IEnumerable<string>> GetArchive() {
             if (dirwrap.Exists(AppConfig.__dirpath))
             {
                 int thisYear = datewrap.Today.Year;
@@ -37,11 +37,11 @@ namespace joulukalenteri.Server.Controllers
                         results.Add(year, dirwrap.GetFiles(dir).Where(str => regex.Match(str).Success).ToArray());
                     }
                 }
-                return JsonConvert.SerializeObject(results);
+                return results;
             }
             else
             {
-                return "";
+                return null;
             }
         }
     }
