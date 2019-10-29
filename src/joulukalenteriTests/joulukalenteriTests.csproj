@@ -34,4 +34,10 @@
     <ProjectReference Include="..\Shared\joulukalenteri.Shared.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Content Include="contents\**">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
 </Project>
