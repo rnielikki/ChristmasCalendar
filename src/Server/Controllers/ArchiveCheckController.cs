@@ -35,7 +35,7 @@ namespace joulukalenteri.Server.Controllers
                     int year;
                     if (int.TryParse(dirName, out year) && year < thisYear)
                     {
-                        results.Add(year, dirwrap.GetFiles(dir).Where(str => regex.Match(Path.GetFileName(str)).Success).ToArray());
+                        results.Add(year, dirwrap.GetFiles(dir).Select(str => Path.GetFileName(str)).Where(str => regex.Match(str).Success).ToArray());
                     }
                 }
                 return results;
