@@ -4,6 +4,7 @@ using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using SystemWrapper;
 using SystemWrapper.IO;
+using System.IO;
 using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
@@ -20,7 +21,7 @@ namespace joulukalenteri.Server.Controllers
             dirwrap = _dirwrap;
             datewrap = _datewrap;
         }
-        public string GetArchive() {
+        public Dictionary<int,IEnumerable<string>> GetArchive() {
             if (dirwrap.Exists(AppConfig.__dirpath))
             {
                 int thisYear = datewrap.Today.Year;
@@ -34,14 +35,14 @@ namespace joulukalenteri.Server.Controllers
                     int year;
                     if (int.TryParse(dirName, out year) && year < thisYear)
                     {
-                        results.Add(year, dirwrap.GetFiles(dir).Where(str => regex.Match(str).Success).ToArray());
+                        results.Add(year, dirwrap.GetFiles(dir).Select(str => Path.GetFileName(str)).Where(str => regex.Match(str).Success).ToArray());
                     }
                 }
-                return JsonConvert.SerializeObject(results);
+                return results;
             }
             else
             {
-                return "";
+                return null;
             }
         }
     }
