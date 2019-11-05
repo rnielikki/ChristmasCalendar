@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Server
+  commentId: N:joulukalenteri.Server
+  id: joulukalenteri.Server
+  children:
+  - joulukalenteri.Server.AppConfig
+  langs:
+  - csharp
+  - vb
+  name: joulukalenteri.Server
+  nameWithType: joulukalenteri.Server
+  fullName: joulukalenteri.Server
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: joulukalenteri.Server.AppConfig
+  commentId: T:joulukalenteri.Server.AppConfig
+  name: AppConfig
+  nameWithType: AppConfig
+  fullName: joulukalenteri.Server.AppConfig

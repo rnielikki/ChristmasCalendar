@@ -1,0 +1,15 @@
+{
+  "joulukalenteri.Server": "joulukalenteri.Server.yml",
+  "joulukalenteri.Server.AppConfig": "joulukalenteri.Server.AppConfig.yml",
+  "joulukalenteri.Server.AppConfig.__dirpath": "joulukalenteri.Server.AppConfig.yml",
+  "joulukalenteri.Server.Controllers": "joulukalenteri.Server.Controllers.yml",
+  "joulukalenteri.Server.Controllers.ArchiveCheckController": "joulukalenteri.Server.Controllers.ArchiveCheckController.yml",
+  "joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor(IDirectoryWrap,IDateTimeWrap)": "joulukalenteri.Server.Controllers.ArchiveCheckController.yml",
+  "joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive": "joulukalenteri.Server.Controllers.ArchiveCheckController.yml",
+  "joulukalenteri.Server.Controllers.DayReaderController": "joulukalenteri.Server.Controllers.DayReaderController.yml",
+  "joulukalenteri.Server.Controllers.DayReaderController.#ctor(IFileWrap,IDateTimeWrap)": "joulukalenteri.Server.Controllers.DayReaderController.yml",
+  "joulukalenteri.Server.Controllers.DayReaderController.Get(System.Int32)": "joulukalenteri.Server.Controllers.DayReaderController.yml",
+  "joulukalenteri.Server.Controllers.DayReaderController.Get(System.Int32,System.Int32)": "joulukalenteri.Server.Controllers.DayReaderController.yml",
+  "joulukalenteri.Server.Controllers.DayReaderController.NotFoundMessage": "joulukalenteri.Server.Controllers.DayReaderController.yml",
+  "joulukalenteri.Server.Controllers.DayReaderController.WrongDateMessage": "joulukalenteri.Server.Controllers.DayReaderController.yml"
+}
