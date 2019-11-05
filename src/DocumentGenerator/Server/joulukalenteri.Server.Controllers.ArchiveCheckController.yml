@@ -1,0 +1,288 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Server.Controllers.ArchiveCheckController
+  commentId: T:joulukalenteri.Server.Controllers.ArchiveCheckController
+  id: ArchiveCheckController
+  parent: joulukalenteri.Server.Controllers
+  children:
+  - joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor(IDirectoryWrap,IDateTimeWrap)
+  - joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive
+  langs:
+  - csharp
+  - vb
+  name: ArchiveCheckController
+  nameWithType: ArchiveCheckController
+  fullName: joulukalenteri.Server.Controllers.ArchiveCheckController
+  type: Class
+  source:
+    id: ArchiveCheckController
+    path: ''
+    startLine: 36
+  assemblies:
+  - cs.temp.dll
+  namespace: joulukalenteri.Server.Controllers
+  summary: "\nReturns list of valid and available markdown file names from the archive.\n"
+  example: []
+  syntax:
+    content: 'public class ArchiveCheckController : ControllerBase'
+    content.vb: >-
+      Public Class ArchiveCheckController
+
+          Inherits ControllerBase
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor(IDirectoryWrap,IDateTimeWrap)
+  commentId: M:joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor(IDirectoryWrap,IDateTimeWrap)
+  id: '#ctor(IDirectoryWrap,IDateTimeWrap)'
+  parent: joulukalenteri.Server.Controllers.ArchiveCheckController
+  langs:
+  - csharp
+  - vb
+  name: ArchiveCheckController(IDirectoryWrap, IDateTimeWrap)
+  nameWithType: ArchiveCheckController.ArchiveCheckController(IDirectoryWrap, IDateTimeWrap)
+  fullName: joulukalenteri.Server.Controllers.ArchiveCheckController.ArchiveCheckController(IDirectoryWrap, IDateTimeWrap)
+  type: Constructor
+  source:
+    id: .ctor
+    path: ''
+    startLine: 47
+  assemblies:
+  - cs.temp.dll
+  namespace: joulukalenteri.Server.Controllers
+  summary: "\nGets wrappers as parameter for test purpose.\n"
+  example: []
+  syntax:
+    content: public ArchiveCheckController(IDirectoryWrap dirwrap, IDateTimeWrap datewrap)
+    parameters:
+    - id: dirwrap
+      type: IDirectoryWrap
+      description: Mocked directoryWrapper for the test.
+    - id: datewrap
+      type: IDateTimeWrap
+      description: Mocked dateTimeWrapper for the test.
+    content.vb: Public Sub New(dirwrap As IDirectoryWrap, datewrap As IDateTimeWrap)
+  overload: joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive
+  commentId: M:joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive
+  id: GetArchive
+  parent: joulukalenteri.Server.Controllers.ArchiveCheckController
+  langs:
+  - csharp
+  - vb
+  name: GetArchive()
+  nameWithType: ArchiveCheckController.GetArchive()
+  fullName: joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive()
+  type: Method
+  source:
+    id: GetArchive
+    path: ''
+    startLine: 58
+  assemblies:
+  - cs.temp.dll
+  namespace: joulukalenteri.Server.Controllers
+  summary: "\nReads available file names from each year.\n"
+  remarks: The archive file path should be in the path from <xref href="joulukalenteri.Server.AppConfig.__dirpath" data-throw-if-not-resolved="false"></xref>
+  example: []
+  syntax:
+    content: public Dictionary<int, IEnumerable<string>> GetArchive()
+    return:
+      type: System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.IEnumerable{System.String}}
+      description: Dictionary of archive file names for each valid year, which produces JSON file for clients.
+    content.vb: Public Function GetArchive As Dictionary(Of Integer, IEnumerable(Of String))
+  overload: joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: joulukalenteri.Server.Controllers
+  commentId: N:joulukalenteri.Server.Controllers
+  name: joulukalenteri.Server.Controllers
+  nameWithType: joulukalenteri.Server.Controllers
+  fullName: joulukalenteri.Server.Controllers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor*
+  commentId: Overload:joulukalenteri.Server.Controllers.ArchiveCheckController.#ctor
+  name: ArchiveCheckController
+  nameWithType: ArchiveCheckController.ArchiveCheckController
+  fullName: joulukalenteri.Server.Controllers.ArchiveCheckController.ArchiveCheckController
+- uid: IDirectoryWrap
+  commentId: '!:IDirectoryWrap'
+  isExternal: true
+  name: IDirectoryWrap
+  nameWithType: IDirectoryWrap
+  fullName: IDirectoryWrap
+- uid: IDateTimeWrap
+  isExternal: true
+  name: IDateTimeWrap
+  nameWithType: IDateTimeWrap
+  fullName: IDateTimeWrap
+- uid: joulukalenteri.Server.AppConfig.__dirpath
+  commentId: F:joulukalenteri.Server.AppConfig.__dirpath
+  isExternal: true
+- uid: joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive*
+  commentId: Overload:joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive
+  name: GetArchive
+  nameWithType: ArchiveCheckController.GetArchive
+  fullName: joulukalenteri.Server.Controllers.ArchiveCheckController.GetArchive
+- uid: System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.IEnumerable{System.String}}
+  commentId: T:System.Collections.Generic.Dictionary{System.Int32,System.Collections.Generic.IEnumerable{System.String}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<Int32, IEnumerable<String>>
+  nameWithType: Dictionary<Int32, IEnumerable<String>>
+  fullName: System.Collections.Generic.Dictionary<System.Int32, System.Collections.Generic.IEnumerable<System.String>>
+  nameWithType.vb: Dictionary(Of Int32, IEnumerable(Of String))
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.Int32, System.Collections.Generic.IEnumerable(Of System.String))
+  name.vb: Dictionary(Of Int32, IEnumerable(Of String))
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

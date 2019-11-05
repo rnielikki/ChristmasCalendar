@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Server.Controllers
+  commentId: N:joulukalenteri.Server.Controllers
+  id: joulukalenteri.Server.Controllers
+  children:
+  - joulukalenteri.Server.Controllers.ArchiveCheckController
+  - joulukalenteri.Server.Controllers.DayReaderController
+  langs:
+  - csharp
+  - vb
+  name: joulukalenteri.Server.Controllers
+  nameWithType: joulukalenteri.Server.Controllers
+  fullName: joulukalenteri.Server.Controllers
+  type: Namespace
+  assemblies:
+  - cs.temp.dll
+references:
+- uid: joulukalenteri.Server.Controllers.ArchiveCheckController
+  commentId: T:joulukalenteri.Server.Controllers.ArchiveCheckController
+  name: ArchiveCheckController
+  nameWithType: ArchiveCheckController
+  fullName: joulukalenteri.Server.Controllers.ArchiveCheckController
+- uid: joulukalenteri.Server.Controllers.DayReaderController
+  commentId: T:joulukalenteri.Server.Controllers.DayReaderController
+  name: DayReaderController
+  nameWithType: DayReaderController
+  fullName: joulukalenteri.Server.Controllers.DayReaderController
