@@ -10,19 +10,39 @@ using System;
 
 namespace joulukalenteri.Client.SharedCode
 {
+    /// <summary>
+    /// Parses and reads markdown of the day data from the server.
+    /// </summary>
     public class DayReader
     {
         private readonly IDataReceiver receiver;
+        /// <summary>
+        /// Calls day reader manually for test purpose.
+        /// </summary>
+        /// <param name="_receiver"><see cref="IDataReceiver"/>, which contains HTTP Client</param>
         public DayReader(IDataReceiver _receiver) {
             receiver = _receiver;
         }
         private Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
+        /// <summary>
+        /// Get parsed markdown object asynchronously for current year with a day.
+        /// </summary>
+        /// <param name="day">The target day to get data.</param>
+        /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
+        /// <returns>Parsed <see cref="DayInfoData"/></returns>
         public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(DateTime.Today.Year, day, baseUri);
+        /// <summary>
+        /// Get parsed markdown object asynchronously with a day and a year.
+        /// </summary>
+        /// <param name="year">The target year to get data.</param>
+        /// <param name="day">The target day to get data.</param>
+        /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
+        /// <returns>Parsed <see cref="DayInfoData"/></returns>
         public async Task<DayInfoData> GetContent(int year, int day, string baseUri)
         {
             if (!dataList.ContainsKey((year, day)))
             {
-                dataList.Add((year, day), Parse(day, await receiver.Generate(year, day, baseUri)));
+                dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day, baseUri)));
             }
             return dataList[(year, day)];
         }
