@@ -1,4 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="TestResults.xsl"?>
 <assemblies timestamp="11/06/2019 09:40:39">
   <assembly name="C:\Users\Lumi\source\repos\ChristmasCalendar\src\joulukalenteriTests\bin\Debug\netcoreapp3.0\joulukalenteriTests.dll" run-date="2019-11-06" run-time="09:40:39" total="35" passed="35" failed="0" skipped="0" time="1.777" errors="0">
     <errors />

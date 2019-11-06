@@ -1,0 +1,25 @@
+module.exports={
+    mime:{
+        ".html":"text/html",
+        ".css":"text/css",
+        ".xml":"text/xml",
+        ".xsl":"text/xsl",
+        ".txt":"text/plain",
+        ".cs":"text/plain",//for the c# source code
+        ".js":"text/javascript",
+        ".json":"application/json",
+        ".png":"image/png",
+        ".gif":"image/gif",
+        ".jpg":"image/jpg",
+        ".bmp":"image/bmp",
+        ".tiff":"image/tiff",
+        ".svg":"application/image/svg+xml",
+        ".wav":"audio/wav",
+        ".mp3":"video/mp3",
+        ".mp4":"video/mp4",
+        ".ttf":"application/font-ttf",
+        ".woff":"application/font-woff",
+        ".eot":"application/font-eot",
+        ".otf":"application/font-otf"
+    }
+};

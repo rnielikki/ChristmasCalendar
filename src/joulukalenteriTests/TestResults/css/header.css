@@ -1,0 +1,60 @@
+﻿body{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header{
+  font-size:120%;
+}
+.header-title{
+  text-align: center;
+  font-size:120%;
+  padding:.8rem .6rem;
+  box-sizing: border-box;
+  margin:0;
+  color:#fff;
+}
+.header-grid{
+  display:grid;
+  grid-template-columns:10em 80%;
+}
+.header-grid div{
+  padding: .3rem .2rem .3rem 1rem;
+}
+.header-grid-label{
+  font-weight:bold;
+  background-color:rgba(0,0,0,.1);
+}
+/* conditional color */
+.header-passed{
+  background-color:#d6f5cb;
+}
+.header-passed .header-title{
+  background-color:#0a6a33;
+}
+.header-notpassed{
+  background-color:#ffe9e9;
+}
+.header-notpassed .header-title{
+  background-color:#d72525;
+}
+.header-warning{
+  background-color:#fffcd3;
+}
+.header-warning .header-title{
+  background-color:#a2801b;
+}
+
+/* canvas */
+canvas{
+  margin-right:1.5rem;
+}
+.headers{
+  display:flex;
+}
+.headers > div{
+  flex-grow:1;
+}
+@media screen and (max-width:800px){
+  .headers{
+    display:block;
+  }
+}

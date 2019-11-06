@@ -1,0 +1,49 @@
+﻿.collection{
+  margin-top: 1.2rem;
+  border: 1px solid #8a8a8a;
+}
+.collection-header{
+  padding: .6rem .8rem;
+  color:#fff;
+}
+.collection-header small{
+  opacity:.8;
+  vertical-align: bottom;
+}
+.collection-test{
+  padding: .4rem 1.5rem;
+}
+.collection-test small.test-target{
+  color:#606060;
+}
+/*conditional color*/
+.collection-passed .collection-header{
+  background-color:#1b6118;
+}
+.collection-notpassed .collection-header{
+  background-color:#c52317;
+}
+.collection-warning .collection-header{
+  background-color:#826c11;
+}
+.collection-test-passed{
+  background-color:#dbfbbc;
+}
+.collection-test-notpassed{
+  background-color:#ffcaca;
+}
+.collection-test-warning{
+  background-color:#ddd;
+}
+.collection-test-passed strong::before{
+  content:'\2713\20';
+  color:green;
+}
+.collection-test-notpassed strong::before{
+  content:'\2717\20';
+  color:red;
+}
+.collection-test-warning strong::before{
+  content:'\25CE\20';
+  color:darkgray;
+}
