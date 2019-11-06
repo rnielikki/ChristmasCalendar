@@ -18,7 +18,7 @@ steps:
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    arguments: '--configuration $(buildConfiguration) --test-adapter-path:. --logger:xunit'
 #Reporting (...} \('-')-[..]
 - task: PublishTestResults@2
   inputs:
