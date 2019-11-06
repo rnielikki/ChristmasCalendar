@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using Pose;
-using System.Text;
 using System.Linq;
 using Xunit;
 

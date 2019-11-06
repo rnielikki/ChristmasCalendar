@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Xunit;
-using joulukalenteri.Server.Controllers;
+﻿using Xunit;
 using joulukalenteri.Shared;
 using joulukalenteri.Client.SharedCode;
-using System.Net.Http;
 using Moq;
-using Moq.Protected;
 using System.Threading.Tasks;
-using System.Threading;
-using System.Net;
 using System.Linq;
 
 namespace joulukalenteriTests

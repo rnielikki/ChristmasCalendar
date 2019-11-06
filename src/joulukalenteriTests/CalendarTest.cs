@@ -9,7 +9,6 @@ namespace joulukalenteriTests
     {
         [Theory]
         [MemberData(nameof(OpenByDateData))]
-        //[InlineData(new DateTime(2020, 12, 21), 23, false)]
         public void OpenByDateTest(DateTime fakeday, int openday, bool isOpen)
         {
             Shim shim = Shim.Replace(() => DateTime.Today).With(()=>fakeday);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace joulukalenteri.Shared
+﻿namespace joulukalenteri.Shared
 {
     /// <summary>
     /// Parsed and organized information from a day markdown file.

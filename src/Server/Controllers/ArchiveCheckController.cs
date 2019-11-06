@@ -1,11 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using Microsoft.AspNetCore.Mvc;
 using SystemWrapper;
 using SystemWrapper.IO;
 using System.IO;
-using Newtonsoft.Json;
 using System.Text.RegularExpressions;
 
 namespace joulukalenteri.Server.Controllers
