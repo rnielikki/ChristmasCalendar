@@ -13,12 +13,17 @@ variables:
   buildConfiguration: 'Release'
 
 steps:
-#Testing <3
+#Testing ( '-)-o=<|
 - task: DotNetCoreCLI@2
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
     arguments: '--configuration $(buildConfiguration)'
+#Reporting (...} \('-')-[..]
+- task: PublishTestResults@2
+  inputs:
+    testResultsFormat: 'xUnit'
+    testResultsFiles: '**/TEST-*.xml'
 #Building *-('v')-*
 - script: dotnet build src/ --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
