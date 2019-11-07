@@ -13,10 +13,11 @@ Whatever, I am wating for the white winter.
 ```
 Then title is: *Today is already second day.*
 Content is:
-`
+```
 <p>I wonder if there're Santa Claus. Or is this Satan Claus?</p>
 <p>Whatever, I am wating for the white winter.</p>
-`
+```
+
 And... the summary is:
 *I wonder if there're Santa Claus. Or is this Satan Claus?
 Whatever, I am wating ...*
