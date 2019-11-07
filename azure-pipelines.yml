@@ -18,12 +18,12 @@ steps:
   inputs:
     command: test
     projects: '**/*Tests/*.csproj'
-    arguments: '--configuration $(buildConfiguration)'
+    arguments: '--configuration $(buildConfiguration) --test-adapter-path:. --logger:xunit'
 #Reporting (...} \('-')-[..]
 - task: PublishTestResults@2
   inputs:
     testResultsFormat: 'xUnit'
-    testResultsFiles: '**/TEST-*.xml'
+    testResultsFiles: '**/TestResults.xml'
 #Building *-('v')-*
 - script: dotnet build src/ --configuration $(buildConfiguration)
   displayName: 'dotnet build $(buildConfiguration)'
