@@ -4,6 +4,7 @@ using System.Linq;
 using Xunit;
 using joulukalenteri.Client.SharedCode;
 using joulukalenteri.Shared;
+using Moq;
 
 namespace joulukalenteriTests
 {
@@ -12,7 +13,9 @@ namespace joulukalenteriTests
         [Fact]
         public void ValidShuffleTest()
         {
-            DaysShuffler shuffler = new DaysShuffler(new ConcreateDate());
+            var daymock = new Mock<IDateTime>();
+            daymock.Setup(day => day.Now).Returns(DateTime.Now);
+            DaysShuffler shuffler = new DaysShuffler(daymock.Object);
             int[] shuffled = shuffler.ShuffleDays();
             //without duplication
             Assert.Equal(shuffled.Length, shuffled.Distinct().Count());
@@ -24,7 +27,9 @@ namespace joulukalenteriTests
         }
         [Fact]
         public void ShuffleConsistenceTest() {
-            DaysShuffler shuffler = new DaysShuffler(new ConcreateDate(new DateTime(2019,01,25)));
+            var daymock = new Mock<IDateTime>();
+            daymock.Setup(day => day.Now).Returns(new DateTime(2019,01,25));
+            DaysShuffler shuffler = new DaysShuffler(daymock.Object);
             int[] shuffled = shuffler.ShuffleDays();
             //System.Index exists : must be written explicitly.
             Assert.Equal(shuffler.ShuffleDays(), shuffler.ShuffleDays());
@@ -33,23 +38,12 @@ namespace joulukalenteriTests
             Assert.NotEqual(shuffled, Enumerable.Range(1, 25).ToArray());
 
             //Different years, different days.
-            DaysShuffler shuffler2 = new DaysShuffler(new ConcreateDate(new DateTime(2020,12,12)));
+            var daymock2 = new Mock<IDateTime>();
+            daymock2.Setup(day => day.Now).Returns(new DateTime(2020,12,12));
+            DaysShuffler shuffler2 = new DaysShuffler(daymock2.Object);
             int[] shuffled2 = shuffler2.ShuffleDays();
             Assert.NotNull(shuffled2);
             Assert.NotEqual(shuffled, shuffled2);
         }
-    }
-    internal class ConcreateDate : IDateTime
-    {
-        private DateTime datetime;
-        public ConcreateDate()
-        {
-            datetime = DateTime.Now;
-        }
-        public ConcreateDate(DateTime _datetime)
-        {
-            datetime = _datetime;
-        }
-        public DateTime Now => datetime;
     }
 }
