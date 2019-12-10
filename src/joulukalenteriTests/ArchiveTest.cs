@@ -57,8 +57,8 @@ namespace joulukalenteriTests
             int[] years = (await reader.GetYears("whatever")).ToArray();
             int[] days = (await reader.GetDays(2015, "meh")).ToArray();
 
-            Assert.Equal(new int[] { 2010, 2015 }, years);
-            Assert.Equal(new int[] { 5, 7, 9, 24 }, days);
+            Assert.Equal(new int[] { 2010, 2015 }, years.OrderBy(a => a));
+            Assert.Equal(new int[] { 5, 7, 9, 24 }, days.OrderBy(a => a));
         }
     }
 }
