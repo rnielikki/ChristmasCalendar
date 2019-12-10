@@ -54,8 +54,8 @@ namespace joulukalenteriTests
             ReceiverMock.Setup(receiver => receiver.ReceiveArchive(It.IsAny<string>())).ReturnsAsync(raw);
             ArchiveReader reader = new ArchiveReader(ReceiverMock.Object);
 
-            int[] years = await reader.GetYears("whatever");
-            int[] days = await reader.GetDays(2015, "meh");
+            int[] years = (await reader.GetYears("whatever")).ToArray();
+            int[] days = (await reader.GetDays(2015, "meh")).ToArray();
 
             Assert.Equal(new int[] { 2010, 2015 }, years);
             Assert.Equal(new int[] { 5, 7, 9, 24 }, days);
