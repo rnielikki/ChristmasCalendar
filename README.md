@@ -1,4 +1,5 @@
 # ChristmasCalendar Project!
+... It was "Advent calendar" in english, whatever.
 
 [![Build Status](https://dev.azure.com/LumiKwon0498/KouluAss/_apis/build/status/rnielikki.ChristmasCalendar?branchName=master)](https://dev.azure.com/LumiKwon0498/KouluAss/_build/latest?definitionId=3&branchName=master)
 
@@ -26,10 +27,15 @@ Whatever, I am wating ...*
 It's part of the software testing project, but also for trying blazor WASM!
 
 ## Can I see example?
-If Azure CD is open with Blazor WASM, maybe. Not now.
+Sorry, currently I have no subscription for this right now.
+
+But I can leave link here, if you have an example!
+
+## Why it's 1-25, not 1-24?
+I made it, but I don't know. Maybe 5x5 looked beautiful?
 
 ## Can I contribute?
-Sure.
+**Sure.** VVelcome!
 
 ## Any plan for this project in future?
 Hopefully.
