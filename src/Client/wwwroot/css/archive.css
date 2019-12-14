@@ -1,0 +1,52 @@
+﻿h1 {
+    background-color: #e0d0ea;
+    padding: 0.6rem 0.8rem;
+    border-left: 10px solid #7385df;
+}
+.day-wrapper {
+    margin-left: 1.5rem;
+    background-color: #efe9f9;
+}
+.day-header {
+    background-color: #d6d7f4;
+    margin: 0;
+    padding: 0.3rem 0.4rem;
+}
+.day-content {
+    padding: 0.8rem 1.5rem;
+}
+    .day-content a {
+        color: #fff6fd;
+        background-color: #6874ae;
+        text-decoration: none;
+        padding: 0.2rem 0.6rem;
+    }
+        .day-content a:hover {
+            background-color: #242a73;
+        }
+.content-wrapper ul {
+    list-style-type: none;
+}
+
+    .content-wrapper ul li {
+        font-size: 120%;
+    }
+
+        .content-wrapper ul li::before {
+            content: "*";
+            color: #d988c8;
+            display: block;
+            float: left;
+            margin-right: 1.5rem;
+        }
+
+        .content-wrapper ul li > a {
+            color: #41559f;
+            text-decoration: none;
+            display: block;
+            width: 100%;
+            padding: 0.1rem 0.3rem;
+        }
+    .content-wrapper ul > li a:hover {
+        background-color: #fde7fd;
+    }

@@ -1,0 +1,24 @@
+﻿@page "/archive/{Year:int}"
+@layout ArchiveLayout
+<div class=" wrapper">
+    @if (Year < DateTime.Today.Year)
+    {
+        <h1>Archive @Year</h1>
+        <div class="content-wrapper">
+            <ul>
+                @for (int i = 1; i < 26; i++)
+                {
+                    <li><a href="/archive/@Year/@i">Day @i</a></li>
+                }
+            </ul>
+        </div>
+    }
+    else {
+        <p>Only the day before this year is available.</p>
+    }
+</div>
+
+@functions{
+    [Parameter]
+    public int Year { get; set; }
+}

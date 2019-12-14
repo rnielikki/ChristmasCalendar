@@ -1,11 +1,15 @@
-﻿@page "/day/{Day:int}"
+﻿@page "/archive/{Year:int}/{Day:int}"
 @inject joulukalenteri.Client.SharedCode.Validator validator
 @inject joulukalenteri.Client.SharedCode.DayReader reader
 @inject NavigationManager nav
+@layout ArchiveLayout
 @using joulukalenteri.Shared
+@*
+    Example for custom layout!
+**@
 
 <div class="wrapper">
-    <h1>Christmas calendar</h1>
+    <h1>Christmas calendar @Year</h1>
     <div class="day-wrapper">
         @if (validator.IsOpenToday(Day))
         {
@@ -15,7 +19,7 @@
                 <div class="day-content">
                     @((MarkupString)Content)
                     <br />
-                    <NavLink class="linkbtn" href="/">Back to the main</NavLink>
+                    <a class="linkbtn" href="/archive/@Year">Back to the archive</a>
                 </div>
 
             }
@@ -32,12 +36,14 @@
 </div>
 @functions{
     [Parameter]
+    public int Year { get; set; }
+    [Parameter]
     public int Day { get; set; }
     string Title;
     string Content;
     protected override async Task OnInitializedAsync()
     {
-        DayInfoData data = await reader.GetContent(Day, nav.BaseUri);
+        DayInfoData data = await reader.GetContent(Year, Day, nav.BaseUri);
         Title = data.Title;
         Content = data.Content;
     }
