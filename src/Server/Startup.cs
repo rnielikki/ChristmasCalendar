@@ -24,6 +24,7 @@ namespace joulukalenteri.Server
 
             services.AddTransient<IFileWrap, FileWrap>();
             services.AddTransient<IDateTimeWrap, DateTimeWrap>();
+            services.AddTransient<IDirectoryWrap, DirectoryWrap>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

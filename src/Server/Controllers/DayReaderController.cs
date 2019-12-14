@@ -33,7 +33,7 @@ namespace joulukalenteri.Server.Controllers
         }
         private string ReadData(int year, int day)
         {
-            string textPath = $"contents/{year}/day{day}.md";
+            string textPath = $"{AppConfig.__dirpath}{year}/day{day}.md";
             if (!_filewrap.Exists(textPath))
                 return NotFoundMessage;
 
