@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using SystemWrapper;
 using SystemWrapper.IO;
@@ -15,24 +13,28 @@ namespace joulukalenteri.Server.Controllers
     [ApiController]
     public class ArchiveCheckController : ControllerBase
     {
-        private readonly IDirectoryWrap _dirwrap;
-        public ArchiveCheckController(IDirectoryWrap dirwrap)
+        private readonly IDirectoryWrap dirwrap;
+        private readonly IDateTimeWrap datewrap;
+        public ArchiveCheckController(IDirectoryWrap _dirwrap, IDateTimeWrap _datewrap)
         {
-            _dirwrap = dirwrap;
+            dirwrap = _dirwrap;
+            datewrap = _datewrap;
         }
         public string GetArchive() {
-            Regex regex = new Regex(@"day([1-9]|1[0-9]|2[0-5])\.md");
-            if (_dirwrap.Exists(AppConfig.__dirpath))
+            if (dirwrap.Exists(AppConfig.__dirpath))
             {
-                Dictionary<string, string[]> results = new Dictionary<string, string[]>();
+                int thisYear = datewrap.Today.Year;
+                Regex regex = new Regex(@"^day([1-9]|1[0-9]|2[0-5])\.md$");
+                Dictionary<int, IEnumerable<string>> results = new Dictionary<int, IEnumerable<string>>();
                 int pathLength = AppConfig.__dirpath.Length;
-                string[] dirs = _dirwrap.GetDirectories(AppConfig.__dirpath);
+                string[] dirs = dirwrap.GetDirectories(AppConfig.__dirpath);
 
                 foreach (string dir in dirs) {
                     string dirName = dir.Substring(pathLength);
-                    if (dirName.All(char.IsDigit))
+                    int year;
+                    if (int.TryParse(dirName, out year) && year < thisYear)
                     {
-                        results.Add(dirName, _dirwrap.GetFiles(dir).Where(str => regex.Match(str).Success).ToArray());
+                        results.Add(year, dirwrap.GetFiles(dir).Where(str => regex.Match(str).Success).ToArray());
                     }
                 }
                 return JsonConvert.SerializeObject(results);

@@ -13,6 +13,7 @@ namespace joulukalenteri.Client
             services.AddBlazoredModal();
             services.AddSingleton<Validator>();
             services.AddSingleton<DayReader>();
+            services.AddSingleton<ArchiveReader>();
             services.AddTransient<HttpClient>();
             services.AddTransient<IDataReceiver, DataReceiver>();
         }

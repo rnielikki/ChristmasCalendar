@@ -1,0 +1,31 @@
+﻿@page "/archive"r
+@layout ArchiveLayout
+@inject NavigationManager nav
+@inject joulukalenteri.Client.SharedCode.ArchiveReader reader
+@using System.Collections.Generic
+<div class=" wrapper">
+    @if (years != null)
+    {
+            <h1>Archive</h1>
+            <div class="content-wrapper">
+                <ul>
+                    @foreach (int year in years)
+                    {
+                        <li><a href="/archive/@year">Year @year</a></li>
+                    }
+                </ul>
+            </div>
+    }
+    else
+    {
+        <p>Loading...</p>
+    }
+</div>
+
+@functions{
+    IEnumerable<int> years;
+    protected override async Task OnInitializedAsync()
+    {
+        years = await reader.GetYears(nav.BaseUri);
+    }
+}

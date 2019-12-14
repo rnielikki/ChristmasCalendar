@@ -1,24 +1,40 @@
 ﻿@page "/archive/{Year:int}"
 @layout ArchiveLayout
+@inject NavigationManager nav
+@inject joulukalenteri.Client.SharedCode.ArchiveReader reader
+@using System.Collections.Generic
 <div class=" wrapper">
-    @if (Year < DateTime.Today.Year)
+    @if (days != null)
     {
-        <h1>Archive @Year</h1>
-        <div class="content-wrapper">
-            <ul>
-                @for (int i = 1; i < 26; i++)
-                {
-                    <li><a href="/archive/@Year/@i">Day @i</a></li>
-                }
-            </ul>
-        </div>
+        @if (Year < DateTime.Today.Year)
+        {
+            <h1>Archive @Year</h1>
+            <div class="content-wrapper">
+                <ul>
+                    @foreach (int day in days)
+                    {
+                        <li><a href="/archive/@Year/@day">Day @day</a></li>
+                    }
+                </ul>
+            </div>
+        }
+        else
+        {
+            <p>Only the day before this year is available.</p>
+        }
     }
-    else {
-        <p>Only the day before this year is available.</p>
+    else
+    {
+        <p>Loading...</p>
     }
 </div>
 
 @functions{
     [Parameter]
     public int Year { get; set; }
+    IEnumerable<int> days;
+    protected override async Task OnInitializedAsync()
+    {
+        days = await reader.GetDays(Year, nav.BaseUri);
+    }
 }
