@@ -2,11 +2,12 @@
 @layout ArchiveLayout
 @inject NavigationManager nav
 @inject joulukalenteri.Client.SharedCode.ArchiveReader reader
+@inject joulukalenteri.Shared.IDateTime datetime
 @using System.Collections.Generic
 <div class=" wrapper">
     @if (days != null)
     {
-        @if (Year < DateTime.Today.Year)
+        @if (Year < datetime.Now.Year)
         {
             <h1>Archive @Year</h1>
             <div class="content-wrapper">

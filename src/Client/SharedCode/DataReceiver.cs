@@ -54,7 +54,6 @@ namespace joulukalenteri.Client.SharedCode
         /// <returns>Raw, unparsed markdown file as string.</returns>
         public async Task<string> ReceiveDayData(int year, int day, string baseUri)
         {
-            int today = DateTime.Today.Day;
             return await _client.GetStringAsync($"{baseUri}api/DayReader/{year}/{day}");
         }
         /// <summary>

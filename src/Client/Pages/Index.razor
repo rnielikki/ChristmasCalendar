@@ -1,8 +1,10 @@
 ﻿@page "/"
 @inject joulukalenteri.Client.SharedCode.Validator validator
 @inject joulukalenteri.Client.SharedCode.DayReader reader
+@inject joulukalenteri.Client.SharedCode.DaysShuffler shuffler
 @inject NavigationManager nav
 @inject IModalService Modal
+@inject joulukalenteri.Shared.IDateTime datetime
 @using joulukalenteri.Shared
 @*
     more abot blazor modal from here <3
@@ -14,7 +16,7 @@
     <h1>Christmas Calendar️</h1>
     <div class="calendar">
         @{
-            int[] shuffled = ShuffleDays();
+            int[] shuffled = shuffler.ShuffleDays();
             for (int i = 0; i < 25; i++)
             {
                 int dayValue = shuffled[i];
@@ -30,29 +32,12 @@
         }
     </div>
 </div>
-
 @functions{
-    public int[] ShuffleDays()
-    {
-        Random random = new Random(DateTime.Today.Year);
-        int[] result = Enumerable.Range(1, 25).ToArray();
-        for (int i = 0; i < 25; i++)
+        private async Task OpenDialog(int day)
         {
-            Swap(ref result[i], ref result[random.Next(i, 24)]);
+            DayInfoData data = await reader.GetContent(day, nav.BaseUri);
+            ModalParameters modalParams = new ModalParameters();
+            modalParams.Add("DayInfo", data);
+            Modal.Show<DaysModal>($"Day {day}: {data.Title}", modalParams);
         }
-        return result;
-        void Swap(ref int x, ref int y)
-        {
-            int temp = x;
-            x = y;
-            y = temp;
-        }
-    }
-    private async Task OpenDialog(int day)
-    {
-        DayInfoData data = await reader.GetContent(day, nav.BaseUri);
-        ModalParameters modalParams = new ModalParameters();
-        modalParams.Add("DayInfo", data);
-        Modal.Show<DaysModal>($"Day {day}: {data.Title}", modalParams);
-    }
 }

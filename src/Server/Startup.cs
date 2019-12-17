@@ -4,8 +4,8 @@ using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
-using SystemWrapper.IO;
-using SystemWrapper;
+using System.IO.Abstractions;
+using joulukalenteri.Shared;
 
 namespace joulukalenteri.Server
 {
@@ -21,10 +21,8 @@ namespace joulukalenteri.Server
                 opts.MimeTypes = ResponseCompressionDefaults.MimeTypes.Concat(
                     new[] { "application/octet-stream" });
             });
-
-            services.AddTransient<IFileWrap, FileWrap>();
-            services.AddTransient<IDateTimeWrap, DateTimeWrap>();
-            services.AddTransient<IDirectoryWrap, DirectoryWrap>();
+            services.AddTransient<IDateTime, DefaultDateTime>();
+            services.AddTransient<IFileSystem, FileSystem>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
