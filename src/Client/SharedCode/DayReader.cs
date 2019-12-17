@@ -16,12 +16,15 @@ namespace joulukalenteri.Client.SharedCode
     public class DayReader
     {
         private readonly IDataReceiver receiver;
+        private readonly IDateTime datetime;
         /// <summary>
-        /// Calls day reader manually for test purpose.
+        /// Calls day reader and abstract datetime manually for test purpose.
         /// </summary>
         /// <param name="_receiver"><see cref="IDataReceiver"/>, which contains HTTP Client</param>
-        public DayReader(IDataReceiver _receiver) {
+        /// <param name="_datetime"><see cref="IDateTime"/>, which is possibly fake date.</param>
+        public DayReader(IDataReceiver _receiver, IDateTime _datetime) {
             receiver = _receiver;
+            datetime = _datetime;
         }
         private Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
         /// <summary>
@@ -30,7 +33,7 @@ namespace joulukalenteri.Client.SharedCode
         /// <param name="day">The target day to get data.</param>
         /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
-        public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(DateTime.Today.Year, day, baseUri);
+        public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(datetime.Now.Year, day, baseUri);
         /// <summary>
         /// Get parsed markdown object asynchronously with a day and a year.
         /// </summary>

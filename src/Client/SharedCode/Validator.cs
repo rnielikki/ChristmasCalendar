@@ -1,4 +1,5 @@
 ﻿using System;
+using joulukalenteri.Shared;
 
 namespace joulukalenteri.Client.SharedCode
 {
@@ -7,6 +8,14 @@ namespace joulukalenteri.Client.SharedCode
     /// </summary>
     public class Validator
     {
+        private readonly IDateTime datetime;
+        /// <summary>
+        /// Create Validator instance with datetime for test purpose.
+        /// </summary>
+        /// <param name="_datetime"><see cref="IDateTime"/>, which is possibly fake date.</param>
+        public Validator(IDateTime _datetime) {
+            datetime = _datetime;
+        }
         /// <summary>
         /// Check if the day is future or not based on a year and a day.
         /// </summary>
@@ -16,7 +25,7 @@ namespace joulukalenteri.Client.SharedCode
         /// <returns><c>true</c> if the date is valid and not the future, otherwise <c>false</c></returns>
         public bool IsOpenToday(int targetYear, int targetDay)
         {
-            int currentYear = DateTime.Today.Year;
+            int currentYear = datetime.Now.Year;
             if (targetYear < currentYear)
             {
                 return true;
@@ -38,7 +47,7 @@ namespace joulukalenteri.Client.SharedCode
         /// <returns><c>true</c> if the date is valid and not the future, otherwise <c>false</c></returns>
         public bool IsOpenToday(int targetDay)
         {
-            if (DateTime.Today.Month != 12 || DateTime.Today.Day < targetDay || targetDay<=0 )
+            if (datetime.Now.Month != 12 || datetime.Now.Day < targetDay || targetDay<=0 )
             {
                 return false;
             }

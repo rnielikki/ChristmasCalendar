@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using SystemWrapper.IO;
-using SystemWrapper;
+using System.IO.Abstractions;
+using joulukalenteri.Shared;
 
 namespace joulukalenteri.Server.Controllers
 {
@@ -20,17 +20,17 @@ namespace joulukalenteri.Server.Controllers
         /// Placeholder of content, when the date is valid but file does not exist.
         /// </summary>
         public const string NotFoundMessage = "Sorry, the message is not ready!";
-        private readonly IFileWrap _filewrap;
-        private readonly IDateTimeWrap _datewrap;
+        private readonly IFileSystem fileSystemWrap;
+        private readonly IDateTime datewrap;
         /// <summary>
         /// Gets wrappers as parameter for test purpose.
         /// </summary>
-        /// <param name="filewrap">Mocked fileyWrapper for the test.</param>
-        /// <param name="datewrap">Mocked dateTimeWrapper for the test.</param>
-        public DayReaderController(IFileWrap filewrap, IDateTimeWrap datewrap)
+        /// <param name="_fileSystemWrap">Mocked fileyWrapper for the test.</param>
+        /// <param name="_datewrap">Mocked dateTimeWrapper for the test.</param>
+        public DayReaderController(IFileSystem _fileSystemWrap, IDateTime _datewrap)
         {
-            _filewrap = filewrap;
-            _datewrap = datewrap;
+            fileSystemWrap = _fileSystemWrap;
+            datewrap = _datewrap;
         }
         /// <summary>
         /// Get the raw data from a day of current year.
@@ -38,7 +38,7 @@ namespace joulukalenteri.Server.Controllers
         /// <param name="day">Day of current year to get markdown string.</param>
         /// <returns>Raw markdown text file of the given day.</returns>
         [HttpGet("{day}")]
-        public string Get(int day) => Get(_datewrap.Today.Year, day);
+        public string Get(int day) => Get(datewrap.Now.Year, day);
         /// <summary>
         /// Get the raw data with a day and a year.
         /// </summary>
@@ -47,7 +47,7 @@ namespace joulukalenteri.Server.Controllers
         /// <returns>Raw markdown text file of the given year and day.</returns>
         [HttpGet("{year}/{day}")]
         public string Get(int year, int day){
-            IDateTimeWrap today = _datewrap.Today;
+            var today = datewrap.Now;
             if ((day > 0 && day < 26) && ((year < today.Year) || (year == today.Year && day <= today.Day)))
             {
                 return ReadData(year, day);
@@ -57,11 +57,11 @@ namespace joulukalenteri.Server.Controllers
         private string ReadData(int year, int day)
         {
             string textPath = $"{AppConfig.__dirpath}{year}/day{day}.md";
-            if (!_filewrap.Exists(textPath))
+            if (!fileSystemWrap.File.Exists(textPath))
                 return NotFoundMessage;
 
             else
-                return _filewrap.ReadAllText(textPath);
+                return fileSystemWrap.File.ReadAllText(textPath);
         }
     }
 }

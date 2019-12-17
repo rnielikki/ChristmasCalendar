@@ -1,13 +1,14 @@
-﻿using System.Collections.Generic;
-using joulukalenteri.Server.Controllers;
-using joulukalenteri.Client.SharedCode;
-using Xunit;
-using SystemWrapper;
-using SystemWrapper.IO;
-using Moq;
+﻿using joulukalenteri.Client.SharedCode;
 using joulukalenteri.Server;
+using joulukalenteri.Server.Controllers;
+using joulukalenteri.Shared;
+using Moq;
+using System;
+using System.Collections.Generic;
+using System.IO.Abstractions.TestingHelpers;
 using System.Linq;
 using System.Threading.Tasks;
+using Xunit;
 
 namespace joulukalenteriTests
 {
@@ -25,22 +26,25 @@ namespace joulukalenteriTests
                 {AppConfig.__dirpath + "2345", new string[] { "day5.md", "day7.md", "day9.txt", "day45.md", "day24.txt", "day25.md" }},
             };
 
-            var dirmock = new Mock<IDirectoryWrap>();
-            dirmock.Setup(dir => dir.Exists(It.IsAny<string>())).Returns(true);
-            dirmock.Setup(dir => dir.GetDirectories(It.IsAny<string>())).Returns(entries.Keys.ToArray());
+            var nodata = new MockFileData("");
+            IMockFileDataAccessor accessor = new MockFileSystem();
 
-            foreach (var entry in entries) {
-                dirmock.Setup(dir => dir.GetFiles(entry.Key))
-                    .Returns(entry.Value.ToArray());
+            foreach (var entry in entries)
+            {
+                string _key = entry.Key;
+                foreach (var filename in entry.Value)
+                {
+                    accessor.AddFile($"{_key}/{filename}", new MockFileData(""));
+                }
             }
 
-            var daymock = new Mock<IDateTimeWrap>();
-            daymock.Setup(day => day.Today.Year).Returns(2020);
+            var daymock = new Mock<IDateTime>();
+            daymock.Setup(day => day.Now).Returns(new DateTime(2020, 10, 10));
 
-            ArchiveCheckController controller = new ArchiveCheckController(dirmock.Object, daymock.Object);
+            ArchiveCheckController controller = new ArchiveCheckController(accessor.FileSystem, daymock.Object);
             var dataJson = controller.GetArchive();
-            Assert.Equal(new int []{ 1991,2015}, dataJson.Keys.ToArray());
-            Assert.Equal(new string []{ "day5.md", "day7.md", "day25.md"}, dataJson[2015]);
+            Assert.Equal(new int[] { 1991, 2015 }, dataJson.Keys.ToArray());
+            Assert.Equal(new string[] { "day5.md", "day7.md", "day25.md" }, dataJson[2015]);
         }
         [Fact]
         public async Task ClientSideTest()

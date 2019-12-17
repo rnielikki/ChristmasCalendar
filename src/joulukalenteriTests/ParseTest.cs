@@ -1,4 +1,5 @@
-﻿using Xunit;
+﻿using System;
+using Xunit;
 using joulukalenteri.Shared;
 using joulukalenteri.Client.SharedCode;
 using Moq;
@@ -16,9 +17,11 @@ namespace joulukalenteriTests
         [InlineData(1, "aaa\n# asdf\nghi\n", "asdf", "aaa", "<p>aaa</p>\n<p>ghi</p>\n")]
         [MemberData(nameof(TestData))]
         public async Task DataParserTest(int day, string input, string title, string summary, string content) {
-            var ReceiverMock = new Mock<IDataReceiver>(MockBehavior.Strict);
-            ReceiverMock.Setup(receiver => receiver.ReceiveDayData(It.IsAny<int>(), day, It.IsAny<string>())).ReturnsAsync(input);
-            DayReader reader = new DayReader(ReceiverMock.Object);
+            var receiverMock = new Mock<IDataReceiver>(MockBehavior.Strict);
+            receiverMock.Setup(receiver => receiver.ReceiveDayData(It.IsAny<int>(), day, It.IsAny<string>())).ReturnsAsync(input);
+            var dayMock = new Mock<IDateTime>();
+            dayMock.Setup(day => day.Now).Returns(DateTime.Today);
+            DayReader reader = new DayReader(receiverMock.Object, dayMock.Object);
             DayInfoData data = (await reader.GetContent(day, It.IsAny<string>()));
             string parseResult = (await reader.GetContent(day, It.IsAny<string>()))?.Title;
             //Assert.True(true);

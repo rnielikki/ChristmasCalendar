@@ -18,7 +18,7 @@
     </PackageReference>
     <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="3.0.0" />
     <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.0.0" />
-    <PackageReference Include="SystemWrapper" Version="0.4.0" />
+    <PackageReference Include="System.IO.Abstractions" Version="7.0.7" />
   </ItemGroup>
 
   <ItemGroup>

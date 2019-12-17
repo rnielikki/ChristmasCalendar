@@ -1,6 +1,7 @@
 using System;
 using Xunit;
-using Pose;
+using Moq;
+using joulukalenteri.Shared;
 using joulukalenteri.Client.SharedCode;
 
 namespace joulukalenteriTests
@@ -11,28 +12,22 @@ namespace joulukalenteriTests
         [MemberData(nameof(OpenByDateData))]
         public void OpenByDateTest(DateTime fakeday, int openday, bool isOpen)
         {
-            Shim shim = Shim.Replace(() => DateTime.Today).With(()=>fakeday);
+            var daymock = new Mock<IDateTime>();
+            daymock.Setup(day => day.Now).Returns(fakeday);
             bool? result=null;
-            Validator validator = new Validator();
-            PoseContext.Isolate(() =>
-            {
-                result=validator.IsOpenToday(openday);
-            }, shim);
-            //Assert.False(result);
+            Validator validator = new Validator(daymock.Object);
+            result=validator.IsOpenToday(openday);
             Assert.Equal(isOpen, result);
         }
         [Theory]
         [MemberData(nameof(OpenByYearData))]
         public void OpenByYearTest(DateTime fakeday, int openyear, int openday, bool isOpen)
         {
-            Shim shim = Shim.Replace(() => DateTime.Today).With(()=>fakeday);
+            var daymock = new Mock<IDateTime>();
+            daymock.Setup(day => day.Now).Returns(fakeday);
             bool? result=null;
-            Validator validator = new Validator();
-            PoseContext.Isolate(() =>
-            {
-                result=validator.IsOpenToday(openyear, openday);
-            }, shim);
-            //Assert.False(result);
+            Validator validator = new Validator(daymock.Object);
+            result=validator.IsOpenToday(openyear, openday);
             Assert.Equal(isOpen, result);
         }
 
