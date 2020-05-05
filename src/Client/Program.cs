@@ -1,16 +1,34 @@
-﻿using Microsoft.AspNetCore.Blazor.Hosting;
+﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
+using Blazored.Modal;
+using Microsoft.Extensions.DependencyInjection;
+using joulukalenteri.Client.SharedCode;
+//using System.Net.Http;
+using joulukalenteri.Shared;
+
 
 namespace joulukalenteri.Client
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async System.Threading.Tasks.Task Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            var builder = WebAssemblyHostBuilder.CreateDefault(args);
+            builder.RootComponents.Add<App>("app");
+            ConfigureServices(builder.Services);
+            await builder.Build().RunAsync();
         }
+        private static void ConfigureServices(IServiceCollection services)
+        {
+            services.AddBlazoredModal();
+            services.AddSingleton<DayReader>();
+            services.AddSingleton<ArchiveReader>();
+            services.AddSingleton<DaysShuffler>();
 
-        public static IWebAssemblyHostBuilder CreateHostBuilder(string[] args) =>
-            BlazorWebAssemblyHost.CreateDefaultBuilder()
-                .UseBlazorStartup<Startup>();
+            services.AddTransient<Validator>();
+            //services.AddTransient<HttpClient>();
+            services.AddTransient<IDataReceiver, DataReceiver>();
+
+            services.AddTransient<IDateTime, DefaultDateTime>();
+        }
     }
 }

@@ -11,7 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "joulukalenteri.Shared", "Sh
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "joulukalenteriTests", "joulukalenteriTests\joulukalenteriTests.csproj", "{E4169C7D-47E5-4318-89EA-BE2501A9D2F7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DocumentGenerator", "DocumentGenerator\DocumentGenerator.csproj", "{132A8344-00A8-4849-A224-56E9EC567378}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DocumentGenerator", "DocumentGenerator\DocumentGenerator.csproj", "{132A8344-00A8-4849-A224-56E9EC567378}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8AE69DCB-416D-4649-83BD-BB44E0A10196}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
