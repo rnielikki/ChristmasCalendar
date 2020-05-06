@@ -7,6 +7,7 @@ using System.Linq;
 using Markdig.Renderers;
 using System.IO;
 using System;
+using System.Net;
 
 namespace joulukalenteri.Client.SharedCode
 {
@@ -34,6 +35,8 @@ namespace joulukalenteri.Client.SharedCode
         /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
         public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(datetime.Now.Year, day, baseUri);
+        //TODO: DOCS AND TEST
+        public async Task<bool> GetAvailability(int year, int day, string baseUri) => (await receiver.CheckDayData(year, day, baseUri));
         /// <summary>
         /// Get parsed markdown object asynchronously with a day and a year.
         /// </summary>
@@ -45,7 +48,10 @@ namespace joulukalenteri.Client.SharedCode
         {
             if (!dataList.ContainsKey((year, day)))
             {
-                dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day, baseUri)));
+                if (await receiver.CheckDayData(year, day, baseUri))
+                    dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day, baseUri)));
+                else
+                    dataList.Add((year, day), DayInfoData.CreateEmpty(day));
             }
             return dataList[(year, day)];
         }

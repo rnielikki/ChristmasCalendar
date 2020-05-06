@@ -95,7 +95,15 @@ h1 {
 }
     .linkbtn:hover {
         background-color: #863e98;
+        cursor:pointer;
     }
+.closebtn {
+    background-color:#606060;
+}
+    .closebtn:hover {
+        background-color: #909090;
+    }
+
 .footer {
     background-color: #2b1f6a96;
     color: #fff;

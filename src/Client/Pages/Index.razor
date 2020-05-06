@@ -1,5 +1,4 @@
 ﻿@page "/"
-@*
 @inject joulukalenteri.Client.SharedCode.Validator validator
 @inject joulukalenteri.Client.SharedCode.DayReader reader
 @inject joulukalenteri.Client.SharedCode.DaysShuffler shuffler
@@ -7,12 +6,6 @@
 @inject IModalService Modal
 @inject joulukalenteri.Shared.IDateTime datetime
 @using joulukalenteri.Shared
-*@
-<p>&lt;p&gt;laceholder</p>
-@*
-    more abot blazor modal from here <3
-    https://github.com/Blazored/Modal
-
 
 <div class="calendar-wrapper wrapper">
     <h1>Christmas Calendar️</h1>
@@ -39,8 +32,7 @@
         {
             DayInfoData data = await reader.GetContent(day, nav.BaseUri);
             ModalParameters modalParams = new ModalParameters();
-            modalParams.Add("DayInfo", data);
+            modalParams.Add(nameof(DaysModal.DayInfo), data);
             Modal.Show<DaysModal>($"Day {day}: {data.Title}", modalParams);
         }
 }
-*@

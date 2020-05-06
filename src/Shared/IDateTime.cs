@@ -19,6 +19,7 @@ namespace joulukalenteri.Shared
         /// <summary>
         /// Provides Real <see cref="DateTime.Now"/>.
         /// </summary>
-        public DateTime Now { get => DateTime.Now; }
+        //public DateTime Now { get => DateTime.Now; }
+        public DateTime Now { get => new DateTime(2020,12,20); }
     }
 }

@@ -9,7 +9,7 @@
   <PropertyGroup>
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
-
+ 
   <ItemGroup>
     <PackageReference Include="Blazored.Modal" Version="4.1.0" />
     <PackageReference Include="Markdig" Version="0.20.0" />
