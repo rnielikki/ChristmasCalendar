@@ -40,8 +40,8 @@ namespace joulukalenteri.Client.SharedCode
     /// </summary>
     public class DataReceiver:IDataReceiver
     {
-        private Dictionary<ValueTuple<int, int>, HttpResponseMessage> dataList = new Dictionary<ValueTuple<int, int>, HttpResponseMessage>();
-        private HttpClient _client;
+        private readonly Dictionary<ValueTuple<int, int>, HttpResponseMessage> dataList = new Dictionary<ValueTuple<int, int>, HttpResponseMessage>();
+        private readonly HttpClient _client;
         /// <summary>
         /// Creates DataReceiver for injecting purpose on a razor page.
         /// </summary>

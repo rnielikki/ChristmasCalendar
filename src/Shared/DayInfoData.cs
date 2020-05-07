@@ -45,7 +45,7 @@
             Day = day,
             Title = "Not found",
             Summary = "This calendar content is not ready.",
-            Content = "The text doesn't exist.",
+            Content = "<p>The text doesn't exist.</p>",
             Exists = false
         };
     }
