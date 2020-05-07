@@ -35,7 +35,13 @@ namespace joulukalenteri.Client.SharedCode
         /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
         public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(datetime.Now.Year, day, baseUri);
-        //TODO: DOCS AND TEST
+        /// <summary>
+        /// Get Availability of specific day data
+        /// </summary>
+        /// <param name="year">The target year check data.</param>
+        /// <param name="day">The target day to check data.</param>
+        /// <param name="baseUri">The base uri to check data.</param>
+        /// <returns></returns>
         public async Task<bool> GetAvailability(int year, int day, string baseUri) => (await receiver.CheckDayData(year, day, baseUri));
         /// <summary>
         /// Get parsed markdown object asynchronously with a day and a year.
