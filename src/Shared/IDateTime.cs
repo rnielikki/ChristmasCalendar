@@ -11,6 +11,10 @@ namespace joulukalenteri.Shared
         /// <see cref="DateTime"/> for the wrap.
         /// </summary>
         DateTime Now { get; }
+        /// <summary>
+        /// <see cref="DateTime.Year"/> for the wrap.
+        /// </summary>
+        int Year { get; }
     }
     /// <summary>
     /// Default implementation for public DateTime wrapper, both for server and client.
@@ -19,6 +23,11 @@ namespace joulukalenteri.Shared
         /// <summary>
         /// Provides Real <see cref="DateTime.Now"/>.
         /// </summary>
-        public DateTime Now { get => DateTime.Now; }
+        //public DateTime Now { get => DateTime.Now; }
+        public DateTime Now { get => new DateTime(2020, 12, 20); }
+        /// <summary>
+        /// Provides Real Year from <see cref="DateTime.Now"/>.
+        /// </summary>
+        public int Year { get => Now.Year; }
     }
 }

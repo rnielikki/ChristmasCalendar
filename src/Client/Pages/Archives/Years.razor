@@ -22,10 +22,10 @@
     }
 </div>
 
-@functions{
+@code{
     IEnumerable<int> years;
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
-        years = await reader.GetYears(nav.BaseUri);
+        years = reader.GetYears();
     }
 }

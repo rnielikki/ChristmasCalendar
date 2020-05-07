@@ -6,11 +6,6 @@
 @inject IModalService Modal
 @inject joulukalenteri.Shared.IDateTime datetime
 @using joulukalenteri.Shared
-@*
-    more abot blazor modal from here <3
-    https://github.com/Blazored/Modal
-*@
-
 
 <div class="calendar-wrapper wrapper">
     <h1>Christmas Calendar️</h1>
@@ -32,12 +27,12 @@
         }
     </div>
 </div>
-@functions{
+@code{
         private async Task OpenDialog(int day)
         {
             DayInfoData data = await reader.GetContent(day, nav.BaseUri);
             ModalParameters modalParams = new ModalParameters();
-            modalParams.Add("DayInfo", data);
+            modalParams.Add(nameof(DaysModal.DayInfo), data);
             Modal.Show<DaysModal>($"Day {day}: {data.Title}", modalParams);
         }
 }

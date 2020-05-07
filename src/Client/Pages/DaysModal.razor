@@ -2,16 +2,16 @@
 @using joulukalenteri.Shared;
 
 <div class="dialog-content">
-        @(DayInfo.Summary)
+        @(DayInfo?.Summary)
         <br />
-        <a class="linkbtn" href="/day/@(DayInfo.Day)" @onclick="ModalService.Cancel">See more</a>
+    @if(DayInfo.Exists){
+        <a class="linkbtn" href="/day/@(DayInfo?.Day)">See more</a>
+    }
+        <a class="linkbtn closebtn" @onclick="@(()=>BlazoredModal.Close(ModalResult.Cancel()))">Close</a>
 </div>
 @code {
     [CascadingParameter]
-    ModalParameters modalParams { get; set; }
-    private DayInfoData DayInfo { get; set; }
-    protected override void OnParametersSet()
-    {
-        DayInfo = modalParams.Get<DayInfoData>("DayInfo");
-    }
+    BlazoredModalInstance BlazoredModal { get; set; }
+    [Parameter]
+    public DayInfoData DayInfo { get; set; }
 }

@@ -26,6 +26,9 @@ Whatever, I am wating ...*
 ## Why?
 It's part of the software testing project, but also for trying blazor WASM!
 
+## It's fully client-side, so you can foresee API data. It's not safe.
+If someone wants spoiler, let them see it.
+
 ## Can I see example?
 Sorry, currently I have no subscription for this right now.
 
