@@ -28,7 +28,7 @@ namespace joulukalenteri.Client.SharedCode
         public IEnumerable<int> GetYears() {
             if (_archiveYears == null) {
                 int startYear = _config.GetValue<int>("startYear");
-                _archiveYears = Enumerable.Range(startYear, _datetime.Now.Year - startYear);
+                _archiveYears = Enumerable.Range(startYear, _datetime.Year - startYear);
                 var skipYears = _config.GetSection("skipYears")?.Get<int[]>();
                 if(skipYears!=null)
                     _archiveYears=_archiveYears.Except(skipYears);

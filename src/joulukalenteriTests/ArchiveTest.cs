@@ -1,11 +1,9 @@
 ﻿using joulukalenteri.Client.SharedCode;
-using joulukalenteri.Server;
-using joulukalenteri.Server.Controllers;
 using joulukalenteri.Shared;
+using Microsoft.Extensions.Configuration;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.IO.Abstractions.TestingHelpers;
 using System.Linq;
 using System.Threading.Tasks;
 using Xunit;
@@ -15,50 +13,45 @@ namespace joulukalenteriTests
     public class ArchiveTest
     {
         [Fact]
-        public void ServerSideTest()
+        public void ArchiveRangeTest()
         {
-            Dictionary<string, IEnumerable<string>> entries = new Dictionary<string, IEnumerable<string>>()
+            IConfiguration config = new ConfigurationBuilder().AddInMemoryCollection(new List<KeyValuePair<string, string>>
             {
-                {AppConfig.__dirpath + "1991", new string[] { "adsf.md", "test.md", "day1.txt", "day5.md", "day32.md" }},
-                {AppConfig.__dirpath + "132f", new string[] { "day5.md", "day7.md", "day9.txt", "day24.md", "dummy.txt" }},
-                {AppConfig.__dirpath + "2015", new string[] { "day5.md", "day7.md", "day9.txt", "day45.md", "day24.txt", "day25.md" }},
-                {AppConfig.__dirpath + "2020", new string[] { "day5.md", "day7.md", "day9.txt", "day45.md", "day24.txt", "day25.md" }},
-                {AppConfig.__dirpath + "2345", new string[] { "day5.md", "day7.md", "day9.txt", "day45.md", "day24.txt", "day25.md" }},
-            };
+                new KeyValuePair<string, string>("startYear", "2010"),
+                new KeyValuePair<string, string>("skipYears:0", "2012"),
+                new KeyValuePair<string, string>("skipYears:1", "2015")
+            }).Build();
+            Assert.Equal(2010, config.GetValue<int>("startYear"));
+            Assert.Equal(new int[] { 2012, 2015 }, config.GetSection("skipYears").Get<int[]>());
 
-            var nodata = new MockFileData("");
-            IMockFileDataAccessor accessor = new MockFileSystem();
-
-            foreach (var entry in entries)
-            {
-                string _key = entry.Key;
-                foreach (var filename in entry.Value)
-                {
-                    accessor.AddFile($"{_key}/{filename}", new MockFileData(""));
-                }
-            }
-
-            var daymock = new Mock<IDateTime>();
-            daymock.Setup(day => day.Now).Returns(new DateTime(2020, 10, 10));
-
-            ArchiveCheckController controller = new ArchiveCheckController(accessor.FileSystem, daymock.Object);
-            var dataJson = controller.GetArchive();
-            Assert.Equal(new int[] { 1991, 2015 }, dataJson.Keys.ToArray());
-            Assert.Equal(new string[] { "day5.md", "day7.md", "day25.md" }, dataJson[2015]);
+            ArchiveReader reader = new ArchiveReader(config, YearMock(2018));
+            Assert.Equal(new int[] { 2010, 2011, 2013, 2014, 2016, 2017}, reader.GetYears());
         }
         [Fact]
-        public async Task ClientSideTest()
-        {
-            string raw = "{ \"2010\": [\"day1.md\", \"day5.md\", \"day24.md\"], \"2015\": [\"day5.md\", \"day7.md\",\"day9.md\",\"day24.md\"]}";
-            var ReceiverMock = new Mock<IDataReceiver>(MockBehavior.Strict);
-            ReceiverMock.Setup(receiver => receiver.ReceiveArchive(It.IsAny<string>())).ReturnsAsync(raw);
-            ArchiveReader reader = new ArchiveReader(ReceiverMock.Object);
+        public void ArchiveThrowTest() {
+            IConfiguration config = new ConfigurationBuilder().AddInMemoryCollection(new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("startYear", "2010"),
+            }).Build();
 
-            int[] years = (await reader.GetYears("whatever")).ToArray();
-            int[] days = (await reader.GetDays(2015, "meh")).ToArray();
+            ArchiveReader reader = new ArchiveReader(config, YearMock(2015));
 
-            Assert.Equal(new int[] { 2010, 2015 }, years.OrderBy(a => a));
-            Assert.Equal(new int[] { 5, 7, 9, 24 }, days.OrderBy(a => a));
+            //Assert.NotThrows
+            reader.GetYears();
+            IConfiguration failConfig = new ConfigurationBuilder().AddInMemoryCollection(new List<KeyValuePair<string, string>>
+            {
+                new KeyValuePair<string, string>("startYear", "2022"),
+            }).Build();
+
+            ArchiveReader sameYearReader = new ArchiveReader(failConfig, YearMock(2022));
+            sameYearReader.GetYears();
+            ArchiveReader failReader = new ArchiveReader(failConfig, YearMock(2010));
+            Assert.Throws<ArgumentOutOfRangeException>(failReader.GetYears);
+        }
+        private IDateTime YearMock(int year) {
+            Mock<IDateTime> datetime = new Mock<IDateTime>();
+            datetime.Setup(datetime => datetime.Year).Returns(year);
+            return datetime.Object;
         }
     }
 }
