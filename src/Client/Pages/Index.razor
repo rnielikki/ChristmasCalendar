@@ -5,10 +5,11 @@
 @inject NavigationManager nav
 @inject IModalService Modal
 @inject joulukalenteri.Shared.IDateTime datetime
+@inject Microsoft.Extensions.Configuration.IConfiguration config
 @using joulukalenteri.Shared
 
 <div class="calendar-wrapper wrapper">
-    <h1>Christmas Calendar️</h1>
+    <h1>@(config["title"]??"Advent Calendar")️</h1>
     <div class="calendar">
         @{
             int[] shuffled = shuffler.ShuffleDays();

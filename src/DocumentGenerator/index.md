@@ -24,11 +24,5 @@ Whatever, I am wating ...*
 ## Why?
 It's part of the software testing project, but also for trying blazor WASM!
 
-## Can I see example?
-If Azure CD is open with Blazor WASM, maybe. Not now.
-
-## Can I contribute?
-Sure.
-
-## Any plan for this project in future?
-Hopefully.
+## Any questions?
+To https://github.com/rnielikki/ChristmasCalendar, thank you.

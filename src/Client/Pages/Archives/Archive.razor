@@ -5,7 +5,7 @@
 @inject joulukalenteri.Shared.IDateTime datetime
 
 <div class=" wrapper">
-    @if (Year < datetime.Now.Year)
+    @if (reader.IsAvailableYear(Year))
     {
         <h1>Archive @Year</h1>
         <div class="content-wrapper">
@@ -19,8 +19,9 @@
     }
     else
     {
-        <p>Only the day before this year is available.</p>
+        <p>This year is not available.</p>
     }
+    <a href="/archive/" class="archive-back">Back to the list</a>
 </div>
 
 @code{

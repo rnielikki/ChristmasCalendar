@@ -1,6 +1,6 @@
 ﻿@import url("common.css");
 
-h1 {
+.archive-header {
     background-color: #e0d0ea;
     padding: 0.6rem 0.8rem;
     border-left: 10px solid #7385df;
@@ -21,7 +21,8 @@ h1 {
         color: #fff6fd;
         background-color: #6874ae;
         text-decoration: none;
-        padding: 0.2rem 0.6rem;
+        padding: 0.6rem 0.8rem;
+        display: inline-block;
     }
         .day-content a:hover {
             background-color: #242a73;
@@ -57,4 +58,16 @@ h1 {
 }
     .footer a:hover {
         color:#bd2180;
+    }
+.archive-back {
+    text-decoration: none;
+    background-color: #e0e0e0;
+    padding: .45rem .75rem;
+    margin: .48rem 3.15rem;
+    display: inline-block;
+    color: navy;
+    border: 1px solid #7979cc;
+}
+    .archive-back:hover {
+        background-color:#f9fafb;
     }

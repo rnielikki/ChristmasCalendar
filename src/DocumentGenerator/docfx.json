@@ -27,8 +27,8 @@
       },
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
+          "app-settings/**.md",
+          "app-settings/toc.yml",
           "toc.yml",
           "*.md"
         ]

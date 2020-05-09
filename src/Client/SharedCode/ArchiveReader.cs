@@ -25,7 +25,8 @@ namespace joulukalenteri.Client.SharedCode
         /// Get list of available calendar years asynchronously.
         /// </summary>
         /// <returns>Enumerable integers of available years.</returns>
-        public IEnumerable<int> GetYears() {
+        public IEnumerable<int> GetYears()
+        {
             if (_archiveYears == null) {
                 int startYear = _config.GetValue<int>("startYear");
                 _archiveYears = Enumerable.Range(startYear, _datetime.Year - startYear);
@@ -34,6 +35,16 @@ namespace joulukalenteri.Client.SharedCode
                     _archiveYears=_archiveYears.Except(skipYears);
             }
             return _archiveYears;
+        }
+        /// <summary>
+        /// Get Available year.
+        /// </summary>
+        /// <param name="year">year to know if it's available</param>
+        /// <returns></returns>
+        public bool IsAvailableYear(int year)
+        {
+            if (_archiveYears == null) GetYears();
+            return _archiveYears.Contains(year);
         }
     }
 }

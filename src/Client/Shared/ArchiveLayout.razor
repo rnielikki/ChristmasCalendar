@@ -1,5 +1,7 @@
 ﻿@inherits LayoutComponentBase
+@inject Microsoft.Extensions.Configuration.IConfiguration config
 <div class="app-body">
+    <h1 class="archive-header">@(config["title"]??"Advent Calendar")️ Archive</h1>
     @Body
 </div>
 <div class="footer">
