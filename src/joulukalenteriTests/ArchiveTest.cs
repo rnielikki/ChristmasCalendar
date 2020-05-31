@@ -12,8 +12,8 @@ namespace joulukalenteriTests
 {
     public class ArchiveTest
     {
-        const int currentYear = 2018;
-        IConfiguration config = new ConfigurationBuilder().AddInMemoryCollection(new List<KeyValuePair<string, string>>
+        private const int currentYear = 2018;
+        private readonly IConfiguration config = new ConfigurationBuilder().AddInMemoryCollection(new List<KeyValuePair<string, string>>
         {
             new KeyValuePair<string, string>("startYear", "2010"),
             new KeyValuePair<string, string>("skipYears:0", "2012"),

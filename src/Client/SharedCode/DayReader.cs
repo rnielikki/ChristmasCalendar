@@ -27,14 +27,14 @@ namespace joulukalenteri.Client.SharedCode
             receiver = _receiver;
             datetime = _datetime;
         }
-        private Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
+        private readonly Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
         /// <summary>
         /// Get parsed markdown object asynchronously for current year with a day.
         /// </summary>
         /// <param name="day">The target day to get data.</param>
         /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
-        public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(datetime.Now.Year, day, baseUri);
+        public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(datetime.Now.Year, day, baseUri).ConfigureAwait(true);
         /// <summary>
         /// Get Availability of specific day data
         /// </summary>
@@ -42,7 +42,7 @@ namespace joulukalenteri.Client.SharedCode
         /// <param name="day">The target day to check data.</param>
         /// <param name="baseUri">The base uri to check data.</param>
         /// <returns></returns>
-        public async Task<bool> GetAvailability(int year, int day, string baseUri) => (await receiver.CheckDayData(year, day, baseUri));
+        public async Task<bool> GetAvailability(int year, int day, string baseUri) => await receiver.CheckDayData(year, day, baseUri).ConfigureAwait(true);
         /// <summary>
         /// Get parsed markdown object asynchronously with a day and a year.
         /// </summary>
@@ -54,8 +54,8 @@ namespace joulukalenteri.Client.SharedCode
         {
             if (!dataList.ContainsKey((year, day)))
             {
-                if (await receiver.CheckDayData(year, day, baseUri))
-                    dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day, baseUri)));
+                if (await receiver.CheckDayData(year, day, baseUri).ConfigureAwait(true))
+                    dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day, baseUri).ConfigureAwait(true)));
                 else
                     dataList.Add((year, day), DayInfoData.CreateEmpty(day));
             }
@@ -63,8 +63,10 @@ namespace joulukalenteri.Client.SharedCode
         }
         private DayInfoData Parse(int day, string input) {
             MarkdownDocument markdown = Markdown.Parse(input);
-            DayInfoData daydata = new DayInfoData();
-            daydata.Day = day;
+            DayInfoData daydata = new DayInfoData
+            {
+                Day = day
+            };
             //title part
             HeadingBlock title = markdown.Descendants<HeadingBlock>().Where(block => block.Level == 1)?.FirstOrDefault();
             if (title != null)

@@ -51,6 +51,5 @@ namespace joulukalenteriTests
                 { new DateTime(2021, 12, 26), 2021, 25, true },
                 { new DateTime(2020, 8, 12), 2018, 6, true },
             };
-
     }
 }

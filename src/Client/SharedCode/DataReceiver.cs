@@ -66,9 +66,9 @@ namespace joulukalenteri.Client.SharedCode
         public async Task<bool> CheckDayData(int year, int day, string baseUri)
         {
             if (!dataList.ContainsKey((year, day))) {
-                dataList.Add((year, day), await _client.GetAsync($"{baseUri}contents/{year}/day{day}.md", HttpCompletionOption.ResponseHeadersRead));
+                dataList.Add((year, day), await _client.GetAsync($"{baseUri}contents/{year}/day{day}.md", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true));
             }
-            return (dataList[(year, day)].IsSuccessStatusCode);
+            return dataList[(year, day)].IsSuccessStatusCode;
         }
         /// <summary>
         /// Gets markdown of day file.
@@ -80,12 +80,12 @@ namespace joulukalenteri.Client.SharedCode
         public async Task<string> ReceiveDayData(int year, int day, string baseUri)
         {
             //TODO: Save checkDayData result for further use!
-            if (await CheckDayData(year, day, baseUri))
+            if (await CheckDayData(year, day, baseUri).ConfigureAwait(true))
             {
                 var response = dataList[(year, day)];
                 try
                 {
-                    return await response.Content.ReadAsStringAsync();
+                    return await response.Content.ReadAsStringAsync().ConfigureAwait(true);
                 }
                 finally {
                     response.Dispose();
@@ -102,7 +102,7 @@ namespace joulukalenteri.Client.SharedCode
         /// <param name="baseUri">The base uri of the current <see cref="HttpClient"/> page.</param>
         /// <returns>Unparsed JSON string of the available year and day file names.</returns>
         public async Task<string> ReceiveArchive(string baseUri) {
-            return await _client.GetStringAsync($"{baseUri}api/ArchiveCheck");
+            return await _client.GetStringAsync($"{baseUri}api/ArchiveCheck").ConfigureAwait(true);
         }
     }
 }

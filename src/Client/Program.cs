@@ -5,17 +5,16 @@ using joulukalenteri.Client.SharedCode;
 //using System.Net.Http;
 using joulukalenteri.Shared;
 
-
 namespace joulukalenteri.Client
 {
-    public class Program
+    public static class Program
     {
         public static async System.Threading.Tasks.Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
             ConfigureServices(builder.Services);
-            await builder.Build().RunAsync();
+            await builder.Build().RunAsync().ConfigureAwait(true); //Blazor has SynchronizationContext
         }
         private static void ConfigureServices(IServiceCollection services)
         {

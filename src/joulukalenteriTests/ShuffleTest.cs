@@ -23,7 +23,6 @@ namespace joulukalenteriTests
             //1-25
             Assert.Equal(1, shuffled.Min());
             Assert.Equal(25, shuffled.Max());
-
         }
         [Fact]
         public void ShuffleConsistenceTest() {

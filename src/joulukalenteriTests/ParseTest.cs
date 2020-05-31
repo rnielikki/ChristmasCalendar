@@ -24,8 +24,8 @@ namespace joulukalenteriTests
             var dateTime = new DefaultDateTime();
 
             DayReader reader = new DayReader(receiverMock.Object, dateTime);
-            DayInfoData data = (await reader.GetContent(1, It.IsAny<string>()));
-            string parseResult = (await reader.GetContent(1, It.IsAny<string>()))?.Title;
+            DayInfoData data = (await reader.GetContent(1, It.IsAny<string>()).ConfigureAwait(false));
+            string parseResult = (await reader.GetContent(1, It.IsAny<string>()).ConfigureAwait(false))?.Title;
             Assert.Equal(title, data.Title);
             Assert.Equal(summary, data.Summary);
             Assert.Equal(content, data.Content);
@@ -33,8 +33,10 @@ namespace joulukalenteriTests
         public static TheoryData<string, string, string, string> TestData() {
             string repeat = string.Concat(Enumerable.Repeat("a",DayInfoData.SummaryLength));
             string content = repeat + "asdfg";
-            TheoryData<string, string, string, string> data =  new TheoryData<string, string, string, string>();
-            data.Add($"{content}\n# mytitle", "mytitle", repeat + "...", $"<p>{content}</p>\n");
+            TheoryData<string, string, string, string> data = new TheoryData<string, string, string, string>
+            {
+                { $"{content}\n# mytitle", "mytitle", repeat + "...", $"<p>{content}</p>\n" }
+            };
             return data;
         }
     }
