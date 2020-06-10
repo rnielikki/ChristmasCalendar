@@ -1,0 +1,680 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Shared.DayInfoData
+  commentId: T:joulukalenteri.Shared.DayInfoData
+  id: DayInfoData
+  parent: joulukalenteri.Shared
+  children:
+  - joulukalenteri.Shared.DayInfoData.Content
+  - joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  - joulukalenteri.Shared.DayInfoData.Day
+  - joulukalenteri.Shared.DayInfoData.Exists
+  - joulukalenteri.Shared.DayInfoData.Summary
+  - joulukalenteri.Shared.DayInfoData.SummaryLength
+  - joulukalenteri.Shared.DayInfoData.Title
+  langs:
+  - csharp
+  - vb
+  name: DayInfoData
+  nameWithType: DayInfoData
+  fullName: joulukalenteri.Shared.DayInfoData
+  type: Class
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: DayInfoData
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 5
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nParsed and organized information from a day markdown file.\n"
+  example: []
+  syntax:
+    content: public class DayInfoData
+    content.vb: Public Class DayInfoData
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: joulukalenteri.Shared.DayInfoData.SummaryLength
+  commentId: F:joulukalenteri.Shared.DayInfoData.SummaryLength
+  id: SummaryLength
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: SummaryLength
+  nameWithType: DayInfoData.SummaryLength
+  fullName: joulukalenteri.Shared.DayInfoData.SummaryLength
+  type: Field
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: SummaryLength
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 10
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nMaximum length of the summary from the content.\n"
+  example: []
+  syntax:
+    content: public const int SummaryLength = 80
+    return:
+      type: System.Int32
+    content.vb: Public Const SummaryLength As Integer = 80
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: joulukalenteri.Shared.DayInfoData.Day
+  commentId: P:joulukalenteri.Shared.DayInfoData.Day
+  id: Day
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: Day
+  nameWithType: DayInfoData.Day
+  fullName: joulukalenteri.Shared.DayInfoData.Day
+  type: Property
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Day
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 14
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nRepresents the corresponding day of the data.\n"
+  example: []
+  syntax:
+    content: public int Day { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Day As Integer
+  overload: joulukalenteri.Shared.DayInfoData.Day*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Shared.DayInfoData.Title
+  commentId: P:joulukalenteri.Shared.DayInfoData.Title
+  id: Title
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: Title
+  nameWithType: DayInfoData.Title
+  fullName: joulukalenteri.Shared.DayInfoData.Title
+  type: Property
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Title
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 19
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nTitle of the data.\n"
+  remarks: Always first header of markdown syntax is title.
+  example: []
+  syntax:
+    content: public string Title { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Title As String
+  overload: joulukalenteri.Shared.DayInfoData.Title*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Shared.DayInfoData.Summary
+  commentId: P:joulukalenteri.Shared.DayInfoData.Summary
+  id: Summary
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: Summary
+  nameWithType: DayInfoData.Summary
+  fullName: joulukalenteri.Shared.DayInfoData.Summary
+  type: Property
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Summary
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 24
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nTruncated contents to <xref href=\"joulukalenteri.Shared.DayInfoData.SummaryLength\" data-throw-if-not-resolved=\"false\"></xref>\n"
+  example: []
+  syntax:
+    content: public string Summary { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Summary As String
+  overload: joulukalenteri.Shared.DayInfoData.Summary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Shared.DayInfoData.Content
+  commentId: P:joulukalenteri.Shared.DayInfoData.Content
+  id: Content
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: Content
+  nameWithType: DayInfoData.Content
+  fullName: joulukalenteri.Shared.DayInfoData.Content
+  type: Property
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Content
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 33
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nHTML format text of the content.\n"
+  remarks: Content doesn&apos;t contain text from the title. It&apos;s only in the <xref href="joulukalenteri.Shared.DayInfoData.Title" data-throw-if-not-resolved="false"></xref> propery.
+  example: []
+  syntax:
+    content: public string Content { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Content As String
+  overload: joulukalenteri.Shared.DayInfoData.Content*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Shared.DayInfoData.Exists
+  commentId: P:joulukalenteri.Shared.DayInfoData.Exists
+  id: Exists
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: Exists
+  nameWithType: DayInfoData.Exists
+  fullName: joulukalenteri.Shared.DayInfoData.Exists
+  type: Property
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Exists
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 37
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nCheck if it&apos;s real data or placeholder. Default is true, unless it&apos;s created by <xref href=\"joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)\" data-throw-if-not-resolved=\"false\"></xref>.\n"
+  example: []
+  syntax:
+    content: public bool Exists { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property Exists As Boolean
+  overload: joulukalenteri.Shared.DayInfoData.Exists*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  commentId: M:joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  id: CreateEmpty(System.Int32)
+  parent: joulukalenteri.Shared.DayInfoData
+  langs:
+  - csharp
+  - vb
+  name: CreateEmpty(Int32)
+  nameWithType: DayInfoData.CreateEmpty(Int32)
+  fullName: joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Shared/DayInfoData.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: CreateEmpty
+    path: ../../src/Shared/DayInfoData.cs
+    startLine: 43
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nCreate <xref href=\"joulukalenteri.Shared.DayInfoData\" data-throw-if-not-resolved=\"false\"></xref> for non-existance. Placeholder of null.\n"
+  example: []
+  syntax:
+    content: public static DayInfoData CreateEmpty(int day)
+    parameters:
+    - id: day
+      type: System.Int32
+      description: The day to set for the empty data
+    return:
+      type: joulukalenteri.Shared.DayInfoData
+      description: Pre-defined specific <xref href="joulukalenteri.Shared.DayInfoData" data-throw-if-not-resolved="false"></xref>.
+    content.vb: Public Shared Function CreateEmpty(day As Integer) As DayInfoData
+  overload: joulukalenteri.Shared.DayInfoData.CreateEmpty*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: joulukalenteri.Shared
+  commentId: N:joulukalenteri.Shared
+  name: joulukalenteri.Shared
+  nameWithType: joulukalenteri.Shared
+  fullName: joulukalenteri.Shared
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: joulukalenteri.Shared.DayInfoData.Day*
+  commentId: Overload:joulukalenteri.Shared.DayInfoData.Day
+  name: Day
+  nameWithType: DayInfoData.Day
+  fullName: joulukalenteri.Shared.DayInfoData.Day
+- uid: joulukalenteri.Shared.DayInfoData.Title*
+  commentId: Overload:joulukalenteri.Shared.DayInfoData.Title
+  name: Title
+  nameWithType: DayInfoData.Title
+  fullName: joulukalenteri.Shared.DayInfoData.Title
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: joulukalenteri.Shared.DayInfoData.SummaryLength
+  commentId: F:joulukalenteri.Shared.DayInfoData.SummaryLength
+  isExternal: true
+- uid: joulukalenteri.Shared.DayInfoData.Summary*
+  commentId: Overload:joulukalenteri.Shared.DayInfoData.Summary
+  name: Summary
+  nameWithType: DayInfoData.Summary
+  fullName: joulukalenteri.Shared.DayInfoData.Summary
+- uid: joulukalenteri.Shared.DayInfoData.Title
+  commentId: P:joulukalenteri.Shared.DayInfoData.Title
+  isExternal: true
+- uid: joulukalenteri.Shared.DayInfoData.Content*
+  commentId: Overload:joulukalenteri.Shared.DayInfoData.Content
+  name: Content
+  nameWithType: DayInfoData.Content
+  fullName: joulukalenteri.Shared.DayInfoData.Content
+- uid: joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  commentId: M:joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  isExternal: true
+- uid: joulukalenteri.Shared.DayInfoData.Exists*
+  commentId: Overload:joulukalenteri.Shared.DayInfoData.Exists
+  name: Exists
+  nameWithType: DayInfoData.Exists
+  fullName: joulukalenteri.Shared.DayInfoData.Exists
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: joulukalenteri.Shared.DayInfoData
+  commentId: T:joulukalenteri.Shared.DayInfoData
+  parent: joulukalenteri.Shared
+  name: DayInfoData
+  nameWithType: DayInfoData
+  fullName: joulukalenteri.Shared.DayInfoData
+- uid: joulukalenteri.Shared.DayInfoData.CreateEmpty*
+  commentId: Overload:joulukalenteri.Shared.DayInfoData.CreateEmpty
+  name: CreateEmpty
+  nameWithType: DayInfoData.CreateEmpty
+  fullName: joulukalenteri.Shared.DayInfoData.CreateEmpty

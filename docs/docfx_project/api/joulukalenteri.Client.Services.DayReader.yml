@@ -1,0 +1,686 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Client.Services.DayReader
+  commentId: T:joulukalenteri.Client.Services.DayReader
+  id: DayReader
+  parent: joulukalenteri.Client.Services
+  children:
+  - joulukalenteri.Client.Services.DayReader.#ctor(joulukalenteri.Client.Services.IDataReceiver,joulukalenteri.Shared.IDateTime)
+  - joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32,System.Int32)
+  - joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
+  - joulukalenteri.Client.Services.DayReader.GetContent(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: DayReader
+  nameWithType: DayReader
+  fullName: joulukalenteri.Client.Services.DayReader
+  type: Class
+  source:
+    remote:
+      path: src/Client/Services/DayReader.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: DayReader
+    path: ../../src/Client/Services/DayReader.cs
+    startLine: 16
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nParses and reads markdown of the day data from the server.\n"
+  example: []
+  syntax:
+    content: public class DayReader
+    content.vb: Public Class DayReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: joulukalenteri.Client.Services.DayReader.#ctor(joulukalenteri.Client.Services.IDataReceiver,joulukalenteri.Shared.IDateTime)
+  commentId: M:joulukalenteri.Client.Services.DayReader.#ctor(joulukalenteri.Client.Services.IDataReceiver,joulukalenteri.Shared.IDateTime)
+  id: '#ctor(joulukalenteri.Client.Services.IDataReceiver,joulukalenteri.Shared.IDateTime)'
+  parent: joulukalenteri.Client.Services.DayReader
+  langs:
+  - csharp
+  - vb
+  name: DayReader(IDataReceiver, IDateTime)
+  nameWithType: DayReader.DayReader(IDataReceiver, IDateTime)
+  fullName: joulukalenteri.Client.Services.DayReader.DayReader(joulukalenteri.Client.Services.IDataReceiver, joulukalenteri.Shared.IDateTime)
+  type: Constructor
+  source:
+    remote:
+      path: src/Client/Services/DayReader.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: .ctor
+    path: ../../src/Client/Services/DayReader.cs
+    startLine: 25
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nCalls day reader and abstract datetime manually for test purpose.\n"
+  example: []
+  syntax:
+    content: public DayReader(IDataReceiver _receiver, IDateTime _datetime)
+    parameters:
+    - id: _receiver
+      type: joulukalenteri.Client.Services.IDataReceiver
+      description: <xref href="joulukalenteri.Client.Services.IDataReceiver" data-throw-if-not-resolved="false"></xref>, which contains HTTP Client
+    - id: _datetime
+      type: joulukalenteri.Shared.IDateTime
+      description: <xref href="joulukalenteri.Shared.IDateTime" data-throw-if-not-resolved="false"></xref>, which is possibly fake date.
+    content.vb: Public Sub New(_receiver As IDataReceiver, _datetime As IDateTime)
+  overload: joulukalenteri.Client.Services.DayReader.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
+  commentId: M:joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
+  id: GetContent(System.Int32)
+  parent: joulukalenteri.Client.Services.DayReader
+  langs:
+  - csharp
+  - vb
+  name: GetContent(Int32)
+  nameWithType: DayReader.GetContent(Int32)
+  fullName: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/DayReader.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: GetContent
+    path: ../../src/Client/Services/DayReader.cs
+    startLine: 35
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nGet parsed markdown object asynchronously for current year with a day.\n"
+  example: []
+  syntax:
+    content: public Task<DayInfoData> GetContent(int day)
+    parameters:
+    - id: day
+      type: System.Int32
+      description: The target day to get data.
+    return:
+      type: System.Threading.Tasks.Task{joulukalenteri.Shared.DayInfoData}
+      description: Parsed <xref href="joulukalenteri.Shared.DayInfoData" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function GetContent(day As Integer) As Task(Of DayInfoData)
+  overload: joulukalenteri.Client.Services.DayReader.GetContent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32,System.Int32)
+  commentId: M:joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32,System.Int32)
+  id: GetAvailability(System.Int32,System.Int32)
+  parent: joulukalenteri.Client.Services.DayReader
+  langs:
+  - csharp
+  - vb
+  name: GetAvailability(Int32, Int32)
+  nameWithType: DayReader.GetAvailability(Int32, Int32)
+  fullName: joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/DayReader.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: GetAvailability
+    path: ../../src/Client/Services/DayReader.cs
+    startLine: 42
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nGet Availability of specific day data\n"
+  example: []
+  syntax:
+    content: public Task<bool> GetAvailability(int year, int day)
+    parameters:
+    - id: year
+      type: System.Int32
+      description: The target year check data.
+    - id: day
+      type: System.Int32
+      description: The target day to check data.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: ''
+    content.vb: Public Function GetAvailability(year As Integer, day As Integer) As Task(Of Boolean)
+  overload: joulukalenteri.Client.Services.DayReader.GetAvailability*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32,System.Int32)
+  commentId: M:joulukalenteri.Client.Services.DayReader.GetContent(System.Int32,System.Int32)
+  id: GetContent(System.Int32,System.Int32)
+  parent: joulukalenteri.Client.Services.DayReader
+  langs:
+  - csharp
+  - vb
+  name: GetContent(Int32, Int32)
+  nameWithType: DayReader.GetContent(Int32, Int32)
+  fullName: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/DayReader.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: GetContent
+    path: ../../src/Client/Services/DayReader.cs
+    startLine: 49
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nGet parsed markdown object asynchronously with a day and a year.\n"
+  example: []
+  syntax:
+    content: public Task<DayInfoData> GetContent(int year, int day)
+    parameters:
+    - id: year
+      type: System.Int32
+      description: The target year to get data.
+    - id: day
+      type: System.Int32
+      description: The target day to get data.
+    return:
+      type: System.Threading.Tasks.Task{joulukalenteri.Shared.DayInfoData}
+      description: Parsed <xref href="joulukalenteri.Shared.DayInfoData" data-throw-if-not-resolved="false"></xref>
+    content.vb: Public Function GetContent(year As Integer, day As Integer) As Task(Of DayInfoData)
+  overload: joulukalenteri.Client.Services.DayReader.GetContent*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: joulukalenteri.Client.Services
+  commentId: N:joulukalenteri.Client.Services
+  name: joulukalenteri.Client.Services
+  nameWithType: joulukalenteri.Client.Services
+  fullName: joulukalenteri.Client.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: joulukalenteri.Client.Services.IDataReceiver
+  commentId: T:joulukalenteri.Client.Services.IDataReceiver
+  parent: joulukalenteri.Client.Services
+  name: IDataReceiver
+  nameWithType: IDataReceiver
+  fullName: joulukalenteri.Client.Services.IDataReceiver
+- uid: joulukalenteri.Shared.IDateTime
+  commentId: T:joulukalenteri.Shared.IDateTime
+  parent: joulukalenteri.Shared
+  name: IDateTime
+  nameWithType: IDateTime
+  fullName: joulukalenteri.Shared.IDateTime
+- uid: joulukalenteri.Client.Services.DayReader.#ctor*
+  commentId: Overload:joulukalenteri.Client.Services.DayReader.#ctor
+  name: DayReader
+  nameWithType: DayReader.DayReader
+  fullName: joulukalenteri.Client.Services.DayReader.DayReader
+- uid: joulukalenteri.Shared
+  commentId: N:joulukalenteri.Shared
+  name: joulukalenteri.Shared
+  nameWithType: joulukalenteri.Shared
+  fullName: joulukalenteri.Shared
+- uid: joulukalenteri.Shared.DayInfoData
+  commentId: T:joulukalenteri.Shared.DayInfoData
+  parent: joulukalenteri.Shared
+  name: DayInfoData
+  nameWithType: DayInfoData
+  fullName: joulukalenteri.Shared.DayInfoData
+- uid: joulukalenteri.Client.Services.DayReader.GetContent*
+  commentId: Overload:joulukalenteri.Client.Services.DayReader.GetContent
+  name: GetContent
+  nameWithType: DayReader.GetContent
+  fullName: joulukalenteri.Client.Services.DayReader.GetContent
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Threading.Tasks.Task{joulukalenteri.Shared.DayInfoData}
+  commentId: T:System.Threading.Tasks.Task{joulukalenteri.Shared.DayInfoData}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<DayInfoData>
+  nameWithType: Task<DayInfoData>
+  fullName: System.Threading.Tasks.Task<joulukalenteri.Shared.DayInfoData>
+  nameWithType.vb: Task(Of DayInfoData)
+  fullName.vb: System.Threading.Tasks.Task(Of joulukalenteri.Shared.DayInfoData)
+  name.vb: Task(Of DayInfoData)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: joulukalenteri.Shared.DayInfoData
+    name: DayInfoData
+    nameWithType: DayInfoData
+    fullName: joulukalenteri.Shared.DayInfoData
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: joulukalenteri.Shared.DayInfoData
+    name: DayInfoData
+    nameWithType: DayInfoData
+    fullName: joulukalenteri.Shared.DayInfoData
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: joulukalenteri.Client.Services.DayReader.GetAvailability*
+  commentId: Overload:joulukalenteri.Client.Services.DayReader.GetAvailability
+  name: GetAvailability
+  nameWithType: DayReader.GetAvailability
+  fullName: joulukalenteri.Client.Services.DayReader.GetAvailability
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

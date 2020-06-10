@@ -1,0 +1,41 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Shared
+  commentId: N:joulukalenteri.Shared
+  id: joulukalenteri.Shared
+  children:
+  - joulukalenteri.Shared.DayInfoData
+  - joulukalenteri.Shared.DefaultDateTime
+  - joulukalenteri.Shared.IDateTime
+  langs:
+  - csharp
+  - vb
+  name: joulukalenteri.Shared
+  nameWithType: joulukalenteri.Shared
+  fullName: joulukalenteri.Shared
+  type: Namespace
+  assemblies:
+  - joulukalenteri.Shared
+references:
+- uid: joulukalenteri.Shared.DayInfoData
+  commentId: T:joulukalenteri.Shared.DayInfoData
+  parent: joulukalenteri.Shared
+  name: DayInfoData
+  nameWithType: DayInfoData
+  fullName: joulukalenteri.Shared.DayInfoData
+- uid: joulukalenteri.Shared.IDateTime
+  commentId: T:joulukalenteri.Shared.IDateTime
+  parent: joulukalenteri.Shared
+  name: IDateTime
+  nameWithType: IDateTime
+  fullName: joulukalenteri.Shared.IDateTime
+- uid: joulukalenteri.Shared.DefaultDateTime
+  commentId: T:joulukalenteri.Shared.DefaultDateTime
+  name: DefaultDateTime
+  nameWithType: DefaultDateTime
+  fullName: joulukalenteri.Shared.DefaultDateTime
+- uid: joulukalenteri.Shared
+  commentId: N:joulukalenteri.Shared
+  name: joulukalenteri.Shared
+  nameWithType: joulukalenteri.Shared
+  fullName: joulukalenteri.Shared

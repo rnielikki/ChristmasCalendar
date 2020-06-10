@@ -1,0 +1,290 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Client.Services.IDataReceiver
+  commentId: T:joulukalenteri.Client.Services.IDataReceiver
+  id: IDataReceiver
+  parent: joulukalenteri.Client.Services
+  children:
+  - joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
+  - joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: IDataReceiver
+  nameWithType: IDataReceiver
+  fullName: joulukalenteri.Client.Services.IDataReceiver
+  type: Interface
+  source:
+    remote:
+      path: src/Client/Services/IDataReceiver.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: IDataReceiver
+    path: ../../src/Client/Services/IDataReceiver.cs
+    startLine: 11
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nProvides the server data receiver interface.\n"
+  remarks: "\nWraps the <xref href=\"System.Net.Http.HttpClient\" data-throw-if-not-resolved=\"false\"></xref> for testing purpose.\n"
+  example: []
+  syntax:
+    content: public interface IDataReceiver
+    content.vb: Public Interface IDataReceiver
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
+  commentId: M:joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
+  id: CheckDayData(System.Int32,System.Int32)
+  parent: joulukalenteri.Client.Services.IDataReceiver
+  langs:
+  - csharp
+  - vb
+  name: CheckDayData(Int32, Int32)
+  nameWithType: IDataReceiver.CheckDayData(Int32, Int32)
+  fullName: joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/IDataReceiver.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: CheckDayData
+    path: ../../src/Client/Services/IDataReceiver.cs
+    startLine: 18
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nGets if day file is availble.\n"
+  example: []
+  syntax:
+    content: Task<bool> CheckDayData(int year, int day)
+    parameters:
+    - id: year
+      type: System.Int32
+      description: Target year to receive data.
+    - id: day
+      type: System.Int32
+      description: Target day to receive data.
+    return:
+      type: System.Threading.Tasks.Task{System.Boolean}
+      description: true if the file exists, false if it the file doesn&apos;t exist.
+    content.vb: Function CheckDayData(year As Integer, day As Integer) As Task(Of Boolean)
+  overload: joulukalenteri.Client.Services.IDataReceiver.CheckDayData*
+- uid: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  commentId: M:joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  id: ReceiveDayData(System.Int32,System.Int32)
+  parent: joulukalenteri.Client.Services.IDataReceiver
+  langs:
+  - csharp
+  - vb
+  name: ReceiveDayData(Int32, Int32)
+  nameWithType: IDataReceiver.ReceiveDayData(Int32, Int32)
+  fullName: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/IDataReceiver.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: ReceiveDayData
+    path: ../../src/Client/Services/IDataReceiver.cs
+    startLine: 25
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nProvides getter interface of markdown of day file from the server.\n"
+  example: []
+  syntax:
+    content: Task<string> ReceiveDayData(int year, int day)
+    parameters:
+    - id: year
+      type: System.Int32
+      description: Target year to receive data.
+    - id: day
+      type: System.Int32
+      description: Target day to receive data.
+    return:
+      type: System.Threading.Tasks.Task{System.String}
+      description: Raw, unparsed markdown file as string.
+    content.vb: Function ReceiveDayData(year As Integer, day As Integer) As Task(Of String)
+  overload: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData*
+references:
+- uid: System.Net.Http.HttpClient
+  commentId: T:System.Net.Http.HttpClient
+  parent: System.Net.Http
+  isExternal: true
+  name: HttpClient
+  nameWithType: HttpClient
+  fullName: System.Net.Http.HttpClient
+- uid: joulukalenteri.Client.Services
+  commentId: N:joulukalenteri.Client.Services
+  name: joulukalenteri.Client.Services
+  nameWithType: joulukalenteri.Client.Services
+  fullName: joulukalenteri.Client.Services
+- uid: System.Net.Http
+  commentId: N:System.Net.Http
+  isExternal: true
+  name: System.Net.Http
+  nameWithType: System.Net.Http
+  fullName: System.Net.Http
+- uid: joulukalenteri.Client.Services.IDataReceiver.CheckDayData*
+  commentId: Overload:joulukalenteri.Client.Services.IDataReceiver.CheckDayData
+  name: CheckDayData
+  nameWithType: IDataReceiver.CheckDayData
+  fullName: joulukalenteri.Client.Services.IDataReceiver.CheckDayData
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Threading.Tasks.Task{System.Boolean}
+  commentId: T:System.Threading.Tasks.Task{System.Boolean}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<Boolean>
+  nameWithType: Task<Boolean>
+  fullName: System.Threading.Tasks.Task<System.Boolean>
+  nameWithType.vb: Task(Of Boolean)
+  fullName.vb: System.Threading.Tasks.Task(Of System.Boolean)
+  name.vb: Task(Of Boolean)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData*
+  commentId: Overload:joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData
+  name: ReceiveDayData
+  nameWithType: IDataReceiver.ReceiveDayData
+  fullName: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData
+- uid: System.Threading.Tasks.Task{System.String}
+  commentId: T:System.Threading.Tasks.Task{System.String}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<String>
+  nameWithType: Task<String>
+  fullName: System.Threading.Tasks.Task<System.String>
+  nameWithType.vb: Task(Of String)
+  fullName.vb: System.Threading.Tasks.Task(Of System.String)
+  name.vb: Task(Of String)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )

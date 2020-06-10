@@ -1,0 +1,501 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Client.Services.Validator
+  commentId: T:joulukalenteri.Client.Services.Validator
+  id: Validator
+  parent: joulukalenteri.Client.Services
+  children:
+  - joulukalenteri.Client.Services.Validator.#ctor(joulukalenteri.Shared.IDateTime)
+  - joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
+  - joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: Validator
+  nameWithType: Validator
+  fullName: joulukalenteri.Client.Services.Validator
+  type: Class
+  source:
+    remote:
+      path: src/Client/Services/Validator.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Validator
+    path: ../../src/Client/Services/Validator.cs
+    startLine: 7
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nClient-side check if the given date is future or not.\n"
+  example: []
+  syntax:
+    content: public class Validator
+    content.vb: Public Class Validator
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: joulukalenteri.Client.Services.Validator.#ctor(joulukalenteri.Shared.IDateTime)
+  commentId: M:joulukalenteri.Client.Services.Validator.#ctor(joulukalenteri.Shared.IDateTime)
+  id: '#ctor(joulukalenteri.Shared.IDateTime)'
+  parent: joulukalenteri.Client.Services.Validator
+  langs:
+  - csharp
+  - vb
+  name: Validator(IDateTime)
+  nameWithType: Validator.Validator(IDateTime)
+  fullName: joulukalenteri.Client.Services.Validator.Validator(joulukalenteri.Shared.IDateTime)
+  type: Constructor
+  source:
+    remote:
+      path: src/Client/Services/Validator.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: .ctor
+    path: ../../src/Client/Services/Validator.cs
+    startLine: 14
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nCreate Validator instance with datetime for test purpose.\n"
+  example: []
+  syntax:
+    content: public Validator(IDateTime _datetime)
+    parameters:
+    - id: _datetime
+      type: joulukalenteri.Shared.IDateTime
+      description: <xref href="joulukalenteri.Shared.IDateTime" data-throw-if-not-resolved="false"></xref>, which is possibly fake date.
+    content.vb: Public Sub New(_datetime As IDateTime)
+  overload: joulukalenteri.Client.Services.Validator.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32,System.Int32)
+  commentId: M:joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32,System.Int32)
+  id: IsOpenToday(System.Int32,System.Int32)
+  parent: joulukalenteri.Client.Services.Validator
+  langs:
+  - csharp
+  - vb
+  name: IsOpenToday(Int32, Int32)
+  nameWithType: Validator.IsOpenToday(Int32, Int32)
+  fullName: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/Validator.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: IsOpenToday
+    path: ../../src/Client/Services/Validator.cs
+    startLine: 24
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nCheck if the day is future or not based on a year and a day.\n"
+  remarks: Based on <code>IsOpenToday()</code>, the future day is inactivated in the calendar.
+  example: []
+  syntax:
+    content: public bool IsOpenToday(int targetYear, int targetDay)
+    parameters:
+    - id: targetYear
+      type: System.Int32
+      description: The year to check
+    - id: targetDay
+      type: System.Int32
+      description: The day to check
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the date is valid and not the future, otherwise <code>false</code>
+    content.vb: Public Function IsOpenToday(targetYear As Integer, targetDay As Integer) As Boolean
+  overload: joulukalenteri.Client.Services.Validator.IsOpenToday*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
+  commentId: M:joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
+  id: IsOpenToday(System.Int32)
+  parent: joulukalenteri.Client.Services.Validator
+  langs:
+  - csharp
+  - vb
+  name: IsOpenToday(Int32)
+  nameWithType: Validator.IsOpenToday(Int32)
+  fullName: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: src/Client/Services/Validator.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: IsOpenToday
+    path: ../../src/Client/Services/Validator.cs
+    startLine: 46
+  assemblies:
+  - joulukalenteri.Client
+  namespace: joulukalenteri.Client.Services
+  summary: "\nCheck if the day is future or not based on a day in current year.\n"
+  remarks: Based on <code>IsOpenToday()</code>, the future day is inactivated in the calendar.
+  example: []
+  syntax:
+    content: public bool IsOpenToday(int targetDay)
+    parameters:
+    - id: targetDay
+      type: System.Int32
+      description: The day of current year to check
+    return:
+      type: System.Boolean
+      description: <code>true</code> if the date is valid and not the future, otherwise <code>false</code>
+    content.vb: Public Function IsOpenToday(targetDay As Integer) As Boolean
+  overload: joulukalenteri.Client.Services.Validator.IsOpenToday*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: joulukalenteri.Client.Services
+  commentId: N:joulukalenteri.Client.Services
+  name: joulukalenteri.Client.Services
+  nameWithType: joulukalenteri.Client.Services
+  fullName: joulukalenteri.Client.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: joulukalenteri.Shared.IDateTime
+  commentId: T:joulukalenteri.Shared.IDateTime
+  parent: joulukalenteri.Shared
+  name: IDateTime
+  nameWithType: IDateTime
+  fullName: joulukalenteri.Shared.IDateTime
+- uid: joulukalenteri.Client.Services.Validator.#ctor*
+  commentId: Overload:joulukalenteri.Client.Services.Validator.#ctor
+  name: Validator
+  nameWithType: Validator.Validator
+  fullName: joulukalenteri.Client.Services.Validator.Validator
+- uid: joulukalenteri.Shared
+  commentId: N:joulukalenteri.Shared
+  name: joulukalenteri.Shared
+  nameWithType: joulukalenteri.Shared
+  fullName: joulukalenteri.Shared
+- uid: joulukalenteri.Client.Services.Validator.IsOpenToday*
+  commentId: Overload:joulukalenteri.Client.Services.Validator.IsOpenToday
+  name: IsOpenToday
+  nameWithType: Validator.IsOpenToday
+  fullName: joulukalenteri.Client.Services.Validator.IsOpenToday
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

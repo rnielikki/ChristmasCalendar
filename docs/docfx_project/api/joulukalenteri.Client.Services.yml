@@ -1,0 +1,58 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Client.Services
+  commentId: N:joulukalenteri.Client.Services
+  id: joulukalenteri.Client.Services
+  children:
+  - joulukalenteri.Client.Services.ArchiveReader
+  - joulukalenteri.Client.Services.DataReceiver
+  - joulukalenteri.Client.Services.DayReader
+  - joulukalenteri.Client.Services.DaysShuffler
+  - joulukalenteri.Client.Services.IDataReceiver
+  - joulukalenteri.Client.Services.Validator
+  langs:
+  - csharp
+  - vb
+  name: joulukalenteri.Client.Services
+  nameWithType: joulukalenteri.Client.Services
+  fullName: joulukalenteri.Client.Services
+  type: Namespace
+  assemblies:
+  - joulukalenteri.Client
+references:
+- uid: joulukalenteri.Client.Services.ArchiveReader
+  commentId: T:joulukalenteri.Client.Services.ArchiveReader
+  name: ArchiveReader
+  nameWithType: ArchiveReader
+  fullName: joulukalenteri.Client.Services.ArchiveReader
+- uid: joulukalenteri.Client.Services.DataReceiver
+  commentId: T:joulukalenteri.Client.Services.DataReceiver
+  name: DataReceiver
+  nameWithType: DataReceiver
+  fullName: joulukalenteri.Client.Services.DataReceiver
+- uid: joulukalenteri.Client.Services.DayReader
+  commentId: T:joulukalenteri.Client.Services.DayReader
+  name: DayReader
+  nameWithType: DayReader
+  fullName: joulukalenteri.Client.Services.DayReader
+- uid: joulukalenteri.Client.Services.DaysShuffler
+  commentId: T:joulukalenteri.Client.Services.DaysShuffler
+  name: DaysShuffler
+  nameWithType: DaysShuffler
+  fullName: joulukalenteri.Client.Services.DaysShuffler
+- uid: joulukalenteri.Client.Services.IDataReceiver
+  commentId: T:joulukalenteri.Client.Services.IDataReceiver
+  parent: joulukalenteri.Client.Services
+  name: IDataReceiver
+  nameWithType: IDataReceiver
+  fullName: joulukalenteri.Client.Services.IDataReceiver
+- uid: joulukalenteri.Client.Services.Validator
+  commentId: T:joulukalenteri.Client.Services.Validator
+  name: Validator
+  nameWithType: Validator
+  fullName: joulukalenteri.Client.Services.Validator
+- uid: joulukalenteri.Client.Services
+  commentId: N:joulukalenteri.Client.Services
+  name: joulukalenteri.Client.Services
+  nameWithType: joulukalenteri.Client.Services
+  fullName: joulukalenteri.Client.Services

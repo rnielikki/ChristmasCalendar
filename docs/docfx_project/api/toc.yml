@@ -1,0 +1,25 @@
+### YamlMime:TableOfContent
+- uid: joulukalenteri.Client.Services
+  name: joulukalenteri.Client.Services
+  items:
+  - uid: joulukalenteri.Client.Services.ArchiveReader
+    name: ArchiveReader
+  - uid: joulukalenteri.Client.Services.DataReceiver
+    name: DataReceiver
+  - uid: joulukalenteri.Client.Services.DayReader
+    name: DayReader
+  - uid: joulukalenteri.Client.Services.DaysShuffler
+    name: DaysShuffler
+  - uid: joulukalenteri.Client.Services.IDataReceiver
+    name: IDataReceiver
+  - uid: joulukalenteri.Client.Services.Validator
+    name: Validator
+- uid: joulukalenteri.Shared
+  name: joulukalenteri.Shared
+  items:
+  - uid: joulukalenteri.Shared.DayInfoData
+    name: DayInfoData
+  - uid: joulukalenteri.Shared.DefaultDateTime
+    name: DefaultDateTime
+  - uid: joulukalenteri.Shared.IDateTime
+    name: IDateTime

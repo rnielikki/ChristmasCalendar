@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: joulukalenteri.Shared.IDateTime
+  commentId: T:joulukalenteri.Shared.IDateTime
+  id: IDateTime
+  parent: joulukalenteri.Shared
+  children:
+  - joulukalenteri.Shared.IDateTime.Now
+  - joulukalenteri.Shared.IDateTime.Year
+  langs:
+  - csharp
+  - vb
+  name: IDateTime
+  nameWithType: IDateTime
+  fullName: joulukalenteri.Shared.IDateTime
+  type: Interface
+  source:
+    remote:
+      path: src/Shared/IDateTime.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: IDateTime
+    path: ../../src/Shared/IDateTime.cs
+    startLine: 7
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\nProvides public DateTime wrapper, both for server and client.\n"
+  example: []
+  syntax:
+    content: public interface IDateTime
+    content.vb: Public Interface IDateTime
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: joulukalenteri.Shared.IDateTime.Now
+  commentId: P:joulukalenteri.Shared.IDateTime.Now
+  id: Now
+  parent: joulukalenteri.Shared.IDateTime
+  langs:
+  - csharp
+  - vb
+  name: Now
+  nameWithType: IDateTime.Now
+  fullName: joulukalenteri.Shared.IDateTime.Now
+  type: Property
+  source:
+    remote:
+      path: src/Shared/IDateTime.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Now
+    path: ../../src/Shared/IDateTime.cs
+    startLine: 12
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\n<xref href=\"System.DateTime\" data-throw-if-not-resolved=\"false\"></xref> for the wrap.\n"
+  example: []
+  syntax:
+    content: DateTime Now { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: ReadOnly Property Now As Date
+  overload: joulukalenteri.Shared.IDateTime.Now*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: joulukalenteri.Shared.IDateTime.Year
+  commentId: P:joulukalenteri.Shared.IDateTime.Year
+  id: Year
+  parent: joulukalenteri.Shared.IDateTime
+  langs:
+  - csharp
+  - vb
+  name: Year
+  nameWithType: IDateTime.Year
+  fullName: joulukalenteri.Shared.IDateTime.Year
+  type: Property
+  source:
+    remote:
+      path: src/Shared/IDateTime.cs
+      branch: non-master
+      repo: https://github.com/rnielikki/ChristmasCalendar.git
+    id: Year
+    path: ../../src/Shared/IDateTime.cs
+    startLine: 16
+  assemblies:
+  - joulukalenteri.Shared
+  namespace: joulukalenteri.Shared
+  summary: "\n<xref href=\"System.DateTime.Year\" data-throw-if-not-resolved=\"false\"></xref> for the wrap.\n"
+  example: []
+  syntax:
+    content: int Year { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property Year As Integer
+  overload: joulukalenteri.Shared.IDateTime.Year*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: joulukalenteri.Shared
+  commentId: N:joulukalenteri.Shared
+  name: joulukalenteri.Shared
+  nameWithType: joulukalenteri.Shared
+  fullName: joulukalenteri.Shared
+- uid: System.DateTime
+  commentId: T:System.DateTime
+  parent: System
+  isExternal: true
+  name: DateTime
+  nameWithType: DateTime
+  fullName: System.DateTime
+- uid: joulukalenteri.Shared.IDateTime.Now*
+  commentId: Overload:joulukalenteri.Shared.IDateTime.Now
+  name: Now
+  nameWithType: IDateTime.Now
+  fullName: joulukalenteri.Shared.IDateTime.Now
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.DateTime.Year
+  commentId: P:System.DateTime.Year
+  isExternal: true
+- uid: joulukalenteri.Shared.IDateTime.Year*
+  commentId: Overload:joulukalenteri.Shared.IDateTime.Year
+  name: Year
+  nameWithType: IDateTime.Year
+  fullName: joulukalenteri.Shared.IDateTime.Year
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
