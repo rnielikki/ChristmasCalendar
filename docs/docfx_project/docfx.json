@@ -1,0 +1,67 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src":"../..",
+          "files": [
+            "src/**/**.csproj"
+          ],
+          "exclude":[
+            "src/**Tests/**Tests.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/**.md",
+        ]
+      },
+      {
+        "files": [
+          "app-settings/**.md",
+          "app-settings/**.yml"
+        ]
+      },
+      {
+        "files": [
+          "toc.yml",
+          "index.md"
+        ]
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "images/**"
+        ]
+      }
+    ],
+    "overwrite": [
+      {
+        "files": [
+          "apidoc/**.md"
+        ],
+        "exclude": [
+          "obj/**",
+          "_site/**"
+        ]
+      }
+    ],
+    "dest": "../",
+    "globalMetadataFiles": [],
+    "fileMetadataFiles": [],
+    "template": [
+      "default"
+    ],
+    "postProcessors": [],
+    "markdownEngineName": "markdig",
+    "noLangKeyword": false,
+  }
+}

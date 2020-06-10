@@ -1,7 +1,6 @@
 ﻿@page "/archive/{Year:int}"
 @layout ArchiveLayout
-@inject NavigationManager nav
-@inject joulukalenteri.Client.SharedCode.ArchiveReader reader
+@inject joulukalenteri.Client.Services.ArchiveReader reader
 @inject joulukalenteri.Shared.IDateTime datetime
 
 <div class=" wrapper">

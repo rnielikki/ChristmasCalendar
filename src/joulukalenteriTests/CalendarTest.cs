@@ -2,7 +2,7 @@ using System;
 using Xunit;
 using Moq;
 using joulukalenteri.Shared;
-using joulukalenteri.Client.SharedCode;
+using joulukalenteri.Client.Services;
 
 namespace joulukalenteriTests
 {

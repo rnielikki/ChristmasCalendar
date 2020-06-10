@@ -1,4 +1,4 @@
-﻿using joulukalenteri.Client.SharedCode;
+﻿using joulukalenteri.Client.Services;
 using joulukalenteri.Shared;
 using Microsoft.Extensions.Configuration;
 using Moq;

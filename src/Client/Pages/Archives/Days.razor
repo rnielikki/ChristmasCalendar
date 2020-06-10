@@ -1,7 +1,6 @@
 ﻿@page "/archive/{Year:int}/{Day:int}"
-@inject joulukalenteri.Client.SharedCode.Validator validator
-@inject joulukalenteri.Client.SharedCode.DayReader reader
-@inject NavigationManager nav
+@inject joulukalenteri.Client.Services.Validator validator
+@inject joulukalenteri.Client.Services.DayReader reader
 @layout ArchiveLayout
 @using joulukalenteri.Shared
 @*
@@ -43,7 +42,7 @@
     string Content;
     protected override async Task OnInitializedAsync()
     {
-        DayInfoData data = await reader.GetContent(Year, Day, nav.BaseUri);
+        DayInfoData data = await reader.GetContent(Year, Day);
         Title = data.Title;
         Content = data.Content;
     }
