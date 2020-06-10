@@ -9,7 +9,7 @@ using System.IO;
 using System;
 using System.Net;
 
-namespace joulukalenteri.Client.SharedCode
+namespace joulukalenteri.Client.Services
 {
     /// <summary>
     /// Parses and reads markdown of the day data from the server.
@@ -32,30 +32,27 @@ namespace joulukalenteri.Client.SharedCode
         /// Get parsed markdown object asynchronously for current year with a day.
         /// </summary>
         /// <param name="day">The target day to get data.</param>
-        /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
-        public async Task<DayInfoData> GetContent(int day, string baseUri) => await GetContent(datetime.Now.Year, day, baseUri).ConfigureAwait(true);
+        public async Task<DayInfoData> GetContent(int day) => await GetContent(datetime.Now.Year, day).ConfigureAwait(true);
         /// <summary>
         /// Get Availability of specific day data
         /// </summary>
         /// <param name="year">The target year check data.</param>
         /// <param name="day">The target day to check data.</param>
-        /// <param name="baseUri">The base uri to check data.</param>
         /// <returns></returns>
-        public async Task<bool> GetAvailability(int year, int day, string baseUri) => await receiver.CheckDayData(year, day, baseUri).ConfigureAwait(true);
+        public async Task<bool> GetAvailability(int year, int day) => await receiver.CheckDayData(year, day).ConfigureAwait(true);
         /// <summary>
         /// Get parsed markdown object asynchronously with a day and a year.
         /// </summary>
         /// <param name="year">The target year to get data.</param>
         /// <param name="day">The target day to get data.</param>
-        /// <param name="baseUri">The base uri of the current <see cref="System.Net.Http.HttpClient"/> page.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
-        public async Task<DayInfoData> GetContent(int year, int day, string baseUri)
+        public async Task<DayInfoData> GetContent(int year, int day)
         {
             if (!dataList.ContainsKey((year, day)))
             {
-                if (await receiver.CheckDayData(year, day, baseUri).ConfigureAwait(true))
-                    dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day, baseUri).ConfigureAwait(true)));
+                if (await receiver.CheckDayData(year, day).ConfigureAwait(true))
+                    dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day).ConfigureAwait(true)));
                 else
                     dataList.Add((year, day), DayInfoData.CreateEmpty(day));
             }

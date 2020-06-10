@@ -1,7 +1,7 @@
 ﻿using System;
 using Xunit;
 using joulukalenteri.Shared;
-using joulukalenteri.Client.SharedCode;
+using joulukalenteri.Client.Services;
 using Moq;
 using System.Threading.Tasks;
 using System.Linq;
@@ -18,14 +18,14 @@ namespace joulukalenteriTests
         [MemberData(nameof(TestData))]
         public async Task DataParserTest(string input, string title, string summary, string content) {
             var receiverMock = new Mock<IDataReceiver>();
-            receiverMock.Setup(receiver => receiver.CheckDayData(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string>())).ReturnsAsync(true);
-            receiverMock.Setup(receiver => receiver.ReceiveDayData(It.IsAny<int>(), It.IsAny<int>(), It.IsAny<string>())).ReturnsAsync(input);
+            receiverMock.Setup(receiver => receiver.CheckDayData(It.IsAny<int>(), It.IsAny<int>())).ReturnsAsync(true);
+            receiverMock.Setup(receiver => receiver.ReceiveDayData(It.IsAny<int>(), It.IsAny<int>())).ReturnsAsync(input);
 
             var dateTime = new DefaultDateTime();
 
             DayReader reader = new DayReader(receiverMock.Object, dateTime);
-            DayInfoData data = (await reader.GetContent(1, It.IsAny<string>()).ConfigureAwait(false));
-            string parseResult = (await reader.GetContent(1, It.IsAny<string>()).ConfigureAwait(false))?.Title;
+            DayInfoData data = (await reader.GetContent(1).ConfigureAwait(false));
+            string parseResult = (await reader.GetContent(1).ConfigureAwait(false))?.Title;
             Assert.Equal(title, data.Title);
             Assert.Equal(summary, data.Summary);
             Assert.Equal(content, data.Content);

@@ -1,6 +1,6 @@
 ﻿using joulukalenteri.Shared;
 
-namespace joulukalenteri.Client.SharedCode
+namespace joulukalenteri.Client.Services
 {
     /// <summary>
     /// Client-side check if the given date is future or not.

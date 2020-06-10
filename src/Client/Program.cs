@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Blazored.Modal;
 using Microsoft.Extensions.DependencyInjection;
-using joulukalenteri.Client.SharedCode;
+using joulukalenteri.Client.Services;
 using joulukalenteri.Shared;
 
 namespace joulukalenteri.Client
@@ -23,7 +23,6 @@ namespace joulukalenteri.Client
             services.AddSingleton<DaysShuffler>();
 
             services.AddTransient<Validator>();
-            //services.AddTransient<HttpClient>();
             services.AddTransient<IDataReceiver, DataReceiver>();
 
             services.AddTransient<IDateTime, DefaultDateTime>();

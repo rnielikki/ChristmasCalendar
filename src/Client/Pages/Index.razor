@@ -1,15 +1,14 @@
 ﻿@page "/"
-@inject joulukalenteri.Client.SharedCode.Validator validator
-@inject joulukalenteri.Client.SharedCode.DayReader reader
-@inject joulukalenteri.Client.SharedCode.DaysShuffler shuffler
-@inject NavigationManager nav
+@inject joulukalenteri.Client.Services.Validator validator
+@inject joulukalenteri.Client.Services.DayReader reader
+@inject joulukalenteri.Client.Services.DaysShuffler shuffler
 @inject IModalService Modal
 @inject joulukalenteri.Shared.IDateTime datetime
 @inject Microsoft.Extensions.Configuration.IConfiguration config
 @using joulukalenteri.Shared
 
 <div class="calendar-wrapper wrapper">
-    <h1>@(config["title"]??"Advent Calendar")️</h1>
+    <h1>@(config["title"]??"Advent Calendar")</h1>
     <div class="calendar">
         @{
             int[] shuffled = shuffler.ShuffleDays();
@@ -31,7 +30,7 @@
 @code{
         private async Task OpenDialog(int day)
         {
-            DayInfoData data = await reader.GetContent(day, nav.BaseUri);
+            DayInfoData data = await reader.GetContent(day);
             ModalParameters modalParams = new ModalParameters();
             modalParams.Add(nameof(DaysModal.DayInfo), data);
             Modal.Show<DaysModal>($"Day {day}: {data.Title}", modalParams);

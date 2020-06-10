@@ -2,7 +2,7 @@
 using System.Linq;
 using joulukalenteri.Shared;
 
-namespace joulukalenteri.Client.SharedCode
+namespace joulukalenteri.Client.Services
 {
     /// <summary>
     /// Shuffles date according to year.

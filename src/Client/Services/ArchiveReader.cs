@@ -2,7 +2,7 @@
 using System.Linq;
 using Microsoft.Extensions.Configuration;
 
-namespace joulukalenteri.Client.SharedCode
+namespace joulukalenteri.Client.Services
 {
     /// <summary>
     /// Parses and reads JSON archive list from the server.

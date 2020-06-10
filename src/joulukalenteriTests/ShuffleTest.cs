@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using joulukalenteri.Client.SharedCode;
+using joulukalenteri.Client.Services;
 using joulukalenteri.Shared;
 using Moq;
 
