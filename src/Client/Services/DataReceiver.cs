@@ -20,7 +20,7 @@ namespace joulukalenteri.Client.Services
         /// </summary>
         public DataReceiver(IConfiguration config, NavigationManager nav) {
             _client = new HttpClient();
-            _baseUri = string.IsNullOrEmpty(config["baseUri"])? nav.BaseUri:config["baseUri"];
+            _baseUri = string.IsNullOrEmpty(config["baseUri"])? nav.BaseUri+"/contents/":config["baseUri"];
             //_baseUri = _client.BaseAddress.AbsoluteUri;
         }
         /// <summary>
@@ -30,7 +30,6 @@ namespace joulukalenteri.Client.Services
         public DataReceiver(HttpClient client) {
             _client = client;
             _baseUri = "";
-            //_baseUri = _client.BaseAddress.AbsoluteUri;
         }
         /// <summary>
         /// Gets if day file is availble.
@@ -42,7 +41,7 @@ namespace joulukalenteri.Client.Services
         public async Task<bool> CheckDayData(int year, int day)
         {
             if (!dataList.ContainsKey((year, day))) {
-                dataList.Add((year, day), await _client.GetAsync($"{_baseUri}/contents/{year}/day{day}.md", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true));
+                dataList.Add((year, day), await _client.GetAsync($"{_baseUri}/{year}/day{day}.md", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true));
             }
             return dataList[(year, day)].IsSuccessStatusCode;
         }
@@ -70,13 +69,6 @@ namespace joulukalenteri.Client.Services
             else {
                 return null;
             }
-        }
-        /// <summary>
-        /// Provides JSON data of available days and years from the server.
-        /// </summary>
-        /// <returns>Unparsed JSON string of the available year and day file names.</returns>
-        public async Task<string> ReceiveArchive() {
-            return await _client.GetStringAsync($"{_baseUri}api/ArchiveCheck").ConfigureAwait(true);
         }
     }
 }

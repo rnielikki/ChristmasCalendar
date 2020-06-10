@@ -24,10 +24,5 @@ namespace joulukalenteri.Client.Services
         /// <param name="day">Target day to receive data.</param>
         /// <returns>Raw, unparsed markdown file as string.</returns>
         Task<string> ReceiveDayData(int year, int day);
-        /// <summary>
-        /// Provides getter interface of JSON data of available days and years from the server.
-        /// </summary>
-        /// <returns>Unparsed JSON string of the available year and day file names.</returns>
-        Task<string> ReceiveArchive();
     }
 }

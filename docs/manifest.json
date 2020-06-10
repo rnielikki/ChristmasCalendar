@@ -1,0 +1,260 @@
+{
+  "homepages": [],
+  "source_base_path": "C:/Users/Lumi/source/repos/ASP.NET/Blazor/ChristmasCalendar/docs/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Conceptual",
+      "source_relative_path": "api/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "api/index.html",
+          "hash": "OtyEDcTGG0CCgxj9mt1eCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.ArchiveReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.ArchiveReader.html",
+          "hash": "7dd/Una6ksSqgEdd/Wvb7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.DataReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.DataReceiver.html",
+          "hash": "V2vbK3ihPcHjt2o4X7hjew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.DayReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.DayReader.html",
+          "hash": "En1a+t/Cj3oaMxV2bFPjzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.DaysShuffler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.DaysShuffler.html",
+          "hash": "88FDA260HjwLU400YXRxqA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.IDataReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.IDataReceiver.html",
+          "hash": "3mtOrKeZ1BKVxQ3kvoV3RQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.Validator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.Validator.html",
+          "hash": "EwYhY9BSajMN4Wgn2YSsvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Client.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Client.Services.html",
+          "hash": "WT6CtKrexdsSGZkcO2Xxzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Shared.DayInfoData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Shared.DayInfoData.html",
+          "hash": "xMSNKTVmne60nRV/AW/jZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Shared.DefaultDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Shared.DefaultDateTime.html",
+          "hash": "SqziwVymNTHGRvWrosjJ+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Shared.IDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Shared.IDateTime.html",
+          "hash": "q1WEb2oV0272lW+WomJpIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/joulukalenteri.Shared.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/joulukalenteri.Shared.html",
+          "hash": "sANQ0nX9A/MQh7KEqs+3pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "BmP94gnewtKj5xihSKpVCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "app-settings/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "app-settings/toc.html",
+          "hash": "AjPZYmRzz5PTs47Qbj/XeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "app-settings/usage.md",
+      "output": {
+        ".html": {
+          "relative_path": "app-settings/usage.html",
+          "hash": "T1SkRfFZHIAWuXQCwU0fJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "ZMTRZ/f0wvFPWm/W7zJVLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "dP8t3tjFKgWRLutvJ3Nj0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 11,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

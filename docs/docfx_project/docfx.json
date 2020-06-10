@@ -3,15 +3,16 @@
     {
       "src": [
         {
-          "src": "..",
+          "src":"../..",
           "files": [
-            "\\Client\\SharedCode\\**.cs"
+            "src/**/**.csproj"
+          ],
+          "exclude":[
+            "src/**Tests/**Tests.csproj"
           ]
         }
       ],
-      "dest": "api/Client",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "dest": "api"
     }
   ],
   "build": {
@@ -19,15 +20,19 @@
       {
         "files": [
           "api/**.yml",
-          "api/index.md"
+          "api/**.md",
         ]
       },
       {
         "files": [
-          "articles/**.md",
-          "articles/**/toc.yml",
+          "app-settings/**.md",
+          "app-settings/**.yml"
+        ]
+      },
+      {
+        "files": [
           "toc.yml",
-          "*.md"
+          "index.md"
         ]
       }
     ],
@@ -49,7 +54,7 @@
         ]
       }
     ],
-    "dest": "_site",
+    "dest": "../",
     "globalMetadataFiles": [],
     "fileMetadataFiles": [],
     "template": [
@@ -58,8 +63,5 @@
     "postProcessors": [],
     "markdownEngineName": "markdig",
     "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
   }
 }

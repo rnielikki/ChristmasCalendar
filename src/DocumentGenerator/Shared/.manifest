@@ -1,9 +1,0 @@
-{
-  "joulukalenteri.Shared": "joulukalenteri.Shared.yml",
-  "joulukalenteri.Shared.DayInfoData": "joulukalenteri.Shared.DayInfoData.yml",
-  "joulukalenteri.Shared.DayInfoData.Content": "joulukalenteri.Shared.DayInfoData.yml",
-  "joulukalenteri.Shared.DayInfoData.Day": "joulukalenteri.Shared.DayInfoData.yml",
-  "joulukalenteri.Shared.DayInfoData.Summary": "joulukalenteri.Shared.DayInfoData.yml",
-  "joulukalenteri.Shared.DayInfoData.SummaryLength": "joulukalenteri.Shared.DayInfoData.yml",
-  "joulukalenteri.Shared.DayInfoData.Title": "joulukalenteri.Shared.DayInfoData.yml"
-}
