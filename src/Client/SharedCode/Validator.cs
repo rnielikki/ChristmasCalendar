@@ -1,5 +1,4 @@
-﻿using System;
-using joulukalenteri.Shared;
+﻿using joulukalenteri.Shared;
 
 namespace joulukalenteri.Client.SharedCode
 {
@@ -47,14 +46,7 @@ namespace joulukalenteri.Client.SharedCode
         /// <returns><c>true</c> if the date is valid and not the future, otherwise <c>false</c></returns>
         public bool IsOpenToday(int targetDay)
         {
-            if (datetime.Now.Month != 12 || datetime.Now.Day < targetDay || targetDay<=0 )
-            {
-                return false;
-            }
-            else
-            {
-                return true;
-            }
+            return datetime.Now.Month == 12 && datetime.Now.Day >= targetDay && targetDay > 0;
         }
     }
 }

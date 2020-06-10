@@ -5,16 +5,17 @@
         {
           "src": "..",
           "files": [
-            "Client/SharedCode/**.cs",
-            "Server/Controllers/**.cs",
-            "Server/AppConfig.cs",
-            "Shared/**.cs"
+            "Client/**.csproj",
+            "Shared/**.csproj"
+          ],
+          "exclude": [
+            "**/bin/**",
+            "**/obj/**",
+            "**Tests.csproj"
           ]
         }
       ],
-      "dest": "api",
-      "disableGitFeatures": false,
-      "disableDefaultFilter": false
+      "dest": "api"
     }
   ],
   "build": {
@@ -60,9 +61,6 @@
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
-    "noLangKeyword": false,
-    "keepFileLink": false,
-    "cleanupCacheHistory": false,
-    "disableGitFeatures": false
+    "noLangKeyword": false
   }
 }

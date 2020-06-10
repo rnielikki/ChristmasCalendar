@@ -40,7 +40,7 @@ namespace joulukalenteri.Client.SharedCode
         /// Get Available year.
         /// </summary>
         /// <param name="year">year to know if it's available</param>
-        /// <returns></returns>
+        /// <returns><c>true</c> if the year is available, <c>false</c> if it doesn't</returns>
         public bool IsAvailableYear(int year)
         {
             if (_archiveYears == null) GetYears();

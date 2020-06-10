@@ -32,7 +32,8 @@ namespace joulukalenteri.Client.SharedCode
                 Swap(ref result[i], ref result[random.Next(i, 24)]);
             }
             return result;
-            void Swap(ref int x, ref int y)
+
+            static void Swap(ref int x, ref int y)
             {
                 int temp = x;
                 x = y;

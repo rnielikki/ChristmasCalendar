@@ -2,14 +2,13 @@
 using Blazored.Modal;
 using Microsoft.Extensions.DependencyInjection;
 using joulukalenteri.Client.SharedCode;
-//using System.Net.Http;
 using joulukalenteri.Shared;
 
 namespace joulukalenteri.Client
 {
-    public static class Program
+    internal static class Program
     {
-        public static async System.Threading.Tasks.Task Main(string[] args)
+        private static async System.Threading.Tasks.Task Main(string[] args)
         {
             var builder = WebAssemblyHostBuilder.CreateDefault(args);
             builder.RootComponents.Add<App>("app");
