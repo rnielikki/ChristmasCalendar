@@ -1,12 +1,12 @@
 ﻿using System;
 using Xunit;
-using joulukalenteri.Shared;
-using joulukalenteri.Client.Services;
+using AdventCalendar.Client.Services;
 using Moq;
 using System.Threading.Tasks;
 using System.Linq;
+using AdventCalendar;
 
-namespace joulukalenteriTests
+namespace AdventCalendarTests
 {
     public class ParseTest
     {

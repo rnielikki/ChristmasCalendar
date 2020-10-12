@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace joulukalenteri.Shared
+namespace AdventCalendar
 {
     /// <summary>
     /// Provides public DateTime wrapper, both for server and client.
@@ -19,7 +19,8 @@ namespace joulukalenteri.Shared
     /// <summary>
     /// Default implementation for public DateTime wrapper, both for server and client.
     /// </summary>
-    public class DefaultDateTime : IDateTime {
+    public class DefaultDateTime : IDateTime
+    {
         /// <summary>
         /// Provides Real <see cref="DateTime.Now"/>.
         /// </summary>

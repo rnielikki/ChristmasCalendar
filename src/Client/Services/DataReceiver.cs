@@ -3,9 +3,8 @@ using System.Net.Http;
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Components;
-using Microsoft.Extensions.Configuration;
 
-namespace joulukalenteri.Client.Services
+namespace AdventCalendar.Client.Services
 {
     /// <summary>
     /// Provides the concrete server data receiver.
@@ -18,16 +17,17 @@ namespace joulukalenteri.Client.Services
         /// <summary>
         /// Creates DataReceiver for injecting purpose on a razor page.
         /// </summary>
-        public DataReceiver(IConfiguration config, NavigationManager nav) {
+        public DataReceiver(IAppSettings settings, NavigationManager nav)
+        {
             _client = new HttpClient();
-            _baseUri = string.IsNullOrEmpty(config["baseUri"])? nav.BaseUri+"/contents/":config["baseUri"];
-            //_baseUri = _client.BaseAddress.AbsoluteUri;
+            _baseUri = string.IsNullOrEmpty(settings.BaseUri) ? nav.BaseUri + "/contents/" : settings.BaseUri;
         }
         /// <summary>
         /// Creates DataReceiver for testing purpose with custom HttpClient.
         /// </summary>
         /// <param name="client">Custom HTTPClient to get data.</param>
-        public DataReceiver(HttpClient client) {
+        public DataReceiver(HttpClient client)
+        {
             _client = client;
             _baseUri = "";
         }
@@ -40,7 +40,8 @@ namespace joulukalenteri.Client.Services
         // TODO: ALSO TEST
         public async Task<bool> CheckDayData(int year, int day)
         {
-            if (!dataList.ContainsKey((year, day))) {
+            if (!dataList.ContainsKey((year, day)))
+            {
                 dataList.Add((year, day), await _client.GetAsync($"{_baseUri}/{year}/day{day}.md", HttpCompletionOption.ResponseHeadersRead).ConfigureAwait(true));
             }
             return dataList[(year, day)].IsSuccessStatusCode;
@@ -61,12 +62,14 @@ namespace joulukalenteri.Client.Services
                 {
                     return await response.Content.ReadAsStringAsync().ConfigureAwait(true);
                 }
-                finally {
+                finally
+                {
                     response.Dispose();
                     dataList.Remove((year, day));
                 }
             }
-            else {
+            else
+            {
                 return null;
             }
         }

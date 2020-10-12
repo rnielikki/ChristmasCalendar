@@ -1,10 +1,9 @@
 ﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
-using Blazored.Modal;
 using Microsoft.Extensions.DependencyInjection;
-using joulukalenteri.Client.Services;
-using joulukalenteri.Shared;
+using AdventCalendar.Client.Services;
+using Microsoft.Extensions.Configuration;
 
-namespace joulukalenteri.Client
+namespace AdventCalendar.Client
 {
     internal static class Program
     {
@@ -17,7 +16,9 @@ namespace joulukalenteri.Client
         }
         private static void ConfigureServices(IServiceCollection services)
         {
-            services.AddBlazoredModal();
+            services.AddSingleton<IAppSettings>(
+                service => new AppSettings(service.GetService<IConfiguration>())
+            );
             services.AddSingleton<DayReader>();
             services.AddSingleton<ArchiveReader>();
             services.AddSingleton<DaysShuffler>();

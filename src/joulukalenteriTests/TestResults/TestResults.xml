@@ -1,124 +1,124 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <?xml-stylesheet type="text/xsl" href="TestResults.xsl"?>
 <assemblies timestamp="11/12/2019 08:33:56">
-  <assembly name="C:\Users\Lumi\source\repos\ChristmasCalendar\src\joulukalenteriTests\bin\Debug\netcoreapp3.0\joulukalenteriTests.dll" run-date="2019-11-12" run-time="08:33:56" total="35" passed="35" failed="0" skipped="0" time="3.733" errors="0">
+  <assembly name="C:\Users\Lumi\source\repos\ChristmasCalendar\src\AdventCalendarTests\bin\Debug\netcoreapp3.0\AdventCalendarTests.dll" run-date="2019-11-12" run-time="08:33:56" total="35" passed="35" failed="0" skipped="0" time="3.733" errors="0">
     <errors />
-    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for joulukalenteriTests.ArchiveTest" time="0.504">
-      <test name="joulukalenteriTests.ArchiveTest.ClientSideTest" type="joulukalenteriTests.ArchiveTest" method="ClientSideTest" time="0.3983568" result="Pass">
+    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for AdventCalendarTests.ArchiveTest" time="0.504">
+      <test name="AdventCalendarTests.ArchiveTest.ClientSideTest" type="AdventCalendarTests.ArchiveTest" method="ClientSideTest" time="0.3983568" result="Pass">
         <traits />
       </test>
-      <test name="joulukalenteriTests.ArchiveTest.ServerSideTest" type="joulukalenteriTests.ArchiveTest" method="ServerSideTest" time="0.1052170" result="Pass">
-        <traits />
-      </test>
-    </collection>
-    <collection total="13" passed="13" failed="0" skipped="0" name="Test collection for joulukalenteriTests.CalendarTest" time="0.014">
-      <test name="joulukalenteriTests.CalendarTest.OpenByYearTest(fakeday: 2020-08-12T00:00:00.0000000, openyear: 2018, openday: 6, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByYearTest" time="0.0109468" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByYearTest(fakeday: 2019-12-15T00:00:00.0000000, openyear: 2018, openday: 2, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByYearTest" time="0.0002821" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByYearTest(fakeday: 2021-06-05T00:00:00.0000000, openyear: 2022, openday: 3, isOpen: False)" type="joulukalenteriTests.CalendarTest" method="OpenByYearTest" time="0.0001203" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByYearTest(fakeday: 2020-11-11T00:00:00.0000000, openyear: 2020, openday: 12, isOpen: False)" type="joulukalenteriTests.CalendarTest" method="OpenByYearTest" time="0.0007062" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByYearTest(fakeday: 2021-12-26T00:00:00.0000000, openyear: 2021, openday: 25, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByYearTest" time="0.0001853" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByYearTest(fakeday: 2020-12-22T00:00:00.0000000, openyear: 2019, openday: 21, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByYearTest" time="0.0001380" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2020-11-11T00:00:00.0000000, openday: 12, isOpen: False)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0011520" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2022-08-12T00:00:00.0000000, openday: 3, isOpen: False)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0001838" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2021-12-05T00:00:00.0000000, openday: 19, isOpen: False)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0001443" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2021-06-01T00:00:00.0000000, openday: 1, isOpen: False)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0001155" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2020-12-22T00:00:00.0000000, openday: 21, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0001095" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2021-12-26T00:00:00.0000000, openday: 25, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0001006" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.CalendarTest.OpenByDateTest(fakeday: 2019-12-15T00:00:00.0000000, openday: 15, isOpen: True)" type="joulukalenteriTests.CalendarTest" method="OpenByDateTest" time="0.0001023" result="Pass">
+      <test name="AdventCalendarTests.ArchiveTest.ServerSideTest" type="AdventCalendarTests.ArchiveTest" method="ServerSideTest" time="0.1052170" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for joulukalenteriTests.Integration.ArchiveOpenTest" time="0.712">
-      <test name="joulukalenteriTests.Integration.ArchiveOpenTest.ArchiveTest" type="joulukalenteriTests.Integration.ArchiveOpenTest" method="ArchiveTest" time="0.7124535" result="Pass">
+    <collection total="13" passed="13" failed="0" skipped="0" name="Test collection for AdventCalendarTests.CalendarTest" time="0.014">
+      <test name="AdventCalendarTests.CalendarTest.OpenByYearTest(fakeday: 2020-08-12T00:00:00.0000000, openyear: 2018, openday: 6, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByYearTest" time="0.0109468" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByYearTest(fakeday: 2019-12-15T00:00:00.0000000, openyear: 2018, openday: 2, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByYearTest" time="0.0002821" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByYearTest(fakeday: 2021-06-05T00:00:00.0000000, openyear: 2022, openday: 3, isOpen: False)" type="AdventCalendarTests.CalendarTest" method="OpenByYearTest" time="0.0001203" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByYearTest(fakeday: 2020-11-11T00:00:00.0000000, openyear: 2020, openday: 12, isOpen: False)" type="AdventCalendarTests.CalendarTest" method="OpenByYearTest" time="0.0007062" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByYearTest(fakeday: 2021-12-26T00:00:00.0000000, openyear: 2021, openday: 25, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByYearTest" time="0.0001853" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByYearTest(fakeday: 2020-12-22T00:00:00.0000000, openyear: 2019, openday: 21, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByYearTest" time="0.0001380" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2020-11-11T00:00:00.0000000, openday: 12, isOpen: False)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0011520" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2022-08-12T00:00:00.0000000, openday: 3, isOpen: False)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0001838" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2021-12-05T00:00:00.0000000, openday: 19, isOpen: False)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0001443" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2021-06-01T00:00:00.0000000, openday: 1, isOpen: False)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0001155" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2020-12-22T00:00:00.0000000, openday: 21, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0001095" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2021-12-26T00:00:00.0000000, openday: 25, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0001006" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.CalendarTest.OpenByDateTest(fakeday: 2019-12-15T00:00:00.0000000, openday: 15, isOpen: True)" type="AdventCalendarTests.CalendarTest" method="OpenByDateTest" time="0.0001023" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for joulukalenteriTests.Integration.CalendarOpenTest" time="1.190">
-      <test name="joulukalenteriTests.Integration.CalendarOpenTest.ReadAndParseTest" type="joulukalenteriTests.Integration.CalendarOpenTest" method="ReadAndParseTest" time="1.1903563" result="Pass">
+    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for AdventCalendarTests.Integration.ArchiveOpenTest" time="0.712">
+      <test name="AdventCalendarTests.Integration.ArchiveOpenTest.ArchiveTest" type="AdventCalendarTests.Integration.ArchiveOpenTest" method="ArchiveTest" time="0.7124535" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="5" passed="5" failed="0" skipped="0" name="Test collection for joulukalenteriTests.ParseTest" time="0.698">
-      <test name="joulukalenteriTests.ParseTest.DataParserTest(day: 1, input: &quot;notitle\n\nasdf&quot;, title: &quot;Day 1&quot;, summary: &quot;notitle&quot;, content: &quot;&lt;p&gt;notitle&lt;/p&gt;\n&lt;p&gt;asdf&lt;/p&gt;\n&quot;)" type="joulukalenteriTests.ParseTest" method="DataParserTest" time="0.5988968" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ParseTest.DataParserTest(day: 1, input: &quot;aaa\n# asdf\n&quot;, title: &quot;asdf&quot;, summary: &quot;aaa&quot;, content: &quot;&lt;p&gt;aaa&lt;/p&gt;\n&quot;)" type="joulukalenteriTests.ParseTest" method="DataParserTest" time="0.0771905" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ParseTest.DataParserTest(day: 1, input: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;..., title: &quot;mytitle&quot;, summary: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;..., content: &quot;&lt;p&gt;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;...)" type="joulukalenteriTests.ParseTest" method="DataParserTest" time="0.0028214" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ParseTest.DataParserTest(day: 1, input: &quot;# asdf\n&quot;, title: &quot;asdf&quot;, summary: &quot;&quot;, content: &quot;&quot;)" type="joulukalenteriTests.ParseTest" method="DataParserTest" time="0.0024577" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ParseTest.DataParserTest(day: 1, input: &quot;aaa\n# asdf\nghi\n&quot;, title: &quot;asdf&quot;, summary: &quot;aaa&quot;, content: &quot;&lt;p&gt;aaa&lt;/p&gt;\n&lt;p&gt;ghi&lt;/p&gt;\n&quot;)" type="joulukalenteriTests.ParseTest" method="DataParserTest" time="0.0162320" result="Pass">
+    <collection total="1" passed="1" failed="0" skipped="0" name="Test collection for AdventCalendarTests.Integration.CalendarOpenTest" time="1.190">
+      <test name="AdventCalendarTests.Integration.CalendarOpenTest.ReadAndParseTest" type="AdventCalendarTests.Integration.CalendarOpenTest" method="ReadAndParseTest" time="1.1903563" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="11" passed="11" failed="0" skipped="0" name="Test collection for joulukalenteriTests.ReadTest" time="0.240">
-      <test name="joulukalenteriTests.ReadTest.ServerReadDayTest(day: 10, success: True)" type="joulukalenteriTests.ReadTest" method="ServerReadDayTest" time="0.2000442" result="Pass">
+    <collection total="5" passed="5" failed="0" skipped="0" name="Test collection for AdventCalendarTests.ParseTest" time="0.698">
+      <test name="AdventCalendarTests.ParseTest.DataParserTest(day: 1, input: &quot;notitle\n\nasdf&quot;, title: &quot;Day 1&quot;, summary: &quot;notitle&quot;, content: &quot;&lt;p&gt;notitle&lt;/p&gt;\n&lt;p&gt;asdf&lt;/p&gt;\n&quot;)" type="AdventCalendarTests.ParseTest" method="DataParserTest" time="0.5988968" result="Pass">
         <traits />
       </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadDayTest(day: 11, success: False)" type="joulukalenteriTests.ReadTest" method="ServerReadDayTest" time="0.0010990" result="Pass">
+      <test name="AdventCalendarTests.ParseTest.DataParserTest(day: 1, input: &quot;aaa\n# asdf\n&quot;, title: &quot;asdf&quot;, summary: &quot;aaa&quot;, content: &quot;&lt;p&gt;aaa&lt;/p&gt;\n&quot;)" type="AdventCalendarTests.ParseTest" method="DataParserTest" time="0.0771905" result="Pass">
         <traits />
       </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadDayTest(day: 26, success: False)" type="joulukalenteriTests.ReadTest" method="ServerReadDayTest" time="0.0013335" result="Pass">
+      <test name="AdventCalendarTests.ParseTest.DataParserTest(day: 1, input: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;..., title: &quot;mytitle&quot;, summary: &quot;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;..., content: &quot;&lt;p&gt;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa&quot;...)" type="AdventCalendarTests.ParseTest" method="DataParserTest" time="0.0028214" result="Pass">
         <traits />
       </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadDayTest(day: 0, success: False)" type="joulukalenteriTests.ReadTest" method="ServerReadDayTest" time="0.0012650" result="Pass">
+      <test name="AdventCalendarTests.ParseTest.DataParserTest(day: 1, input: &quot;# asdf\n&quot;, title: &quot;asdf&quot;, summary: &quot;&quot;, content: &quot;&quot;)" type="AdventCalendarTests.ParseTest" method="DataParserTest" time="0.0024577" result="Pass">
         <traits />
       </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadDayTest(day: 9, success: True)" type="joulukalenteriTests.ReadTest" method="ServerReadDayTest" time="0.0187022" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadYearTest(today: 2019-12-31T00:00:00.0000000, year: 2019, day: 26, isValidDate: False)" type="joulukalenteriTests.ReadTest" method="ServerReadYearTest" time="0.0022319" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadYearTest(today: 2019-12-22T00:00:00.0000000, year: 2020, day: 1, isValidDate: False)" type="joulukalenteriTests.ReadTest" method="ServerReadYearTest" time="0.0053738" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadYearTest(today: 2019-12-01T00:00:00.0000000, year: 2018, day: 25, isValidDate: True)" type="joulukalenteriTests.ReadTest" method="ServerReadYearTest" time="0.0030604" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadYearTest(today: 2019-12-24T00:00:00.0000000, year: 2019, day: 5, isValidDate: True)" type="joulukalenteriTests.ReadTest" method="ServerReadYearTest" time="0.0030764" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadYearTest(today: 2019-12-01T00:00:00.0000000, year: 2018, day: 99, isValidDate: False)" type="joulukalenteriTests.ReadTest" method="ServerReadYearTest" time="0.0015738" result="Pass">
-        <traits />
-      </test>
-      <test name="joulukalenteriTests.ReadTest.ServerReadYearTest(today: 2019-12-24T00:00:00.0000000, year: 2019, day: 24, isValidDate: True)" type="joulukalenteriTests.ReadTest" method="ServerReadYearTest" time="0.0024307" result="Pass">
+      <test name="AdventCalendarTests.ParseTest.DataParserTest(day: 1, input: &quot;aaa\n# asdf\nghi\n&quot;, title: &quot;asdf&quot;, summary: &quot;aaa&quot;, content: &quot;&lt;p&gt;aaa&lt;/p&gt;\n&lt;p&gt;ghi&lt;/p&gt;\n&quot;)" type="AdventCalendarTests.ParseTest" method="DataParserTest" time="0.0162320" result="Pass">
         <traits />
       </test>
     </collection>
-    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for joulukalenteriTests.ShuffleTest" time="0.374">
-      <test name="joulukalenteriTests.ShuffleTest.ValidShuffleTest" type="joulukalenteriTests.ShuffleTest" method="ValidShuffleTest" time="0.3662867" result="Pass">
+    <collection total="11" passed="11" failed="0" skipped="0" name="Test collection for AdventCalendarTests.ReadTest" time="0.240">
+      <test name="AdventCalendarTests.ReadTest.ServerReadDayTest(day: 10, success: True)" type="AdventCalendarTests.ReadTest" method="ServerReadDayTest" time="0.2000442" result="Pass">
         <traits />
       </test>
-      <test name="joulukalenteriTests.ShuffleTest.ShuffleConsistenceTest" type="joulukalenteriTests.ShuffleTest" method="ShuffleConsistenceTest" time="0.0082034" result="Pass">
+      <test name="AdventCalendarTests.ReadTest.ServerReadDayTest(day: 11, success: False)" type="AdventCalendarTests.ReadTest" method="ServerReadDayTest" time="0.0010990" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadDayTest(day: 26, success: False)" type="AdventCalendarTests.ReadTest" method="ServerReadDayTest" time="0.0013335" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadDayTest(day: 0, success: False)" type="AdventCalendarTests.ReadTest" method="ServerReadDayTest" time="0.0012650" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadDayTest(day: 9, success: True)" type="AdventCalendarTests.ReadTest" method="ServerReadDayTest" time="0.0187022" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadYearTest(today: 2019-12-31T00:00:00.0000000, year: 2019, day: 26, isValidDate: False)" type="AdventCalendarTests.ReadTest" method="ServerReadYearTest" time="0.0022319" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadYearTest(today: 2019-12-22T00:00:00.0000000, year: 2020, day: 1, isValidDate: False)" type="AdventCalendarTests.ReadTest" method="ServerReadYearTest" time="0.0053738" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadYearTest(today: 2019-12-01T00:00:00.0000000, year: 2018, day: 25, isValidDate: True)" type="AdventCalendarTests.ReadTest" method="ServerReadYearTest" time="0.0030604" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadYearTest(today: 2019-12-24T00:00:00.0000000, year: 2019, day: 5, isValidDate: True)" type="AdventCalendarTests.ReadTest" method="ServerReadYearTest" time="0.0030764" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadYearTest(today: 2019-12-01T00:00:00.0000000, year: 2018, day: 99, isValidDate: False)" type="AdventCalendarTests.ReadTest" method="ServerReadYearTest" time="0.0015738" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ReadTest.ServerReadYearTest(today: 2019-12-24T00:00:00.0000000, year: 2019, day: 24, isValidDate: True)" type="AdventCalendarTests.ReadTest" method="ServerReadYearTest" time="0.0024307" result="Pass">
+        <traits />
+      </test>
+    </collection>
+    <collection total="2" passed="2" failed="0" skipped="0" name="Test collection for AdventCalendarTests.ShuffleTest" time="0.374">
+      <test name="AdventCalendarTests.ShuffleTest.ValidShuffleTest" type="AdventCalendarTests.ShuffleTest" method="ValidShuffleTest" time="0.3662867" result="Pass">
+        <traits />
+      </test>
+      <test name="AdventCalendarTests.ShuffleTest.ShuffleConsistenceTest" type="AdventCalendarTests.ShuffleTest" method="ShuffleConsistenceTest" time="0.0082034" result="Pass">
         <traits />
       </test>
     </collection>

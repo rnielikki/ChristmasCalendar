@@ -20,7 +20,7 @@
       {
         "files": [
           "api/**.yml",
-          "api/**.md",
+          "api/**.md"
         ]
       },
       {
@@ -62,6 +62,6 @@
     ],
     "postProcessors": [],
     "markdownEngineName": "markdig",
-    "noLangKeyword": false,
+    "noLangKeyword": false
   }
 }

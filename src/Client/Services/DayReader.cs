@@ -1,5 +1,4 @@
-﻿using joulukalenteri.Shared;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Threading.Tasks;
 using Markdig;
 using Markdig.Syntax;
@@ -7,9 +6,8 @@ using System.Linq;
 using Markdig.Renderers;
 using System.IO;
 using System;
-using System.Net;
 
-namespace joulukalenteri.Client.Services
+namespace AdventCalendar.Client.Services
 {
     /// <summary>
     /// Parses and reads markdown of the day data from the server.
@@ -18,14 +16,17 @@ namespace joulukalenteri.Client.Services
     {
         private readonly IDataReceiver receiver;
         private readonly IDateTime datetime;
+        private MarkdownPipeline _pipeline;
         /// <summary>
         /// Calls day reader and abstract datetime manually for test purpose.
         /// </summary>
         /// <param name="_receiver"><see cref="IDataReceiver"/>, which contains HTTP Client</param>
         /// <param name="_datetime"><see cref="IDateTime"/>, which is possibly fake date.</param>
-        public DayReader(IDataReceiver _receiver, IDateTime _datetime) {
+        public DayReader(IDataReceiver _receiver, IDateTime _datetime)
+        {
             receiver = _receiver;
             datetime = _datetime;
+            _pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
         }
         private readonly Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
         /// <summary>
@@ -58,8 +59,9 @@ namespace joulukalenteri.Client.Services
             }
             return dataList[(year, day)];
         }
-        private DayInfoData Parse(int day, string input) {
-            MarkdownDocument markdown = Markdown.Parse(input);
+        private DayInfoData Parse(int day, string input)
+        {
+            MarkdownDocument markdown = Markdown.Parse(input, _pipeline);
             DayInfoData daydata = new DayInfoData
             {
                 Day = day
@@ -71,7 +73,8 @@ namespace joulukalenteri.Client.Services
                 daydata.Title = title.Inline.FirstChild.ToString();
                 markdown.Remove(title);
             }
-            else {
+            else
+            {
                 daydata.Title = $"Day {day}";
             }
             //content part

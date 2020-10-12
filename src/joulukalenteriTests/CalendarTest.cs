@@ -1,10 +1,10 @@
 using System;
 using Xunit;
 using Moq;
-using joulukalenteri.Shared;
-using joulukalenteri.Client.Services;
+using AdventCalendar.Client.Services;
+using AdventCalendar;
 
-namespace joulukalenteriTests
+namespace AdventCalendarTests
 {
     public class CalendarTest
     {

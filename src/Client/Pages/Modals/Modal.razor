@@ -1,0 +1,26 @@
+﻿@namespace AdventCalendar.ModalComponents
+
+@if (DayInfo != null)
+{
+<div class="modal-background">
+    <div class="modal">
+        <h3>@(DayInfo?.Title)</h3>
+        <p>@(DayInfo?.Summary)</p>
+        @if (DayInfo.Exists) {
+            <a class="linkbtn" href="/day/@(DayInfo?.Day)">See more</a>
+        }
+         <a class="linkbtn closebtn" @onclick="(async ()=>await Close())">Close</a>
+    </div>
+</div>
+}
+@code
+{
+    [Parameter]
+    public DayInfoData DayInfo { get; set; }
+    [Parameter]
+    public EventCallback<DayInfoData> DayInfoChanged { get; set; }
+    private async Task Close(){
+        DayInfo = null;
+        await DayInfoChanged.InvokeAsync(DayInfo);
+    }
+}
