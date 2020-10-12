@@ -1,4 +1,5 @@
 ﻿using AdventCalendar;
+using AdventCalendar.Client;
 using AdventCalendar.Client.Services;
 using Microsoft.Extensions.Configuration;
 using Moq;
@@ -17,17 +18,22 @@ namespace AdventCalendarTests
             new KeyValuePair<string, string>("skipYears:0", "2012"),
             new KeyValuePair<string, string>("skipYears:1", "2015")
         }).Build();
+        private readonly IAppSettings settings = Mock.Of<IAppSettings>(mock =>
+                mock.StartYear == 2010 &&
+                mock.SkipYears == new int[] { 2012, 2015 }
+            );
         [Fact]
-        public void ConfigGetTest()
+        public void ReadAppSettingTest()
         {
-            Assert.Equal(2010, config.GetValue<int>("startYear"));
-            Assert.Equal(new int[] { 2012, 2015 }, config.GetSection("skipYears").Get<int[]>());
+            var settingFromConfig = new AppSettings(config);
+            Assert.Equal(settingFromConfig.StartYear, settings.StartYear);
+            Assert.Equal(settingFromConfig.SkipYears, settings.SkipYears);
         }
 
         [Fact]
         public void ArchiveRangeTest()
         {
-            ArchiveReader reader = new ArchiveReader(config, YearMock(currentYear));
+            ArchiveReader reader = new ArchiveReader(settings, YearMock(currentYear));
             Assert.Equal(new int[] { 2010, 2011, 2013, 2014, 2016, 2017}, reader.GetYears());
         }
         [Theory]
@@ -38,7 +44,7 @@ namespace AdventCalendarTests
         [InlineData(2019, false)]
         public void ArchiveAvailableYearTest(int year, bool expectResult)
         {
-            ArchiveReader reader = new ArchiveReader(config, YearMock(currentYear));
+            ArchiveReader reader = new ArchiveReader(settings, YearMock(currentYear));
             Assert.Equal(expectResult, reader.IsAvailableYear(year));
         }
         [Fact]
@@ -50,16 +56,15 @@ namespace AdventCalendarTests
                 new KeyValuePair<string, string>("startYear", currentYear.ToString()),
             }).Build();
 
-            ArchiveReader reader = new ArchiveReader(config, YearMock(currentYear));
+            ArchiveReader reader = new ArchiveReader(settings, YearMock(currentYear));
 
             //Assert.Throws
             reader.GetYears();
-            IConfiguration failConfig = new ConfigurationBuilder().AddInMemoryCollection(new List<KeyValuePair<string, string>>
-            {
-                new KeyValuePair<string, string>("startYear", (currentYear + 1).ToString()),
-            }).Build();
+            IAppSettings failSettings = Mock.Of<IAppSettings>(mock =>
+                mock.StartYear == currentYear+1
+            );
 
-            ArchiveReader failReader = new ArchiveReader(failConfig, YearMock(currentYear));
+            ArchiveReader failReader = new ArchiveReader(failSettings, YearMock(currentYear));
             Assert.Throws<ArgumentOutOfRangeException>(failReader.GetYears);
         }
         private IDateTime YearMock(int year) {

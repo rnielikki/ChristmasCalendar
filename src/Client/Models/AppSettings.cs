@@ -1,12 +1,13 @@
 ﻿using Microsoft.Extensions.Configuration;
-using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 
+[assembly:InternalsVisibleTo("AdventCalendarTests")]
 namespace AdventCalendar.Client
 {
     /// <summary>
     /// Model of app user settings. Same structure as appsettings.json, except 'days' data.
     /// </summary>
-    class AppSettings:IAppSettings
+    internal class AppSettings:IAppSettings
     {
         /// <summary>
         /// Represents from which year the archive starts.

@@ -4,14 +4,13 @@
 @inject AdventCalendar.Client.Services.DayReader reader
 @inject AdventCalendar.Client.Services.DaysShuffler shuffler
 @inject IDateTime datetime
-@inject Microsoft.Extensions.Configuration.IConfiguration config
 @inject AdventCalendar.Client.IAppSettings appSettings
 
-<Modal @bind-DayInfo ="@dayInfo">
+<Modal @bind-DayInfo ="@DayInfo">
 </Modal>
 <div class="calendar-wrapper wrapper">
     <h1>@appSettings.Title</h1>
-    <div class="calendar">
+    <div class="calendar @CalendarType">
         @{
             int[] shuffled = shuffler.ShuffleDays();
             for (int i = 0; i < appSettings.Days; i++)
@@ -31,9 +30,15 @@
 </div>
 @code
 {
-    private DayInfoData dayInfo { get; set; }
-    private async Task OpenDialog(int day)
+    private DayInfoData DayInfo { get; set; }
+    private string CalendarType { get; set; } = "";
+    protected override async Task OnInitializedAsync()
     {
-        dayInfo = await reader.GetContent(day);
+        if(appSettings.Days < 25)
+        CalendarType = "calendar-eve";
+    }
+        private async Task OpenDialog(int day)
+    {
+        DayInfo = await reader.GetContent(day);
     }
 }
