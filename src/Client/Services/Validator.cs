@@ -1,6 +1,4 @@
-﻿using joulukalenteri.Shared;
-
-namespace joulukalenteri.Client.Services
+﻿namespace AdventCalendar.Client.Services
 {
     /// <summary>
     /// Client-side check if the given date is future or not.

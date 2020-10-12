@@ -1,7 +1,8 @@
 ﻿@page "/archive/{Year:int}"
 @layout ArchiveLayout
-@inject joulukalenteri.Client.Services.ArchiveReader reader
-@inject joulukalenteri.Shared.IDateTime datetime
+@inject AdventCalendar.Client.Services.ArchiveReader reader
+@inject IDateTime datetime
+@inject AdventCalendar.Client.IAppSettings appSettings
 
 <div class=" wrapper">
     @if (reader.IsAvailableYear(Year))
@@ -9,7 +10,7 @@
         <h1>Archive @Year</h1>
         <div class="content-wrapper">
             <ul>
-                @for (int day = 1; day < 26; day++)
+                @for (int day = 1; day <= appSettings.Days; day++)
                 {
                     <li><a href="/archive/@Year/@day">Day @day</a></li>
                 }

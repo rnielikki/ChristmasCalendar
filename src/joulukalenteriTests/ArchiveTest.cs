@@ -1,14 +1,12 @@
-﻿using joulukalenteri.Client.Services;
-using joulukalenteri.Shared;
+﻿using AdventCalendar;
+using AdventCalendar.Client.Services;
 using Microsoft.Extensions.Configuration;
 using Moq;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using Xunit;
 
-namespace joulukalenteriTests
+namespace AdventCalendarTests
 {
     public class ArchiveTest
     {

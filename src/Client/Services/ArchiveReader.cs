@@ -1,25 +1,24 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
-using Microsoft.Extensions.Configuration;
 
-namespace joulukalenteri.Client.Services
+namespace AdventCalendar.Client.Services
 {
     /// <summary>
     /// Parses and reads JSON archive list from the server.
     /// </summary>
     public class ArchiveReader
     {
-        private readonly IConfiguration _config;
-        private readonly joulukalenteri.Shared.IDateTime _datetime;
-        private IEnumerable<int> _archiveYears = null;
+        private readonly IDateTime _datetime;
+        private IEnumerable<int> _archiveYears;
+        private readonly IAppSettings _appSettings;
         /// <summary>
         /// Calls archive reader manually for test purpose.
         /// </summary>
-        /// <param name="config">Configuration from appsettings.json</param>
+        /// <param name="settings">The applicatino settings.</param>
         /// <param name="datetime">Current date</param>
-        public ArchiveReader(IConfiguration config, joulukalenteri.Shared.IDateTime datetime) {
-            _config = config;
+        public ArchiveReader(IAppSettings settings, IDateTime datetime) {
             _datetime = datetime;
+            _appSettings = settings;
         }
         /// <summary>
         /// Get list of available calendar years asynchronously.
@@ -28,10 +27,9 @@ namespace joulukalenteri.Client.Services
         public IEnumerable<int> GetYears()
         {
             if (_archiveYears == null) {
-                int startYear = _config.GetValue<int>("startYear");
-                _archiveYears = Enumerable.Range(startYear, _datetime.Year - startYear);
-                var skipYears = _config.GetSection("skipYears")?.Get<int[]>();
-                if(skipYears!=null)
+                _archiveYears = Enumerable.Range(_appSettings.StartYear, _datetime.Year - _appSettings.StartYear);
+                var skipYears = _appSettings.SkipYears;
+                if(skipYears.Length != 0)
                     _archiveYears=_archiveYears.Except(skipYears);
             }
             return _archiveYears;

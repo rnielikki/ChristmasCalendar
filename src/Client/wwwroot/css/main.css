@@ -73,16 +73,32 @@ h1 {
     font-size: 1.2rem;
 }
 /* dialog */
-.blazored-modal-wrapper {
-    width: 100%;
+.modal-background {
     display: flex;
     justify-content: center;
+    align-items: center;
+    background-color:#00000090;
+    position:absolute;
+    top:0;left:0;right:0;bottom:0;
 }
-.blazored-modal {
+.modal {
     padding:0.84rem 1.5rem;
     width:80%;
     max-width:50rem;
+    background-color:#fff;
+    color:#000;
+    border-radius:3px;
 }
+    .modal h3 {
+        margin: .64rem 0 .4rem 0;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: .45rem;
+        font-size: 1.3rem;
+        font-weight: 500;
+    }
+    .modal:not(h3) {
+        font-size:1.1rem;
+    }
 /* button */
 .linkbtn {
     margin: 1.2rem .2rem .35rem .2rem;

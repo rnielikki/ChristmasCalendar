@@ -1,18 +1,20 @@
 ﻿@page "/"
-@inject joulukalenteri.Client.Services.Validator validator
-@inject joulukalenteri.Client.Services.DayReader reader
-@inject joulukalenteri.Client.Services.DaysShuffler shuffler
-@inject IModalService Modal
-@inject joulukalenteri.Shared.IDateTime datetime
+@using AdventCalendar.ModalComponents 
+@inject AdventCalendar.Client.Services.Validator validator
+@inject AdventCalendar.Client.Services.DayReader reader
+@inject AdventCalendar.Client.Services.DaysShuffler shuffler
+@inject IDateTime datetime
 @inject Microsoft.Extensions.Configuration.IConfiguration config
-@using joulukalenteri.Shared
+@inject AdventCalendar.Client.IAppSettings appSettings
 
+<Modal @bind-DayInfo ="@dayInfo">
+</Modal>
 <div class="calendar-wrapper wrapper">
-    <h1>@(config["title"]??"Advent Calendar")</h1>
+    <h1>@appSettings.Title</h1>
     <div class="calendar">
         @{
             int[] shuffled = shuffler.ShuffleDays();
-            for (int i = 0; i < 25; i++)
+            for (int i = 0; i < appSettings.Days; i++)
             {
                 int dayValue = shuffled[i];
                 if (validator.IsOpenToday(dayValue))
@@ -27,12 +29,11 @@
         }
     </div>
 </div>
-@code{
-        private async Task OpenDialog(int day)
-        {
-            DayInfoData data = await reader.GetContent(day);
-            ModalParameters modalParams = new ModalParameters();
-            modalParams.Add(nameof(DaysModal.DayInfo), data);
-            Modal.Show<DaysModal>($"Day {day}: {data.Title}", modalParams);
-        }
+@code
+{
+    private DayInfoData dayInfo { get; set; }
+    private async Task OpenDialog(int day)
+    {
+        dayInfo = await reader.GetContent(day);
+    }
 }

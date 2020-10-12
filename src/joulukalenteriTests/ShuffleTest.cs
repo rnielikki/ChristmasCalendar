@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using Xunit;
-using joulukalenteri.Client.Services;
-using joulukalenteri.Shared;
+using AdventCalendar.Client.Services;
 using Moq;
+using AdventCalendar;
 
-namespace joulukalenteriTests
+namespace AdventCalendarTests
 {
     public class ShuffleTest
     {
