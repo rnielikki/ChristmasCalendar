@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using System.Net.Http;
 
-namespace AdventCalendar.Client.Services
+namespace AdventCalendar.Services
 {
     /// <summary>
     /// Provides the server data receiver interface.

@@ -1,13 +1,13 @@
-﻿using AdventCalendar;
-using AdventCalendar.Client;
-using AdventCalendar.Client.Services;
+﻿using AdventCalendar.Models;
+using AdventCalendar.Services;
+using AdventCalendar.Settings;
 using Microsoft.Extensions.Configuration;
 using Moq;
 using System;
 using System.Collections.Generic;
 using Xunit;
 
-namespace AdventCalendarTests
+namespace AdventCalendarests
 {
     public class ArchiveTest
     {

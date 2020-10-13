@@ -1,8 +1,8 @@
 ﻿@page "/archive/{Year:int}"
 @layout ArchiveLayout
-@inject AdventCalendar.Client.Services.ArchiveReader reader
+@inject AdventCalendar.Services.ArchiveReader reader
 @inject IDateTime datetime
-@inject AdventCalendar.Client.IAppSettings appSettings
+@inject IAppSettings appSettings
 
 <div class=" wrapper">
     @if (reader.IsAvailableYear(Year))

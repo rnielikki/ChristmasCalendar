@@ -1,9 +1,11 @@
 ﻿using Microsoft.AspNetCore.Components.WebAssembly.Hosting;
 using Microsoft.Extensions.DependencyInjection;
-using AdventCalendar.Client.Services;
+using AdventCalendar.Services;
 using Microsoft.Extensions.Configuration;
+using AdventCalendar.Settings;
+using AdventCalendar.Models;
 
-namespace AdventCalendar.Client
+namespace AdventCalendar
 {
     internal static class Program
     {

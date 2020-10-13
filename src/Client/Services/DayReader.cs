@@ -6,26 +6,31 @@ using System.Linq;
 using Markdig.Renderers;
 using System.IO;
 using System;
+using AdventCalendar.Models;
+using AdventCalendar.Settings;
 
-namespace AdventCalendar.Client.Services
+namespace AdventCalendar.Services
 {
     /// <summary>
     /// Parses and reads markdown of the day data from the server.
     /// </summary>
     public class DayReader
     {
-        private readonly IDataReceiver receiver;
-        private readonly IDateTime datetime;
-        private MarkdownPipeline _pipeline;
+        private readonly IDataReceiver _receiver;
+        private readonly IDateTime _datetime;
+        private readonly int _summaryLength;
+        private readonly MarkdownPipeline _pipeline;
         /// <summary>
         /// Calls day reader and abstract datetime manually for test purpose.
         /// </summary>
-        /// <param name="_receiver"><see cref="IDataReceiver"/>, which contains HTTP Client</param>
-        /// <param name="_datetime"><see cref="IDateTime"/>, which is possibly fake date.</param>
-        public DayReader(IDataReceiver _receiver, IDateTime _datetime)
+        /// <param name="receiver"><see cref="IDataReceiver"/>, which contains HTTP Client</param>
+        /// <param name="datetime"><see cref="IDateTime"/>, which is possibly fake date.</param>
+        /// <param name="settings">Injected application Setting.</param>
+        public DayReader(IDataReceiver receiver, IDateTime datetime, IAppSettings settings)
         {
-            receiver = _receiver;
-            datetime = _datetime;
+            _receiver = receiver;
+            _datetime = datetime;
+            _summaryLength = settings.SummaryLength;
             _pipeline = new MarkdownPipelineBuilder().UseAdvancedExtensions().Build();
         }
         private readonly Dictionary<ValueTuple<int, int>, DayInfoData> dataList = new Dictionary<ValueTuple<int, int>, DayInfoData>();
@@ -34,14 +39,14 @@ namespace AdventCalendar.Client.Services
         /// </summary>
         /// <param name="day">The target day to get data.</param>
         /// <returns>Parsed <see cref="DayInfoData"/></returns>
-        public async Task<DayInfoData> GetContent(int day) => await GetContent(datetime.Now.Year, day).ConfigureAwait(true);
+        public async Task<DayInfoData> GetContent(int day) => await GetContent(_datetime.Now.Year, day).ConfigureAwait(true);
         /// <summary>
         /// Get Availability of specific day data
         /// </summary>
         /// <param name="year">The target year check data.</param>
         /// <param name="day">The target day to check data.</param>
         /// <returns></returns>
-        public async Task<bool> GetAvailability(int year, int day) => await receiver.CheckDayData(year, day).ConfigureAwait(true);
+        public async Task<bool> GetAvailability(int year, int day) => await _receiver.CheckDayData(year, day).ConfigureAwait(true);
         /// <summary>
         /// Get parsed markdown object asynchronously with a day and a year.
         /// </summary>
@@ -52,8 +57,8 @@ namespace AdventCalendar.Client.Services
         {
             if (!dataList.ContainsKey((year, day)))
             {
-                if (await receiver.CheckDayData(year, day).ConfigureAwait(true))
-                    dataList.Add((year, day), Parse(day, await receiver.ReceiveDayData(year, day).ConfigureAwait(true)));
+                if (await _receiver.CheckDayData(year, day).ConfigureAwait(true))
+                    dataList.Add((year, day), Parse(day, await _receiver.ReceiveDayData(year, day).ConfigureAwait(true)));
                 else
                     dataList.Add((year, day), DayInfoData.CreateEmpty(day));
             }
@@ -85,7 +90,7 @@ namespace AdventCalendar.Client.Services
             }
             else
             {
-                daydata.Summary = summary.ToString();
+                daydata.Summary = GetSummary(summary.ToString());
             }
             StringWriter writer = new StringWriter();
             HtmlRenderer renderer = new HtmlRenderer(writer);
@@ -93,5 +98,7 @@ namespace AdventCalendar.Client.Services
             daydata.Content = writer.ToString();
             return daydata;
         }
+        private string GetSummary(string text) =>
+            (text.Length > _summaryLength) ? text.Substring(0, _summaryLength)+"..." : text;
     }
 }

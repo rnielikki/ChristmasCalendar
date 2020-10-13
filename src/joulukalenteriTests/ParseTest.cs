@@ -1,12 +1,12 @@
-﻿using System;
-using Xunit;
-using AdventCalendar.Client.Services;
+﻿using Xunit;
+using AdventCalendar.Services;
 using Moq;
 using System.Threading.Tasks;
 using System.Linq;
-using AdventCalendar;
+using AdventCalendar.Models;
+using AdventCalendar.Settings;
 
-namespace AdventCalendarTests
+namespace AdventCalendarests
 {
     public class ParseTest
     {
@@ -20,10 +20,11 @@ namespace AdventCalendarTests
             var receiverMock = new Mock<IDataReceiver>();
             receiverMock.Setup(receiver => receiver.CheckDayData(It.IsAny<int>(), It.IsAny<int>())).ReturnsAsync(true);
             receiverMock.Setup(receiver => receiver.ReceiveDayData(It.IsAny<int>(), It.IsAny<int>())).ReturnsAsync(input);
+            var setting = Mock.Of<IAppSettings>(set => set.SummaryLength == 80);
 
             var dateTime = new DefaultDateTime();
 
-            DayReader reader = new DayReader(receiverMock.Object, dateTime);
+            DayReader reader = new DayReader(receiverMock.Object, dateTime, setting);
             DayInfoData data = (await reader.GetContent(1).ConfigureAwait(false));
             string parseResult = (await reader.GetContent(1).ConfigureAwait(false))?.Title;
             Assert.Equal(title, data.Title);

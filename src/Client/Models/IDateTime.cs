@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace AdventCalendar
+namespace AdventCalendar.Models
 {
     /// <summary>
     /// Provides public DateTime wrapper, both for server and client.
@@ -24,8 +24,7 @@ namespace AdventCalendar
         /// <summary>
         /// Provides Real <see cref="DateTime.Now"/>.
         /// </summary>
-        //public DateTime Now { get => DateTime.Now; }
-        public DateTime Now { get => new DateTime(2020, 12, 25); }
+        public DateTime Now { get => DateTime.Now; }
         /// <summary>
         /// Provides Real Year from <see cref="DateTime.Now"/>.
         /// </summary>

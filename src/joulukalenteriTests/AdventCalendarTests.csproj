@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Client\AdventCalendar.Client.csproj" />
+    <ProjectReference Include="..\Client\AdventCalendar.csproj" />
   </ItemGroup>
 
   <ItemGroup>

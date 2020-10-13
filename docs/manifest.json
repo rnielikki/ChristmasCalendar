@@ -4,144 +4,168 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Models.DayInfoData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Models.DayInfoData.html",
+          "hash": "b9WhWyCrpB64K3VnxzD7SQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Models.DefaultDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Models.DefaultDateTime.html",
+          "hash": "z4+6fa9CTL0k2k6zBSyA1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Models.IDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Models.IDateTime.html",
+          "hash": "1GwJG95oEoPqg+UkHUvqnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Models.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Models.html",
+          "hash": "5DL16JCuMRhYYSpcGfzV9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.ArchiveReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.ArchiveReader.html",
+          "hash": "vhslNodjttNNtudDCNlCwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.DataReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.DataReceiver.html",
+          "hash": "+CjIo2uiqb8/MtVtpIVIjg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.DayReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.DayReader.html",
+          "hash": "704HSRk8LVQ8sJCjmqXdlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.DaysShuffler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.DaysShuffler.html",
+          "hash": "u461EXkGcOAABA55wCio2Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.IDataReceiver.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.IDataReceiver.html",
+          "hash": "0MvhKZflFWf6+g736aHbPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.Validator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.Validator.html",
+          "hash": "WjLW7YYuRVMoN0nj7ZHqoA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Services.html",
+          "hash": "PbQNlNUIsw9UCi1dxNQhcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Settings.IAppSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Settings.IAppSettings.html",
+          "hash": "CDojlYcGv/7tG+XATuLl/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/AdventCalendar.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/AdventCalendar.Settings.html",
+          "hash": "CGyp0dEKTW2bfeb1zmQoCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
       "type": "Conceptual",
       "source_relative_path": "api/index.md",
       "output": {
         ".html": {
           "relative_path": "api/index.html",
-          "hash": "OtyEDcTGG0CCgxj9mt1eCA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.ArchiveReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.ArchiveReader.html",
-          "hash": "7dd/Una6ksSqgEdd/Wvb7Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.DataReceiver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.DataReceiver.html",
-          "hash": "V2vbK3ihPcHjt2o4X7hjew=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.DayReader.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.DayReader.html",
-          "hash": "En1a+t/Cj3oaMxV2bFPjzg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.DaysShuffler.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.DaysShuffler.html",
-          "hash": "88FDA260HjwLU400YXRxqA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.IDataReceiver.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.IDataReceiver.html",
-          "hash": "3mtOrKeZ1BKVxQ3kvoV3RQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.Validator.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.Validator.html",
-          "hash": "EwYhY9BSajMN4Wgn2YSsvA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Client.Services.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Client.Services.html",
-          "hash": "WT6CtKrexdsSGZkcO2Xxzg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Shared.DayInfoData.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Shared.DayInfoData.html",
-          "hash": "xMSNKTVmne60nRV/AW/jZA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Shared.DefaultDateTime.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Shared.DefaultDateTime.html",
-          "hash": "SqziwVymNTHGRvWrosjJ+Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Shared.IDateTime.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Shared.IDateTime.html",
-          "hash": "q1WEb2oV0272lW+WomJpIg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/joulukalenteri.Shared.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/joulukalenteri.Shared.html",
-          "hash": "sANQ0nX9A/MQh7KEqs+3pw=="
+          "hash": "69I+mYVFCPoiY2xWYFBhdQ=="
         }
       },
       "is_incremental": false,
@@ -153,10 +177,34 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "BmP94gnewtKj5xihSKpVCg=="
+          "hash": "Jk5Y+VjbOW+H/TRcjvHGDg=="
         }
       },
       "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "app-settings/appsettings.md",
+      "output": {
+        ".html": {
+          "relative_path": "app-settings/appsettings.html",
+          "hash": "qvlPkBKJR3R9DVyj4tYEEA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "app-settings/content.md",
+      "output": {
+        ".html": {
+          "relative_path": "app-settings/content.html",
+          "hash": "auefkw1GVTz4BhfIz1KxHw=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -165,19 +213,7 @@
       "output": {
         ".html": {
           "relative_path": "app-settings/toc.html",
-          "hash": "AjPZYmRzz5PTs47Qbj/XeQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "app-settings/usage.md",
-      "output": {
-        ".html": {
-          "relative_path": "app-settings/usage.html",
-          "hash": "T1SkRfFZHIAWuXQCwU0fJQ=="
+          "hash": "ldnqL2qo14D6aXSZIVnG0A=="
         }
       },
       "is_incremental": false,
@@ -189,10 +225,10 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ZMTRZ/f0wvFPWm/W7zJVLA=="
+          "hash": "zgrL3PZwtSj5gYEREdb3vg=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -201,7 +237,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "dP8t3tjFKgWRLutvJ3Nj0Q=="
+          "hash": "tVJSE7EgXK2jcbSkDsncxQ=="
         }
       },
       "is_incremental": false,
@@ -211,39 +247,37 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot build incrementally because last build info is missing.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "NoAvailableBuildCache"
+        "skipped_file_count": 0
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 3,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 11,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
           "incrementalPhase": "build",
           "total_file_count": 0,
           "skipped_file_count": 0
+        },
+        "ConceptualDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 4,
+          "skipped_file_count": 4
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 13,
+          "skipped_file_count": 0
         }
       }
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: last post processor info is null.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

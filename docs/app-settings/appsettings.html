@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>appsettings.json </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="appsettings.json ">
+    <meta name="generator" content="docfx 2.48.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="appsettingsjson">appsettings.json</h1>
+
+<p><code>appsettings.json</code> contains some site settings.</p>
+<pre><code class="lang-json">{
+  &quot;title&quot;:&quot;My Advent Calendar&quot;,
+  &quot;startYear&quot;: 2019,
+  &quot;skipYears&quot;: [],
+  &quot;containsChristmas&quot;: true,
+  &quot;baseUri&quot;: &quot;&quot;,
+  &quot;summaryLength&quot;:80
+}
+</code></pre>
+<h2 id="title">title</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Default: &quot;Advent Calendar&quot;</li>
+</ul>
+<p>The title that displayed in the app. It can be theme, site name or whatever.</p>
+<h2 id="startyear">startYear</h2>
+<ul>
+<li>Type: <code>int</code></li>
+<li>Default: 2019</li>
+</ul>
+<p>The year that you started to archive.
+If you don't have any archive, just put current year.</p>
+<blockquote>
+<p>Note: If startYear is not valid (greater than this year), it throws an exception.</p>
+</blockquote>
+<h2 id="skipyears">skipYears</h2>
+<ul>
+<li>Type: <code>int</code></li>
+<li>Default: Empty Array</li>
+</ul>
+<p>If you forgot to make advent calendar in some years, put here the years.</p>
+<h2 id="containschristmas">containsChristmas</h2>
+<ul>
+<li>Type: <code>bool</code></li>
+<li>Default: <code>false</code></li>
+</ul>
+<p>Some advent calendar of cultural region contains Christams, while others not. If the value is <code>true</code>, day 25 will be shown in the calendar and archives. Otherwise, day 25 won't count.</p>
+<h2 id="baseuri">baseUri</h2>
+<ul>
+<li>Type: <code>string</code></li>
+<li>Default: &quot;&quot;</li>
+</ul>
+<p>The absolute path where the content is. If you don't use external URI but inside <code>contents</code> directory of the app (as default), you don't need to set, or let this value empty.</p>
+<h2 id="summarylength">summaryLength</h2>
+<ul>
+<li>Type: <code>int</code></li>
+<li>Default: 80</li>
+</ul>
+<p>The length of the summary.</p>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/rnielikki/ChristmasCalendar/blob/master/docs/docfx_project/app-settings/appsettings.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>

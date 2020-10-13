@@ -1,418 +1,508 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
-- uid: joulukalenteri.Client.Services
-  name: joulukalenteri.Client.Services
-  href: api/joulukalenteri.Client.Services.html
-  commentId: N:joulukalenteri.Client.Services
-  fullName: joulukalenteri.Client.Services
-  nameWithType: joulukalenteri.Client.Services
-- uid: joulukalenteri.Client.Services.ArchiveReader
-  name: ArchiveReader
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html
-  commentId: T:joulukalenteri.Client.Services.ArchiveReader
-  fullName: joulukalenteri.Client.Services.ArchiveReader
-  nameWithType: ArchiveReader
-- uid: joulukalenteri.Client.Services.ArchiveReader.#ctor(Microsoft.Extensions.Configuration.IConfiguration,joulukalenteri.Shared.IDateTime)
-  name: ArchiveReader(IConfiguration, IDateTime)
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html#joulukalenteri_Client_Services_ArchiveReader__ctor_Microsoft_Extensions_Configuration_IConfiguration_joulukalenteri_Shared_IDateTime_
-  commentId: M:joulukalenteri.Client.Services.ArchiveReader.#ctor(Microsoft.Extensions.Configuration.IConfiguration,joulukalenteri.Shared.IDateTime)
-  fullName: joulukalenteri.Client.Services.ArchiveReader.ArchiveReader(Microsoft.Extensions.Configuration.IConfiguration, joulukalenteri.Shared.IDateTime)
-  nameWithType: ArchiveReader.ArchiveReader(IConfiguration, IDateTime)
-- uid: joulukalenteri.Client.Services.ArchiveReader.#ctor*
-  name: ArchiveReader
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html#joulukalenteri_Client_Services_ArchiveReader__ctor_
-  commentId: Overload:joulukalenteri.Client.Services.ArchiveReader.#ctor
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.ArchiveReader.ArchiveReader
-  nameWithType: ArchiveReader.ArchiveReader
-- uid: joulukalenteri.Client.Services.ArchiveReader.GetYears
-  name: GetYears()
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html#joulukalenteri_Client_Services_ArchiveReader_GetYears
-  commentId: M:joulukalenteri.Client.Services.ArchiveReader.GetYears
-  fullName: joulukalenteri.Client.Services.ArchiveReader.GetYears()
-  nameWithType: ArchiveReader.GetYears()
-- uid: joulukalenteri.Client.Services.ArchiveReader.GetYears*
-  name: GetYears
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html#joulukalenteri_Client_Services_ArchiveReader_GetYears_
-  commentId: Overload:joulukalenteri.Client.Services.ArchiveReader.GetYears
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.ArchiveReader.GetYears
-  nameWithType: ArchiveReader.GetYears
-- uid: joulukalenteri.Client.Services.ArchiveReader.IsAvailableYear(System.Int32)
-  name: IsAvailableYear(Int32)
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html#joulukalenteri_Client_Services_ArchiveReader_IsAvailableYear_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.ArchiveReader.IsAvailableYear(System.Int32)
-  fullName: joulukalenteri.Client.Services.ArchiveReader.IsAvailableYear(System.Int32)
-  nameWithType: ArchiveReader.IsAvailableYear(Int32)
-- uid: joulukalenteri.Client.Services.ArchiveReader.IsAvailableYear*
-  name: IsAvailableYear
-  href: api/joulukalenteri.Client.Services.ArchiveReader.html#joulukalenteri_Client_Services_ArchiveReader_IsAvailableYear_
-  commentId: Overload:joulukalenteri.Client.Services.ArchiveReader.IsAvailableYear
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.ArchiveReader.IsAvailableYear
-  nameWithType: ArchiveReader.IsAvailableYear
-- uid: joulukalenteri.Client.Services.DataReceiver
-  name: DataReceiver
-  href: api/joulukalenteri.Client.Services.DataReceiver.html
-  commentId: T:joulukalenteri.Client.Services.DataReceiver
-  fullName: joulukalenteri.Client.Services.DataReceiver
-  nameWithType: DataReceiver
-- uid: joulukalenteri.Client.Services.DataReceiver.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Components.NavigationManager)
-  name: DataReceiver(IConfiguration, NavigationManager)
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver__ctor_Microsoft_Extensions_Configuration_IConfiguration_Microsoft_AspNetCore_Components_NavigationManager_
-  commentId: M:joulukalenteri.Client.Services.DataReceiver.#ctor(Microsoft.Extensions.Configuration.IConfiguration,Microsoft.AspNetCore.Components.NavigationManager)
-  fullName: joulukalenteri.Client.Services.DataReceiver.DataReceiver(Microsoft.Extensions.Configuration.IConfiguration, Microsoft.AspNetCore.Components.NavigationManager)
-  nameWithType: DataReceiver.DataReceiver(IConfiguration, NavigationManager)
-- uid: joulukalenteri.Client.Services.DataReceiver.#ctor(System.Net.Http.HttpClient)
-  name: DataReceiver(HttpClient)
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver__ctor_System_Net_Http_HttpClient_
-  commentId: M:joulukalenteri.Client.Services.DataReceiver.#ctor(System.Net.Http.HttpClient)
-  fullName: joulukalenteri.Client.Services.DataReceiver.DataReceiver(System.Net.Http.HttpClient)
-  nameWithType: DataReceiver.DataReceiver(HttpClient)
-- uid: joulukalenteri.Client.Services.DataReceiver.#ctor*
-  name: DataReceiver
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver__ctor_
-  commentId: Overload:joulukalenteri.Client.Services.DataReceiver.#ctor
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DataReceiver.DataReceiver
-  nameWithType: DataReceiver.DataReceiver
-- uid: joulukalenteri.Client.Services.DataReceiver.CheckDayData(System.Int32,System.Int32)
-  name: CheckDayData(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver_CheckDayData_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.DataReceiver.CheckDayData(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.DataReceiver.CheckDayData(System.Int32, System.Int32)
-  nameWithType: DataReceiver.CheckDayData(Int32, Int32)
-- uid: joulukalenteri.Client.Services.DataReceiver.CheckDayData*
-  name: CheckDayData
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver_CheckDayData_
-  commentId: Overload:joulukalenteri.Client.Services.DataReceiver.CheckDayData
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DataReceiver.CheckDayData
-  nameWithType: DataReceiver.CheckDayData
-- uid: joulukalenteri.Client.Services.DataReceiver.ReceiveDayData(System.Int32,System.Int32)
-  name: ReceiveDayData(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver_ReceiveDayData_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.DataReceiver.ReceiveDayData(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.DataReceiver.ReceiveDayData(System.Int32, System.Int32)
-  nameWithType: DataReceiver.ReceiveDayData(Int32, Int32)
-- uid: joulukalenteri.Client.Services.DataReceiver.ReceiveDayData*
-  name: ReceiveDayData
-  href: api/joulukalenteri.Client.Services.DataReceiver.html#joulukalenteri_Client_Services_DataReceiver_ReceiveDayData_
-  commentId: Overload:joulukalenteri.Client.Services.DataReceiver.ReceiveDayData
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DataReceiver.ReceiveDayData
-  nameWithType: DataReceiver.ReceiveDayData
-- uid: joulukalenteri.Client.Services.DayReader
-  name: DayReader
-  href: api/joulukalenteri.Client.Services.DayReader.html
-  commentId: T:joulukalenteri.Client.Services.DayReader
-  fullName: joulukalenteri.Client.Services.DayReader
-  nameWithType: DayReader
-- uid: joulukalenteri.Client.Services.DayReader.#ctor(joulukalenteri.Client.Services.IDataReceiver,joulukalenteri.Shared.IDateTime)
-  name: DayReader(IDataReceiver, IDateTime)
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader__ctor_joulukalenteri_Client_Services_IDataReceiver_joulukalenteri_Shared_IDateTime_
-  commentId: M:joulukalenteri.Client.Services.DayReader.#ctor(joulukalenteri.Client.Services.IDataReceiver,joulukalenteri.Shared.IDateTime)
-  fullName: joulukalenteri.Client.Services.DayReader.DayReader(joulukalenteri.Client.Services.IDataReceiver, joulukalenteri.Shared.IDateTime)
-  nameWithType: DayReader.DayReader(IDataReceiver, IDateTime)
-- uid: joulukalenteri.Client.Services.DayReader.#ctor*
-  name: DayReader
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader__ctor_
-  commentId: Overload:joulukalenteri.Client.Services.DayReader.#ctor
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DayReader.DayReader
-  nameWithType: DayReader.DayReader
-- uid: joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32,System.Int32)
-  name: GetAvailability(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader_GetAvailability_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.DayReader.GetAvailability(System.Int32, System.Int32)
-  nameWithType: DayReader.GetAvailability(Int32, Int32)
-- uid: joulukalenteri.Client.Services.DayReader.GetAvailability*
-  name: GetAvailability
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader_GetAvailability_
-  commentId: Overload:joulukalenteri.Client.Services.DayReader.GetAvailability
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DayReader.GetAvailability
-  nameWithType: DayReader.GetAvailability
-- uid: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
-  name: GetContent(Int32)
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader_GetContent_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
-  fullName: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32)
-  nameWithType: DayReader.GetContent(Int32)
-- uid: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32,System.Int32)
-  name: GetContent(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader_GetContent_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.DayReader.GetContent(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.DayReader.GetContent(System.Int32, System.Int32)
-  nameWithType: DayReader.GetContent(Int32, Int32)
-- uid: joulukalenteri.Client.Services.DayReader.GetContent*
-  name: GetContent
-  href: api/joulukalenteri.Client.Services.DayReader.html#joulukalenteri_Client_Services_DayReader_GetContent_
-  commentId: Overload:joulukalenteri.Client.Services.DayReader.GetContent
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DayReader.GetContent
-  nameWithType: DayReader.GetContent
-- uid: joulukalenteri.Client.Services.DaysShuffler
-  name: DaysShuffler
-  href: api/joulukalenteri.Client.Services.DaysShuffler.html
-  commentId: T:joulukalenteri.Client.Services.DaysShuffler
-  fullName: joulukalenteri.Client.Services.DaysShuffler
-  nameWithType: DaysShuffler
-- uid: joulukalenteri.Client.Services.DaysShuffler.#ctor(joulukalenteri.Shared.IDateTime)
-  name: DaysShuffler(IDateTime)
-  href: api/joulukalenteri.Client.Services.DaysShuffler.html#joulukalenteri_Client_Services_DaysShuffler__ctor_joulukalenteri_Shared_IDateTime_
-  commentId: M:joulukalenteri.Client.Services.DaysShuffler.#ctor(joulukalenteri.Shared.IDateTime)
-  fullName: joulukalenteri.Client.Services.DaysShuffler.DaysShuffler(joulukalenteri.Shared.IDateTime)
-  nameWithType: DaysShuffler.DaysShuffler(IDateTime)
-- uid: joulukalenteri.Client.Services.DaysShuffler.#ctor*
-  name: DaysShuffler
-  href: api/joulukalenteri.Client.Services.DaysShuffler.html#joulukalenteri_Client_Services_DaysShuffler__ctor_
-  commentId: Overload:joulukalenteri.Client.Services.DaysShuffler.#ctor
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DaysShuffler.DaysShuffler
-  nameWithType: DaysShuffler.DaysShuffler
-- uid: joulukalenteri.Client.Services.DaysShuffler.ShuffleDays
-  name: ShuffleDays()
-  href: api/joulukalenteri.Client.Services.DaysShuffler.html#joulukalenteri_Client_Services_DaysShuffler_ShuffleDays
-  commentId: M:joulukalenteri.Client.Services.DaysShuffler.ShuffleDays
-  fullName: joulukalenteri.Client.Services.DaysShuffler.ShuffleDays()
-  nameWithType: DaysShuffler.ShuffleDays()
-- uid: joulukalenteri.Client.Services.DaysShuffler.ShuffleDays*
-  name: ShuffleDays
-  href: api/joulukalenteri.Client.Services.DaysShuffler.html#joulukalenteri_Client_Services_DaysShuffler_ShuffleDays_
-  commentId: Overload:joulukalenteri.Client.Services.DaysShuffler.ShuffleDays
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.DaysShuffler.ShuffleDays
-  nameWithType: DaysShuffler.ShuffleDays
-- uid: joulukalenteri.Client.Services.IDataReceiver
-  name: IDataReceiver
-  href: api/joulukalenteri.Client.Services.IDataReceiver.html
-  commentId: T:joulukalenteri.Client.Services.IDataReceiver
-  fullName: joulukalenteri.Client.Services.IDataReceiver
-  nameWithType: IDataReceiver
-- uid: joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
-  name: CheckDayData(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.IDataReceiver.html#joulukalenteri_Client_Services_IDataReceiver_CheckDayData_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.IDataReceiver.CheckDayData(System.Int32, System.Int32)
-  nameWithType: IDataReceiver.CheckDayData(Int32, Int32)
-- uid: joulukalenteri.Client.Services.IDataReceiver.CheckDayData*
-  name: CheckDayData
-  href: api/joulukalenteri.Client.Services.IDataReceiver.html#joulukalenteri_Client_Services_IDataReceiver_CheckDayData_
-  commentId: Overload:joulukalenteri.Client.Services.IDataReceiver.CheckDayData
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.IDataReceiver.CheckDayData
-  nameWithType: IDataReceiver.CheckDayData
-- uid: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
-  name: ReceiveDayData(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.IDataReceiver.html#joulukalenteri_Client_Services_IDataReceiver_ReceiveDayData_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData(System.Int32, System.Int32)
-  nameWithType: IDataReceiver.ReceiveDayData(Int32, Int32)
-- uid: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData*
-  name: ReceiveDayData
-  href: api/joulukalenteri.Client.Services.IDataReceiver.html#joulukalenteri_Client_Services_IDataReceiver_ReceiveDayData_
-  commentId: Overload:joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.IDataReceiver.ReceiveDayData
-  nameWithType: IDataReceiver.ReceiveDayData
-- uid: joulukalenteri.Client.Services.Validator
-  name: Validator
-  href: api/joulukalenteri.Client.Services.Validator.html
-  commentId: T:joulukalenteri.Client.Services.Validator
-  fullName: joulukalenteri.Client.Services.Validator
-  nameWithType: Validator
-- uid: joulukalenteri.Client.Services.Validator.#ctor(joulukalenteri.Shared.IDateTime)
-  name: Validator(IDateTime)
-  href: api/joulukalenteri.Client.Services.Validator.html#joulukalenteri_Client_Services_Validator__ctor_joulukalenteri_Shared_IDateTime_
-  commentId: M:joulukalenteri.Client.Services.Validator.#ctor(joulukalenteri.Shared.IDateTime)
-  fullName: joulukalenteri.Client.Services.Validator.Validator(joulukalenteri.Shared.IDateTime)
-  nameWithType: Validator.Validator(IDateTime)
-- uid: joulukalenteri.Client.Services.Validator.#ctor*
-  name: Validator
-  href: api/joulukalenteri.Client.Services.Validator.html#joulukalenteri_Client_Services_Validator__ctor_
-  commentId: Overload:joulukalenteri.Client.Services.Validator.#ctor
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.Validator.Validator
-  nameWithType: Validator.Validator
-- uid: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
-  name: IsOpenToday(Int32)
-  href: api/joulukalenteri.Client.Services.Validator.html#joulukalenteri_Client_Services_Validator_IsOpenToday_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
-  fullName: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32)
-  nameWithType: Validator.IsOpenToday(Int32)
-- uid: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32,System.Int32)
-  name: IsOpenToday(Int32, Int32)
-  href: api/joulukalenteri.Client.Services.Validator.html#joulukalenteri_Client_Services_Validator_IsOpenToday_System_Int32_System_Int32_
-  commentId: M:joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32,System.Int32)
-  fullName: joulukalenteri.Client.Services.Validator.IsOpenToday(System.Int32, System.Int32)
-  nameWithType: Validator.IsOpenToday(Int32, Int32)
-- uid: joulukalenteri.Client.Services.Validator.IsOpenToday*
-  name: IsOpenToday
-  href: api/joulukalenteri.Client.Services.Validator.html#joulukalenteri_Client_Services_Validator_IsOpenToday_
-  commentId: Overload:joulukalenteri.Client.Services.Validator.IsOpenToday
-  isSpec: "True"
-  fullName: joulukalenteri.Client.Services.Validator.IsOpenToday
-  nameWithType: Validator.IsOpenToday
-- uid: joulukalenteri.Shared
-  name: joulukalenteri.Shared
-  href: api/joulukalenteri.Shared.html
-  commentId: N:joulukalenteri.Shared
-  fullName: joulukalenteri.Shared
-  nameWithType: joulukalenteri.Shared
-- uid: joulukalenteri.Shared.DayInfoData
+- uid: AdventCalendar.Models
+  name: AdventCalendar.Models
+  href: api/AdventCalendar.Models.html
+  commentId: N:AdventCalendar.Models
+  fullName: AdventCalendar.Models
+  nameWithType: AdventCalendar.Models
+- uid: AdventCalendar.Models.DayInfoData
   name: DayInfoData
-  href: api/joulukalenteri.Shared.DayInfoData.html
-  commentId: T:joulukalenteri.Shared.DayInfoData
-  fullName: joulukalenteri.Shared.DayInfoData
+  href: api/AdventCalendar.Models.DayInfoData.html
+  commentId: T:AdventCalendar.Models.DayInfoData
+  fullName: AdventCalendar.Models.DayInfoData
   nameWithType: DayInfoData
-- uid: joulukalenteri.Shared.DayInfoData.Content
+- uid: AdventCalendar.Models.DayInfoData.Content
   name: Content
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Content
-  commentId: P:joulukalenteri.Shared.DayInfoData.Content
-  fullName: joulukalenteri.Shared.DayInfoData.Content
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Content
+  commentId: P:AdventCalendar.Models.DayInfoData.Content
+  fullName: AdventCalendar.Models.DayInfoData.Content
   nameWithType: DayInfoData.Content
-- uid: joulukalenteri.Shared.DayInfoData.Content*
+- uid: AdventCalendar.Models.DayInfoData.Content*
   name: Content
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Content_
-  commentId: Overload:joulukalenteri.Shared.DayInfoData.Content
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Content_
+  commentId: Overload:AdventCalendar.Models.DayInfoData.Content
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DayInfoData.Content
+  fullName: AdventCalendar.Models.DayInfoData.Content
   nameWithType: DayInfoData.Content
-- uid: joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+- uid: AdventCalendar.Models.DayInfoData.CreateEmpty(System.Int32)
   name: CreateEmpty(Int32)
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_CreateEmpty_System_Int32_
-  commentId: M:joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
-  fullName: joulukalenteri.Shared.DayInfoData.CreateEmpty(System.Int32)
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_CreateEmpty_System_Int32_
+  commentId: M:AdventCalendar.Models.DayInfoData.CreateEmpty(System.Int32)
+  fullName: AdventCalendar.Models.DayInfoData.CreateEmpty(System.Int32)
   nameWithType: DayInfoData.CreateEmpty(Int32)
-- uid: joulukalenteri.Shared.DayInfoData.CreateEmpty*
+- uid: AdventCalendar.Models.DayInfoData.CreateEmpty*
   name: CreateEmpty
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_CreateEmpty_
-  commentId: Overload:joulukalenteri.Shared.DayInfoData.CreateEmpty
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_CreateEmpty_
+  commentId: Overload:AdventCalendar.Models.DayInfoData.CreateEmpty
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DayInfoData.CreateEmpty
+  fullName: AdventCalendar.Models.DayInfoData.CreateEmpty
   nameWithType: DayInfoData.CreateEmpty
-- uid: joulukalenteri.Shared.DayInfoData.Day
+- uid: AdventCalendar.Models.DayInfoData.Day
   name: Day
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Day
-  commentId: P:joulukalenteri.Shared.DayInfoData.Day
-  fullName: joulukalenteri.Shared.DayInfoData.Day
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Day
+  commentId: P:AdventCalendar.Models.DayInfoData.Day
+  fullName: AdventCalendar.Models.DayInfoData.Day
   nameWithType: DayInfoData.Day
-- uid: joulukalenteri.Shared.DayInfoData.Day*
+- uid: AdventCalendar.Models.DayInfoData.Day*
   name: Day
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Day_
-  commentId: Overload:joulukalenteri.Shared.DayInfoData.Day
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Day_
+  commentId: Overload:AdventCalendar.Models.DayInfoData.Day
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DayInfoData.Day
+  fullName: AdventCalendar.Models.DayInfoData.Day
   nameWithType: DayInfoData.Day
-- uid: joulukalenteri.Shared.DayInfoData.Exists
+- uid: AdventCalendar.Models.DayInfoData.Exists
   name: Exists
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Exists
-  commentId: P:joulukalenteri.Shared.DayInfoData.Exists
-  fullName: joulukalenteri.Shared.DayInfoData.Exists
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Exists
+  commentId: P:AdventCalendar.Models.DayInfoData.Exists
+  fullName: AdventCalendar.Models.DayInfoData.Exists
   nameWithType: DayInfoData.Exists
-- uid: joulukalenteri.Shared.DayInfoData.Exists*
+- uid: AdventCalendar.Models.DayInfoData.Exists*
   name: Exists
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Exists_
-  commentId: Overload:joulukalenteri.Shared.DayInfoData.Exists
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Exists_
+  commentId: Overload:AdventCalendar.Models.DayInfoData.Exists
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DayInfoData.Exists
+  fullName: AdventCalendar.Models.DayInfoData.Exists
   nameWithType: DayInfoData.Exists
-- uid: joulukalenteri.Shared.DayInfoData.Summary
+- uid: AdventCalendar.Models.DayInfoData.Summary
   name: Summary
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Summary
-  commentId: P:joulukalenteri.Shared.DayInfoData.Summary
-  fullName: joulukalenteri.Shared.DayInfoData.Summary
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Summary
+  commentId: P:AdventCalendar.Models.DayInfoData.Summary
+  fullName: AdventCalendar.Models.DayInfoData.Summary
   nameWithType: DayInfoData.Summary
-- uid: joulukalenteri.Shared.DayInfoData.Summary*
+- uid: AdventCalendar.Models.DayInfoData.Summary*
   name: Summary
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Summary_
-  commentId: Overload:joulukalenteri.Shared.DayInfoData.Summary
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Summary_
+  commentId: Overload:AdventCalendar.Models.DayInfoData.Summary
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DayInfoData.Summary
+  fullName: AdventCalendar.Models.DayInfoData.Summary
   nameWithType: DayInfoData.Summary
-- uid: joulukalenteri.Shared.DayInfoData.SummaryLength
+- uid: AdventCalendar.Models.DayInfoData.SummaryLength
   name: SummaryLength
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_SummaryLength
-  commentId: F:joulukalenteri.Shared.DayInfoData.SummaryLength
-  fullName: joulukalenteri.Shared.DayInfoData.SummaryLength
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_SummaryLength
+  commentId: F:AdventCalendar.Models.DayInfoData.SummaryLength
+  fullName: AdventCalendar.Models.DayInfoData.SummaryLength
   nameWithType: DayInfoData.SummaryLength
-- uid: joulukalenteri.Shared.DayInfoData.Title
+- uid: AdventCalendar.Models.DayInfoData.Title
   name: Title
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Title
-  commentId: P:joulukalenteri.Shared.DayInfoData.Title
-  fullName: joulukalenteri.Shared.DayInfoData.Title
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Title
+  commentId: P:AdventCalendar.Models.DayInfoData.Title
+  fullName: AdventCalendar.Models.DayInfoData.Title
   nameWithType: DayInfoData.Title
-- uid: joulukalenteri.Shared.DayInfoData.Title*
+- uid: AdventCalendar.Models.DayInfoData.Title*
   name: Title
-  href: api/joulukalenteri.Shared.DayInfoData.html#joulukalenteri_Shared_DayInfoData_Title_
-  commentId: Overload:joulukalenteri.Shared.DayInfoData.Title
+  href: api/AdventCalendar.Models.DayInfoData.html#AdventCalendar_Models_DayInfoData_Title_
+  commentId: Overload:AdventCalendar.Models.DayInfoData.Title
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DayInfoData.Title
+  fullName: AdventCalendar.Models.DayInfoData.Title
   nameWithType: DayInfoData.Title
-- uid: joulukalenteri.Shared.DefaultDateTime
+- uid: AdventCalendar.Models.DefaultDateTime
   name: DefaultDateTime
-  href: api/joulukalenteri.Shared.DefaultDateTime.html
-  commentId: T:joulukalenteri.Shared.DefaultDateTime
-  fullName: joulukalenteri.Shared.DefaultDateTime
+  href: api/AdventCalendar.Models.DefaultDateTime.html
+  commentId: T:AdventCalendar.Models.DefaultDateTime
+  fullName: AdventCalendar.Models.DefaultDateTime
   nameWithType: DefaultDateTime
-- uid: joulukalenteri.Shared.DefaultDateTime.Now
+- uid: AdventCalendar.Models.DefaultDateTime.Now
   name: Now
-  href: api/joulukalenteri.Shared.DefaultDateTime.html#joulukalenteri_Shared_DefaultDateTime_Now
-  commentId: P:joulukalenteri.Shared.DefaultDateTime.Now
-  fullName: joulukalenteri.Shared.DefaultDateTime.Now
+  href: api/AdventCalendar.Models.DefaultDateTime.html#AdventCalendar_Models_DefaultDateTime_Now
+  commentId: P:AdventCalendar.Models.DefaultDateTime.Now
+  fullName: AdventCalendar.Models.DefaultDateTime.Now
   nameWithType: DefaultDateTime.Now
-- uid: joulukalenteri.Shared.DefaultDateTime.Now*
+- uid: AdventCalendar.Models.DefaultDateTime.Now*
   name: Now
-  href: api/joulukalenteri.Shared.DefaultDateTime.html#joulukalenteri_Shared_DefaultDateTime_Now_
-  commentId: Overload:joulukalenteri.Shared.DefaultDateTime.Now
+  href: api/AdventCalendar.Models.DefaultDateTime.html#AdventCalendar_Models_DefaultDateTime_Now_
+  commentId: Overload:AdventCalendar.Models.DefaultDateTime.Now
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DefaultDateTime.Now
+  fullName: AdventCalendar.Models.DefaultDateTime.Now
   nameWithType: DefaultDateTime.Now
-- uid: joulukalenteri.Shared.DefaultDateTime.Year
+- uid: AdventCalendar.Models.DefaultDateTime.Year
   name: Year
-  href: api/joulukalenteri.Shared.DefaultDateTime.html#joulukalenteri_Shared_DefaultDateTime_Year
-  commentId: P:joulukalenteri.Shared.DefaultDateTime.Year
-  fullName: joulukalenteri.Shared.DefaultDateTime.Year
+  href: api/AdventCalendar.Models.DefaultDateTime.html#AdventCalendar_Models_DefaultDateTime_Year
+  commentId: P:AdventCalendar.Models.DefaultDateTime.Year
+  fullName: AdventCalendar.Models.DefaultDateTime.Year
   nameWithType: DefaultDateTime.Year
-- uid: joulukalenteri.Shared.DefaultDateTime.Year*
+- uid: AdventCalendar.Models.DefaultDateTime.Year*
   name: Year
-  href: api/joulukalenteri.Shared.DefaultDateTime.html#joulukalenteri_Shared_DefaultDateTime_Year_
-  commentId: Overload:joulukalenteri.Shared.DefaultDateTime.Year
+  href: api/AdventCalendar.Models.DefaultDateTime.html#AdventCalendar_Models_DefaultDateTime_Year_
+  commentId: Overload:AdventCalendar.Models.DefaultDateTime.Year
   isSpec: "True"
-  fullName: joulukalenteri.Shared.DefaultDateTime.Year
+  fullName: AdventCalendar.Models.DefaultDateTime.Year
   nameWithType: DefaultDateTime.Year
-- uid: joulukalenteri.Shared.IDateTime
+- uid: AdventCalendar.Models.IDateTime
   name: IDateTime
-  href: api/joulukalenteri.Shared.IDateTime.html
-  commentId: T:joulukalenteri.Shared.IDateTime
-  fullName: joulukalenteri.Shared.IDateTime
+  href: api/AdventCalendar.Models.IDateTime.html
+  commentId: T:AdventCalendar.Models.IDateTime
+  fullName: AdventCalendar.Models.IDateTime
   nameWithType: IDateTime
-- uid: joulukalenteri.Shared.IDateTime.Now
+- uid: AdventCalendar.Models.IDateTime.Now
   name: Now
-  href: api/joulukalenteri.Shared.IDateTime.html#joulukalenteri_Shared_IDateTime_Now
-  commentId: P:joulukalenteri.Shared.IDateTime.Now
-  fullName: joulukalenteri.Shared.IDateTime.Now
+  href: api/AdventCalendar.Models.IDateTime.html#AdventCalendar_Models_IDateTime_Now
+  commentId: P:AdventCalendar.Models.IDateTime.Now
+  fullName: AdventCalendar.Models.IDateTime.Now
   nameWithType: IDateTime.Now
-- uid: joulukalenteri.Shared.IDateTime.Now*
+- uid: AdventCalendar.Models.IDateTime.Now*
   name: Now
-  href: api/joulukalenteri.Shared.IDateTime.html#joulukalenteri_Shared_IDateTime_Now_
-  commentId: Overload:joulukalenteri.Shared.IDateTime.Now
+  href: api/AdventCalendar.Models.IDateTime.html#AdventCalendar_Models_IDateTime_Now_
+  commentId: Overload:AdventCalendar.Models.IDateTime.Now
   isSpec: "True"
-  fullName: joulukalenteri.Shared.IDateTime.Now
+  fullName: AdventCalendar.Models.IDateTime.Now
   nameWithType: IDateTime.Now
-- uid: joulukalenteri.Shared.IDateTime.Year
+- uid: AdventCalendar.Models.IDateTime.Year
   name: Year
-  href: api/joulukalenteri.Shared.IDateTime.html#joulukalenteri_Shared_IDateTime_Year
-  commentId: P:joulukalenteri.Shared.IDateTime.Year
-  fullName: joulukalenteri.Shared.IDateTime.Year
+  href: api/AdventCalendar.Models.IDateTime.html#AdventCalendar_Models_IDateTime_Year
+  commentId: P:AdventCalendar.Models.IDateTime.Year
+  fullName: AdventCalendar.Models.IDateTime.Year
   nameWithType: IDateTime.Year
-- uid: joulukalenteri.Shared.IDateTime.Year*
+- uid: AdventCalendar.Models.IDateTime.Year*
   name: Year
-  href: api/joulukalenteri.Shared.IDateTime.html#joulukalenteri_Shared_IDateTime_Year_
-  commentId: Overload:joulukalenteri.Shared.IDateTime.Year
+  href: api/AdventCalendar.Models.IDateTime.html#AdventCalendar_Models_IDateTime_Year_
+  commentId: Overload:AdventCalendar.Models.IDateTime.Year
   isSpec: "True"
-  fullName: joulukalenteri.Shared.IDateTime.Year
+  fullName: AdventCalendar.Models.IDateTime.Year
   nameWithType: IDateTime.Year
+- uid: AdventCalendar.Services
+  name: AdventCalendar.Services
+  href: api/AdventCalendar.Services.html
+  commentId: N:AdventCalendar.Services
+  fullName: AdventCalendar.Services
+  nameWithType: AdventCalendar.Services
+- uid: AdventCalendar.Services.ArchiveReader
+  name: ArchiveReader
+  href: api/AdventCalendar.Services.ArchiveReader.html
+  commentId: T:AdventCalendar.Services.ArchiveReader
+  fullName: AdventCalendar.Services.ArchiveReader
+  nameWithType: ArchiveReader
+- uid: AdventCalendar.Services.ArchiveReader.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)
+  name: ArchiveReader(IAppSettings, IDateTime)
+  href: api/AdventCalendar.Services.ArchiveReader.html#AdventCalendar_Services_ArchiveReader__ctor_AdventCalendar_Settings_IAppSettings_AdventCalendar_Models_IDateTime_
+  commentId: M:AdventCalendar.Services.ArchiveReader.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)
+  fullName: AdventCalendar.Services.ArchiveReader.ArchiveReader(AdventCalendar.Settings.IAppSettings, AdventCalendar.Models.IDateTime)
+  nameWithType: ArchiveReader.ArchiveReader(IAppSettings, IDateTime)
+- uid: AdventCalendar.Services.ArchiveReader.#ctor*
+  name: ArchiveReader
+  href: api/AdventCalendar.Services.ArchiveReader.html#AdventCalendar_Services_ArchiveReader__ctor_
+  commentId: Overload:AdventCalendar.Services.ArchiveReader.#ctor
+  isSpec: "True"
+  fullName: AdventCalendar.Services.ArchiveReader.ArchiveReader
+  nameWithType: ArchiveReader.ArchiveReader
+- uid: AdventCalendar.Services.ArchiveReader.GetYears
+  name: GetYears()
+  href: api/AdventCalendar.Services.ArchiveReader.html#AdventCalendar_Services_ArchiveReader_GetYears
+  commentId: M:AdventCalendar.Services.ArchiveReader.GetYears
+  fullName: AdventCalendar.Services.ArchiveReader.GetYears()
+  nameWithType: ArchiveReader.GetYears()
+- uid: AdventCalendar.Services.ArchiveReader.GetYears*
+  name: GetYears
+  href: api/AdventCalendar.Services.ArchiveReader.html#AdventCalendar_Services_ArchiveReader_GetYears_
+  commentId: Overload:AdventCalendar.Services.ArchiveReader.GetYears
+  isSpec: "True"
+  fullName: AdventCalendar.Services.ArchiveReader.GetYears
+  nameWithType: ArchiveReader.GetYears
+- uid: AdventCalendar.Services.ArchiveReader.IsAvailableYear(System.Int32)
+  name: IsAvailableYear(Int32)
+  href: api/AdventCalendar.Services.ArchiveReader.html#AdventCalendar_Services_ArchiveReader_IsAvailableYear_System_Int32_
+  commentId: M:AdventCalendar.Services.ArchiveReader.IsAvailableYear(System.Int32)
+  fullName: AdventCalendar.Services.ArchiveReader.IsAvailableYear(System.Int32)
+  nameWithType: ArchiveReader.IsAvailableYear(Int32)
+- uid: AdventCalendar.Services.ArchiveReader.IsAvailableYear*
+  name: IsAvailableYear
+  href: api/AdventCalendar.Services.ArchiveReader.html#AdventCalendar_Services_ArchiveReader_IsAvailableYear_
+  commentId: Overload:AdventCalendar.Services.ArchiveReader.IsAvailableYear
+  isSpec: "True"
+  fullName: AdventCalendar.Services.ArchiveReader.IsAvailableYear
+  nameWithType: ArchiveReader.IsAvailableYear
+- uid: AdventCalendar.Services.DataReceiver
+  name: DataReceiver
+  href: api/AdventCalendar.Services.DataReceiver.html
+  commentId: T:AdventCalendar.Services.DataReceiver
+  fullName: AdventCalendar.Services.DataReceiver
+  nameWithType: DataReceiver
+- uid: AdventCalendar.Services.DataReceiver.#ctor(AdventCalendar.Settings.IAppSettings,Microsoft.AspNetCore.Components.NavigationManager)
+  name: DataReceiver(IAppSettings, NavigationManager)
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver__ctor_AdventCalendar_Settings_IAppSettings_Microsoft_AspNetCore_Components_NavigationManager_
+  commentId: M:AdventCalendar.Services.DataReceiver.#ctor(AdventCalendar.Settings.IAppSettings,Microsoft.AspNetCore.Components.NavigationManager)
+  fullName: AdventCalendar.Services.DataReceiver.DataReceiver(AdventCalendar.Settings.IAppSettings, Microsoft.AspNetCore.Components.NavigationManager)
+  nameWithType: DataReceiver.DataReceiver(IAppSettings, NavigationManager)
+- uid: AdventCalendar.Services.DataReceiver.#ctor(System.Net.Http.HttpClient)
+  name: DataReceiver(HttpClient)
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver__ctor_System_Net_Http_HttpClient_
+  commentId: M:AdventCalendar.Services.DataReceiver.#ctor(System.Net.Http.HttpClient)
+  fullName: AdventCalendar.Services.DataReceiver.DataReceiver(System.Net.Http.HttpClient)
+  nameWithType: DataReceiver.DataReceiver(HttpClient)
+- uid: AdventCalendar.Services.DataReceiver.#ctor*
+  name: DataReceiver
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver__ctor_
+  commentId: Overload:AdventCalendar.Services.DataReceiver.#ctor
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DataReceiver.DataReceiver
+  nameWithType: DataReceiver.DataReceiver
+- uid: AdventCalendar.Services.DataReceiver.CheckDayData(System.Int32,System.Int32)
+  name: CheckDayData(Int32, Int32)
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver_CheckDayData_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.DataReceiver.CheckDayData(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.DataReceiver.CheckDayData(System.Int32, System.Int32)
+  nameWithType: DataReceiver.CheckDayData(Int32, Int32)
+- uid: AdventCalendar.Services.DataReceiver.CheckDayData*
+  name: CheckDayData
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver_CheckDayData_
+  commentId: Overload:AdventCalendar.Services.DataReceiver.CheckDayData
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DataReceiver.CheckDayData
+  nameWithType: DataReceiver.CheckDayData
+- uid: AdventCalendar.Services.DataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  name: ReceiveDayData(Int32, Int32)
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver_ReceiveDayData_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.DataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.DataReceiver.ReceiveDayData(System.Int32, System.Int32)
+  nameWithType: DataReceiver.ReceiveDayData(Int32, Int32)
+- uid: AdventCalendar.Services.DataReceiver.ReceiveDayData*
+  name: ReceiveDayData
+  href: api/AdventCalendar.Services.DataReceiver.html#AdventCalendar_Services_DataReceiver_ReceiveDayData_
+  commentId: Overload:AdventCalendar.Services.DataReceiver.ReceiveDayData
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DataReceiver.ReceiveDayData
+  nameWithType: DataReceiver.ReceiveDayData
+- uid: AdventCalendar.Services.DayReader
+  name: DayReader
+  href: api/AdventCalendar.Services.DayReader.html
+  commentId: T:AdventCalendar.Services.DayReader
+  fullName: AdventCalendar.Services.DayReader
+  nameWithType: DayReader
+- uid: AdventCalendar.Services.DayReader.#ctor(AdventCalendar.Services.IDataReceiver,AdventCalendar.Models.IDateTime,AdventCalendar.Settings.IAppSettings)
+  name: DayReader(IDataReceiver, IDateTime, IAppSettings)
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader__ctor_AdventCalendar_Services_IDataReceiver_AdventCalendar_Models_IDateTime_AdventCalendar_Settings_IAppSettings_
+  commentId: M:AdventCalendar.Services.DayReader.#ctor(AdventCalendar.Services.IDataReceiver,AdventCalendar.Models.IDateTime,AdventCalendar.Settings.IAppSettings)
+  fullName: AdventCalendar.Services.DayReader.DayReader(AdventCalendar.Services.IDataReceiver, AdventCalendar.Models.IDateTime, AdventCalendar.Settings.IAppSettings)
+  nameWithType: DayReader.DayReader(IDataReceiver, IDateTime, IAppSettings)
+- uid: AdventCalendar.Services.DayReader.#ctor*
+  name: DayReader
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader__ctor_
+  commentId: Overload:AdventCalendar.Services.DayReader.#ctor
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DayReader.DayReader
+  nameWithType: DayReader.DayReader
+- uid: AdventCalendar.Services.DayReader.GetAvailability(System.Int32,System.Int32)
+  name: GetAvailability(Int32, Int32)
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader_GetAvailability_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.DayReader.GetAvailability(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.DayReader.GetAvailability(System.Int32, System.Int32)
+  nameWithType: DayReader.GetAvailability(Int32, Int32)
+- uid: AdventCalendar.Services.DayReader.GetAvailability*
+  name: GetAvailability
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader_GetAvailability_
+  commentId: Overload:AdventCalendar.Services.DayReader.GetAvailability
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DayReader.GetAvailability
+  nameWithType: DayReader.GetAvailability
+- uid: AdventCalendar.Services.DayReader.GetContent(System.Int32)
+  name: GetContent(Int32)
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader_GetContent_System_Int32_
+  commentId: M:AdventCalendar.Services.DayReader.GetContent(System.Int32)
+  fullName: AdventCalendar.Services.DayReader.GetContent(System.Int32)
+  nameWithType: DayReader.GetContent(Int32)
+- uid: AdventCalendar.Services.DayReader.GetContent(System.Int32,System.Int32)
+  name: GetContent(Int32, Int32)
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader_GetContent_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.DayReader.GetContent(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.DayReader.GetContent(System.Int32, System.Int32)
+  nameWithType: DayReader.GetContent(Int32, Int32)
+- uid: AdventCalendar.Services.DayReader.GetContent*
+  name: GetContent
+  href: api/AdventCalendar.Services.DayReader.html#AdventCalendar_Services_DayReader_GetContent_
+  commentId: Overload:AdventCalendar.Services.DayReader.GetContent
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DayReader.GetContent
+  nameWithType: DayReader.GetContent
+- uid: AdventCalendar.Services.DaysShuffler
+  name: DaysShuffler
+  href: api/AdventCalendar.Services.DaysShuffler.html
+  commentId: T:AdventCalendar.Services.DaysShuffler
+  fullName: AdventCalendar.Services.DaysShuffler
+  nameWithType: DaysShuffler
+- uid: AdventCalendar.Services.DaysShuffler.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)
+  name: DaysShuffler(IAppSettings, IDateTime)
+  href: api/AdventCalendar.Services.DaysShuffler.html#AdventCalendar_Services_DaysShuffler__ctor_AdventCalendar_Settings_IAppSettings_AdventCalendar_Models_IDateTime_
+  commentId: M:AdventCalendar.Services.DaysShuffler.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)
+  fullName: AdventCalendar.Services.DaysShuffler.DaysShuffler(AdventCalendar.Settings.IAppSettings, AdventCalendar.Models.IDateTime)
+  nameWithType: DaysShuffler.DaysShuffler(IAppSettings, IDateTime)
+- uid: AdventCalendar.Services.DaysShuffler.#ctor*
+  name: DaysShuffler
+  href: api/AdventCalendar.Services.DaysShuffler.html#AdventCalendar_Services_DaysShuffler__ctor_
+  commentId: Overload:AdventCalendar.Services.DaysShuffler.#ctor
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DaysShuffler.DaysShuffler
+  nameWithType: DaysShuffler.DaysShuffler
+- uid: AdventCalendar.Services.DaysShuffler.ShuffleDays
+  name: ShuffleDays()
+  href: api/AdventCalendar.Services.DaysShuffler.html#AdventCalendar_Services_DaysShuffler_ShuffleDays
+  commentId: M:AdventCalendar.Services.DaysShuffler.ShuffleDays
+  fullName: AdventCalendar.Services.DaysShuffler.ShuffleDays()
+  nameWithType: DaysShuffler.ShuffleDays()
+- uid: AdventCalendar.Services.DaysShuffler.ShuffleDays*
+  name: ShuffleDays
+  href: api/AdventCalendar.Services.DaysShuffler.html#AdventCalendar_Services_DaysShuffler_ShuffleDays_
+  commentId: Overload:AdventCalendar.Services.DaysShuffler.ShuffleDays
+  isSpec: "True"
+  fullName: AdventCalendar.Services.DaysShuffler.ShuffleDays
+  nameWithType: DaysShuffler.ShuffleDays
+- uid: AdventCalendar.Services.IDataReceiver
+  name: IDataReceiver
+  href: api/AdventCalendar.Services.IDataReceiver.html
+  commentId: T:AdventCalendar.Services.IDataReceiver
+  fullName: AdventCalendar.Services.IDataReceiver
+  nameWithType: IDataReceiver
+- uid: AdventCalendar.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
+  name: CheckDayData(Int32, Int32)
+  href: api/AdventCalendar.Services.IDataReceiver.html#AdventCalendar_Services_IDataReceiver_CheckDayData_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.IDataReceiver.CheckDayData(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.IDataReceiver.CheckDayData(System.Int32, System.Int32)
+  nameWithType: IDataReceiver.CheckDayData(Int32, Int32)
+- uid: AdventCalendar.Services.IDataReceiver.CheckDayData*
+  name: CheckDayData
+  href: api/AdventCalendar.Services.IDataReceiver.html#AdventCalendar_Services_IDataReceiver_CheckDayData_
+  commentId: Overload:AdventCalendar.Services.IDataReceiver.CheckDayData
+  isSpec: "True"
+  fullName: AdventCalendar.Services.IDataReceiver.CheckDayData
+  nameWithType: IDataReceiver.CheckDayData
+- uid: AdventCalendar.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  name: ReceiveDayData(Int32, Int32)
+  href: api/AdventCalendar.Services.IDataReceiver.html#AdventCalendar_Services_IDataReceiver_ReceiveDayData_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.IDataReceiver.ReceiveDayData(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.IDataReceiver.ReceiveDayData(System.Int32, System.Int32)
+  nameWithType: IDataReceiver.ReceiveDayData(Int32, Int32)
+- uid: AdventCalendar.Services.IDataReceiver.ReceiveDayData*
+  name: ReceiveDayData
+  href: api/AdventCalendar.Services.IDataReceiver.html#AdventCalendar_Services_IDataReceiver_ReceiveDayData_
+  commentId: Overload:AdventCalendar.Services.IDataReceiver.ReceiveDayData
+  isSpec: "True"
+  fullName: AdventCalendar.Services.IDataReceiver.ReceiveDayData
+  nameWithType: IDataReceiver.ReceiveDayData
+- uid: AdventCalendar.Services.Validator
+  name: Validator
+  href: api/AdventCalendar.Services.Validator.html
+  commentId: T:AdventCalendar.Services.Validator
+  fullName: AdventCalendar.Services.Validator
+  nameWithType: Validator
+- uid: AdventCalendar.Services.Validator.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)
+  name: Validator(IAppSettings, IDateTime)
+  href: api/AdventCalendar.Services.Validator.html#AdventCalendar_Services_Validator__ctor_AdventCalendar_Settings_IAppSettings_AdventCalendar_Models_IDateTime_
+  commentId: M:AdventCalendar.Services.Validator.#ctor(AdventCalendar.Settings.IAppSettings,AdventCalendar.Models.IDateTime)
+  fullName: AdventCalendar.Services.Validator.Validator(AdventCalendar.Settings.IAppSettings, AdventCalendar.Models.IDateTime)
+  nameWithType: Validator.Validator(IAppSettings, IDateTime)
+- uid: AdventCalendar.Services.Validator.#ctor*
+  name: Validator
+  href: api/AdventCalendar.Services.Validator.html#AdventCalendar_Services_Validator__ctor_
+  commentId: Overload:AdventCalendar.Services.Validator.#ctor
+  isSpec: "True"
+  fullName: AdventCalendar.Services.Validator.Validator
+  nameWithType: Validator.Validator
+- uid: AdventCalendar.Services.Validator.IsOpenToday(System.Int32)
+  name: IsOpenToday(Int32)
+  href: api/AdventCalendar.Services.Validator.html#AdventCalendar_Services_Validator_IsOpenToday_System_Int32_
+  commentId: M:AdventCalendar.Services.Validator.IsOpenToday(System.Int32)
+  fullName: AdventCalendar.Services.Validator.IsOpenToday(System.Int32)
+  nameWithType: Validator.IsOpenToday(Int32)
+- uid: AdventCalendar.Services.Validator.IsOpenToday(System.Int32,System.Int32)
+  name: IsOpenToday(Int32, Int32)
+  href: api/AdventCalendar.Services.Validator.html#AdventCalendar_Services_Validator_IsOpenToday_System_Int32_System_Int32_
+  commentId: M:AdventCalendar.Services.Validator.IsOpenToday(System.Int32,System.Int32)
+  fullName: AdventCalendar.Services.Validator.IsOpenToday(System.Int32, System.Int32)
+  nameWithType: Validator.IsOpenToday(Int32, Int32)
+- uid: AdventCalendar.Services.Validator.IsOpenToday*
+  name: IsOpenToday
+  href: api/AdventCalendar.Services.Validator.html#AdventCalendar_Services_Validator_IsOpenToday_
+  commentId: Overload:AdventCalendar.Services.Validator.IsOpenToday
+  isSpec: "True"
+  fullName: AdventCalendar.Services.Validator.IsOpenToday
+  nameWithType: Validator.IsOpenToday
+- uid: AdventCalendar.Settings
+  name: AdventCalendar.Settings
+  href: api/AdventCalendar.Settings.html
+  commentId: N:AdventCalendar.Settings
+  fullName: AdventCalendar.Settings
+  nameWithType: AdventCalendar.Settings
+- uid: AdventCalendar.Settings.IAppSettings
+  name: IAppSettings
+  href: api/AdventCalendar.Settings.IAppSettings.html
+  commentId: T:AdventCalendar.Settings.IAppSettings
+  fullName: AdventCalendar.Settings.IAppSettings
+  nameWithType: IAppSettings
+- uid: AdventCalendar.Settings.IAppSettings.BaseUri
+  name: BaseUri
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_BaseUri
+  commentId: P:AdventCalendar.Settings.IAppSettings.BaseUri
+  fullName: AdventCalendar.Settings.IAppSettings.BaseUri
+  nameWithType: IAppSettings.BaseUri
+- uid: AdventCalendar.Settings.IAppSettings.BaseUri*
+  name: BaseUri
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_BaseUri_
+  commentId: Overload:AdventCalendar.Settings.IAppSettings.BaseUri
+  isSpec: "True"
+  fullName: AdventCalendar.Settings.IAppSettings.BaseUri
+  nameWithType: IAppSettings.BaseUri
+- uid: AdventCalendar.Settings.IAppSettings.Days
+  name: Days
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_Days
+  commentId: P:AdventCalendar.Settings.IAppSettings.Days
+  fullName: AdventCalendar.Settings.IAppSettings.Days
+  nameWithType: IAppSettings.Days
+- uid: AdventCalendar.Settings.IAppSettings.Days*
+  name: Days
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_Days_
+  commentId: Overload:AdventCalendar.Settings.IAppSettings.Days
+  isSpec: "True"
+  fullName: AdventCalendar.Settings.IAppSettings.Days
+  nameWithType: IAppSettings.Days
+- uid: AdventCalendar.Settings.IAppSettings.SkipYears
+  name: SkipYears
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_SkipYears
+  commentId: P:AdventCalendar.Settings.IAppSettings.SkipYears
+  fullName: AdventCalendar.Settings.IAppSettings.SkipYears
+  nameWithType: IAppSettings.SkipYears
+- uid: AdventCalendar.Settings.IAppSettings.SkipYears*
+  name: SkipYears
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_SkipYears_
+  commentId: Overload:AdventCalendar.Settings.IAppSettings.SkipYears
+  isSpec: "True"
+  fullName: AdventCalendar.Settings.IAppSettings.SkipYears
+  nameWithType: IAppSettings.SkipYears
+- uid: AdventCalendar.Settings.IAppSettings.StartYear
+  name: StartYear
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_StartYear
+  commentId: P:AdventCalendar.Settings.IAppSettings.StartYear
+  fullName: AdventCalendar.Settings.IAppSettings.StartYear
+  nameWithType: IAppSettings.StartYear
+- uid: AdventCalendar.Settings.IAppSettings.StartYear*
+  name: StartYear
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_StartYear_
+  commentId: Overload:AdventCalendar.Settings.IAppSettings.StartYear
+  isSpec: "True"
+  fullName: AdventCalendar.Settings.IAppSettings.StartYear
+  nameWithType: IAppSettings.StartYear
+- uid: AdventCalendar.Settings.IAppSettings.SummaryLength
+  name: SummaryLength
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_SummaryLength
+  commentId: P:AdventCalendar.Settings.IAppSettings.SummaryLength
+  fullName: AdventCalendar.Settings.IAppSettings.SummaryLength
+  nameWithType: IAppSettings.SummaryLength
+- uid: AdventCalendar.Settings.IAppSettings.SummaryLength*
+  name: SummaryLength
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_SummaryLength_
+  commentId: Overload:AdventCalendar.Settings.IAppSettings.SummaryLength
+  isSpec: "True"
+  fullName: AdventCalendar.Settings.IAppSettings.SummaryLength
+  nameWithType: IAppSettings.SummaryLength
+- uid: AdventCalendar.Settings.IAppSettings.Title
+  name: Title
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_Title
+  commentId: P:AdventCalendar.Settings.IAppSettings.Title
+  fullName: AdventCalendar.Settings.IAppSettings.Title
+  nameWithType: IAppSettings.Title
+- uid: AdventCalendar.Settings.IAppSettings.Title*
+  name: Title
+  href: api/AdventCalendar.Settings.IAppSettings.html#AdventCalendar_Settings_IAppSettings_Title_
+  commentId: Overload:AdventCalendar.Settings.IAppSettings.Title
+  isSpec: "True"
+  fullName: AdventCalendar.Settings.IAppSettings.Title
+  nameWithType: IAppSettings.Title

@@ -2,7 +2,7 @@
 using System.Runtime.CompilerServices;
 
 [assembly:InternalsVisibleTo("AdventCalendarTests")]
-namespace AdventCalendar.Client
+namespace AdventCalendar.Settings
 {
     /// <summary>
     /// Model of app user settings. Same structure as appsettings.json, except 'days' data.
@@ -30,14 +30,19 @@ namespace AdventCalendar.Client
         /// The path, where the contents are. Empty BaseUri resolves contents/ folder as default.
         /// </summary>
         public string BaseUri { get; }
+        /// <summary>
+        /// Length of the sumamry.
+        /// </summary>
+        public int SummaryLength { get; }
 
         internal AppSettings(IConfiguration config)
         {
-            StartYear = config.GetValue("startYear", 2000);
+            StartYear = config.GetValue("startYear", 2019);
             SkipYears = config.GetSection("skipYears")?.Get<int[]>() ?? new int[] { };
             Title = config.GetValue("title", "Advent Calendar");
             Days = (config.GetValue("containsChristmas", false)) ? 25 : 24;
             BaseUri = config.GetValue("baseUri", "");
+            SummaryLength = config.GetValue("summaryLength", 80);
         }
     }
 }

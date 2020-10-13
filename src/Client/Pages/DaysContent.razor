@@ -1,0 +1,39 @@
+﻿@inject AdventCalendar.Services.Validator validator
+@inject AdventCalendar.Services.DayReader reader
+
+<div>
+    @if (_isOpen)
+    {
+        if (data != null)
+        {
+            @ChildContent(data)
+        }
+        else
+        {
+            <p>Loading...</p>
+        }
+    }
+    else
+    {
+        <p>Wrong day detected.</p>
+    }
+</div>
+
+@code{
+    [Parameter]
+    public int Year { get; set; }
+    [Parameter]
+    public int Day { get; set; }
+    [Parameter]
+    public RenderFragment<DayInfoData> ChildContent { get; set; }
+    private DayInfoData data;
+    private bool _isOpen = true;
+    protected override async Task OnInitializedAsync()
+    {
+        _isOpen = validator.IsOpenToday(Year, Day);
+        if (_isOpen)
+        {
+            data = await reader.GetContent(Year, Day);
+        }
+    }
+}

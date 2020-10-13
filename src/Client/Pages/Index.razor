@@ -1,10 +1,10 @@
 ﻿@page "/"
 @using AdventCalendar.ModalComponents 
-@inject AdventCalendar.Client.Services.Validator validator
-@inject AdventCalendar.Client.Services.DayReader reader
-@inject AdventCalendar.Client.Services.DaysShuffler shuffler
+@inject AdventCalendar.Services.Validator validator
+@inject AdventCalendar.Services.DayReader reader
+@inject AdventCalendar.Services.DaysShuffler shuffler
 @inject IDateTime datetime
-@inject AdventCalendar.Client.IAppSettings appSettings
+@inject IAppSettings appSettings
 
 <Modal @bind-DayInfo ="@DayInfo">
 </Modal>
@@ -32,7 +32,7 @@
 {
     private DayInfoData DayInfo { get; set; }
     private string CalendarType { get; set; } = "";
-    protected override async Task OnInitializedAsync()
+    protected override void OnInitialized()
     {
         if(appSettings.Days < 25)
         CalendarType = "calendar-eve";

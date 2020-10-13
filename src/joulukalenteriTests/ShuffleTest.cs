@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Linq;
 using Xunit;
-using AdventCalendar.Client.Services;
+using AdventCalendar.Services;
 using Moq;
-using AdventCalendar;
-using AdventCalendar.Client;
+using AdventCalendar.Settings;
+using AdventCalendar.Models;
 
-namespace AdventCalendarTests
+namespace AdventCalendarests
 {
     public class ShuffleTest
     {
         private const int _days = 30;
-        private IAppSettings appSettings;
+        private readonly IAppSettings appSettings;
         public ShuffleTest()
         {
             var settingMock = new Mock<IAppSettings>();

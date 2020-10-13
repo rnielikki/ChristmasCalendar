@@ -1,4 +1,4 @@
-﻿namespace AdventCalendar
+﻿namespace AdventCalendar.Models
 {
     /// <summary>
     /// Parsed and organized information from a day markdown file.
@@ -18,15 +18,10 @@
         /// </summary>
         /// <remarks>Always first header of markdown syntax is title.</remarks>
         public string Title { get; set; }
-        private string _summary;
         /// <summary>
-        /// Truncated contents to <see cref="SummaryLength"/>
+        /// Truncated contents. Inside setting, <c>summaryLength</c> defines the length.
         /// </summary>
-        public string Summary
-        {
-            get => _summary;
-            set => _summary = (value.Length > SummaryLength) ? value.Substring(0, SummaryLength)+"..." : value;
-        }
+        public string Summary { get; set; }
         /// <summary>
         /// HTML format text of the content.
         /// </summary>
@@ -41,7 +36,8 @@
         /// </summary>
         /// <param name="day">The day to set for the empty data</param>
         /// <returns>Pre-defined specific <see cref="DayInfoData" />.</returns>
-        public static DayInfoData CreateEmpty(int day) => new DayInfoData() {
+        public static DayInfoData CreateEmpty(int day) => new DayInfoData()
+        {
             Day = day,
             Title = "Not found",
             Summary = "This calendar content is not ready.",
