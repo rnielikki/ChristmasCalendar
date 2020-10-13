@@ -1,2 +1,4 @@
-- name: Usage
-  href: usage.md
+- name: Setting the app
+  href: appsettings.md
+- name: Content format
+  href: content.md

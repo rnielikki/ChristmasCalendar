@@ -1,42 +1,22 @@
 ﻿@page "/day/{Day:int}"
-@inject AdventCalendar.Client.Services.Validator validator
-@inject AdventCalendar.Client.Services.DayReader reader
+@inject AdventCalendar.Services.Validator validator
+@inject AdventCalendar.Services.DayReader reader
+@inject IDateTime date
 
 <div class="wrapper">
     <h1>Christmas calendar</h1>
     <div class="day-wrapper">
-        @if (validator.IsOpenToday(Day))
-        {
-            if (Content != null)
-            {
-                <h2 class="day-header">@Title</h2>
-                <div class="day-content">
-                    @((MarkupString)Content)
-                    <br />
-                    <NavLink class="linkbtn" href="/">Back to the main</NavLink>
-                </div>
-
-            }
-            else
-            {
-                <p>Loading...</p>
-            }
-        }
-        else
-        {
-            <p>Wrong day detected!</p>
-        }
+        <DaysContent Year="date.Year" Day="Day">
+            <h2 class="day-header">@context.Title</h2>
+            <div class="day-content">
+                @((MarkupString)context.Content)
+                <br />
+                <NavLink class="linkbtn" href="/">Back to the main</NavLink>
+            </div>
+        </DaysContent>
     </div>
 </div>
 @code{
     [Parameter]
     public int Day { get; set; }
-    string Title;
-    string Content;
-    protected override async Task OnInitializedAsync()
-    {
-        DayInfoData data = await reader.GetContent(Day);
-        Title = data.Title;
-        Content = data.Content;
-    }
 }

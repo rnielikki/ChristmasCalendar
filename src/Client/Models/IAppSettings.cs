@@ -1,4 +1,4 @@
-﻿namespace AdventCalendar.Client
+﻿namespace AdventCalendar.Settings
 {
     /// <summary>
     /// Provides interface of <see cref="AppSettings"/> for testing purpose.
@@ -25,5 +25,9 @@
         /// The path, where the contents are. Empty BaseUri resolves contents/ folder as default.
         /// </summary>
         public string BaseUri { get; }
+        /// <summary>
+        /// Length of the sumamry.
+        /// </summary>
+        public int SummaryLength { get; }
     }
 }

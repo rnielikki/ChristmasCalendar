@@ -154,12 +154,12 @@ h1 {
         width: 100%;
         display:block;
     }
-    .calendar-eve {
-        grid-template-columns: repeat(4, 1fr);
-    }
 }
 @media screen and (max-aspect-ratio:8/5) {
     body {
         background-size: 100%, auto auto, 100%;
+    }
+    .calendar-eve {
+        grid-template-columns: repeat(4, 1fr);
     }
 }

@@ -1,0 +1,30 @@
+### YamlMime:TableOfContent
+- uid: AdventCalendar.Models
+  name: AdventCalendar.Models
+  items:
+  - uid: AdventCalendar.Models.DayInfoData
+    name: DayInfoData
+  - uid: AdventCalendar.Models.DefaultDateTime
+    name: DefaultDateTime
+  - uid: AdventCalendar.Models.IDateTime
+    name: IDateTime
+- uid: AdventCalendar.Services
+  name: AdventCalendar.Services
+  items:
+  - uid: AdventCalendar.Services.ArchiveReader
+    name: ArchiveReader
+  - uid: AdventCalendar.Services.DataReceiver
+    name: DataReceiver
+  - uid: AdventCalendar.Services.DayReader
+    name: DayReader
+  - uid: AdventCalendar.Services.DaysShuffler
+    name: DaysShuffler
+  - uid: AdventCalendar.Services.IDataReceiver
+    name: IDataReceiver
+  - uid: AdventCalendar.Services.Validator
+    name: Validator
+- uid: AdventCalendar.Settings
+  name: AdventCalendar.Settings
+  items:
+  - uid: AdventCalendar.Settings.IAppSettings
+    name: IAppSettings

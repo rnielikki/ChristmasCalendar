@@ -3,8 +3,9 @@ using System.Net.Http;
 using System.Collections.Generic;
 using System;
 using Microsoft.AspNetCore.Components;
+using AdventCalendar.Settings;
 
-namespace AdventCalendar.Client.Services
+namespace AdventCalendar.Services
 {
     /// <summary>
     /// Provides the concrete server data receiver.
@@ -20,7 +21,9 @@ namespace AdventCalendar.Client.Services
         public DataReceiver(IAppSettings settings, NavigationManager nav)
         {
             _client = new HttpClient();
-            _baseUri = string.IsNullOrEmpty(settings.BaseUri) ? nav.BaseUri + "/contents/" : settings.BaseUri;
+            _baseUri = string.IsNullOrEmpty(settings.BaseUri) ?
+                new Uri(new Uri(nav.BaseUri), "contents").ToString()
+                : settings.BaseUri;
         }
         /// <summary>
         /// Creates DataReceiver for testing purpose with custom HttpClient.

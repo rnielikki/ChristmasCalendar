@@ -1,7 +1,9 @@
-﻿using System;
+﻿using AdventCalendar.Models;
+using AdventCalendar.Settings;
+using System;
 using System.Linq;
 
-namespace AdventCalendar.Client.Services
+namespace AdventCalendar.Services
 {
     /// <summary>
     /// Shuffles date according to year.

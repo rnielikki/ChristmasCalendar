@@ -1,6 +1,6 @@
 ﻿@page "/archive/{Year:int}/{Day:int}"
-@inject AdventCalendar.Client.Services.Validator validator
-@inject AdventCalendar.Client.Services.DayReader reader
+@inject AdventCalendar.Services.Validator validator
+@inject AdventCalendar.Services.DayReader reader
 @layout ArchiveLayout
 @*
     Example for custom layout!
@@ -9,27 +9,14 @@
 <div class="wrapper">
     <h1>@Day of  @Year</h1>
     <div class="day-wrapper">
-        @if (validator.IsOpenToday(Year, Day))
-        {
-            if (Content != null)
-            {
-                <h2 class="day-header">@Title</h2>
-                <div class="day-content">
-                    @((MarkupString)Content)
-                    <br />
-                    <a class="linkbtn" href="/archive/@Year">Back to the archive</a>
-                </div>
-
-            }
-            else
-            {
-                <p>Loading...</p>
-            }
-        }
-        else
-        {
-            <p>Wrong day detected!</p>
-        }
+        <DaysContent Year="@Year" Day="@Day">
+            <h2 class="day-header">@context.Title</h2>
+            <div class="day-content">
+                @((MarkupString)context.Content)
+                <br />
+                <a class="linkbtn" href="/archive/@Year">Back to the archive</a>
+            </div>
+        </DaysContent>
     </div>
 </div>
 @code{
@@ -37,12 +24,4 @@
     public int Year { get; set; }
     [Parameter]
     public int Day { get; set; }
-    string Title;
-    string Content;
-    protected override async Task OnInitializedAsync()
-    {
-        DayInfoData data = await reader.GetContent(Year, Day);
-        Title = data.Title;
-        Content = data.Content;
-    }
 }

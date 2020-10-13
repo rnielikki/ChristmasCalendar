@@ -1,7 +1,9 @@
-﻿using System.Collections.Generic;
+﻿using AdventCalendar.Models;
+using AdventCalendar.Settings;
+using System.Collections.Generic;
 using System.Linq;
 
-namespace AdventCalendar.Client.Services
+namespace AdventCalendar.Services
 {
     /// <summary>
     /// Parses and reads JSON archive list from the server.
