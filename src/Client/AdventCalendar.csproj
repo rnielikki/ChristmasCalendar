@@ -9,7 +9,17 @@
    <GenerateDocumentationFile>true</GenerateDocumentationFile>
    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
- 
+
+  <ItemGroup>
+    <None Remove="Shared\ArchiveLayout.razor.css" />
+    <None Remove="Shared\MainLayout.razor.css" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Shared\ArchiveLayout.razor.css" />
+    <Content Include="Shared\MainLayout.razor.css" />
+  </ItemGroup>
+
   <ItemGroup>
     <PackageReference Include="Markdig" Version="0.22.0" />
     <PackageReference Include="Microsoft.AspNetCore.Components.WebAssembly" Version="5.0.0" />

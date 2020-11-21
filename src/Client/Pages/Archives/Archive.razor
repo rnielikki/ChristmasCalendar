@@ -4,7 +4,6 @@
 @inject IDateTime datetime
 @inject IAppSettings appSettings
 
-<div class=" wrapper">
     @if (reader.IsAvailableYear(Year))
     {
         <h1>Archive @Year</h1>
@@ -22,7 +21,6 @@
         <p>This year is not available.</p>
     }
     <a href="/archive/" class="archive-back">Back to the list</a>
-</div>
 
 @code{
     [Parameter]

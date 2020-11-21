@@ -1,0 +1,22 @@
+.day-wrapper {
+    margin-left: 1.5rem;
+    background-color: #efe9f9;
+}
+.day-header {
+    background-color: #d6d7f4;
+    margin: 0;
+    padding: 0.3rem 0.4rem;
+}
+.day-content {
+    padding: 0.8rem 1.5rem;
+}
+    .day-content a {
+        color: #fff6fd;
+        background-color: #6874ae;
+        text-decoration: none;
+        padding: 0.6rem 0.8rem;
+        display: inline-block;
+    }
+        .day-content a:hover {
+            background-color: #242a73;
+        }

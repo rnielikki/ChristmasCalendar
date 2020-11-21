@@ -1,0 +1,12 @@
+.archive-back {
+    text-decoration: none;
+    background-color: #e0e0e0;
+    padding: .45rem .75rem;
+    margin: .48rem 3.15rem;
+    display: inline-block;
+    color: navy;
+    border: 1px solid #7979cc;
+}
+    .archive-back:hover {
+        background-color:#f9fafb;
+    }

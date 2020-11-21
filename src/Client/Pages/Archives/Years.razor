@@ -2,7 +2,6 @@
 @layout ArchiveLayout
 @inject AdventCalendar.Services.ArchiveReader reader
 @using System.Collections.Generic
-<div class=" wrapper">
     @if (years != null)
     {
             <h1>Archive</h1>
@@ -19,7 +18,6 @@
     {
         <p>Loading...</p>
     }
-</div>
 
 @code{
     IEnumerable<int> years;

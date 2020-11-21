@@ -1,10 +1,19 @@
 ﻿@inherits LayoutComponentBase
-@inject IAppSettings settings
-<div class="app-body">
-    <h1 class="archive-header">@settings.Title - Archive</h1>
-    @Body
-</div>
-<div class="footer">
-    <a href="/">Go to the main</a>
-</div>
-<link rel="stylesheet" href="/css/archive.css" />
+@inject IAppSettings appSettings
+
+@if(appSettings.StartYear != DateTime.Today.Year)
+{
+	<div clas="app-layout">
+		<div class="app-body">
+			<h1 class="archive-header">@appSettings.Title - Archive</h1>
+			@Body
+		</div>
+		<div class="footer">
+			<a href="/">Go to the main</a>
+		</div>
+	</div>
+}
+else
+{
+	<p>We don't have any archive!</p>
+}

@@ -8,8 +8,7 @@
 
 <Modal @bind-DayInfo ="@DayInfo">
 </Modal>
-<div class="calendar-wrapper wrapper">
-    <h1>@appSettings.Title</h1>
+<div class="calendar-wrapper">
     <div class="calendar @CalendarType">
         @{
             int[] shuffled = shuffler.ShuffleDays();

@@ -1,0 +1,50 @@
+.calendar {
+    display: inline-grid;
+    background-color: rgba(255,255,255,0.7);
+}
+.calendar:not(.calendar-eve) {
+    grid-template-columns: repeat(5, 1fr);
+}
+.calendar-eve {
+    grid-template-columns: repeat(6, 1fr);
+}
+
+    .calendar > div {
+        box-sizing: border-box;
+        border: 1px solid #999;
+        font-size: 4.5rem;
+        text-align:center;
+        padding: .3em .5em;
+    }
+
+.calendar-open {
+    background-color:rgba(255,255,255,0.3);
+}
+
+    .calendar-open:hover {
+        background-color: rgba(250,125,125,0.3);
+        cursor: pointer;
+    }
+
+.calendar-closed {
+    color: #606060;
+    background-color: rgba(105,105,105,0.5);
+}
+
+/* for mobile and vertical screen */
+@media screen and (max-width:800px)
+{
+    .calendar {
+        width:100%;
+    }
+    .calendar > div {
+        font-size:2.5rem;
+        padding: .3em .2em;
+    }
+}
+
+@media screen and (max-aspect-ratio:8/5) {
+    .calendar-eve {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}

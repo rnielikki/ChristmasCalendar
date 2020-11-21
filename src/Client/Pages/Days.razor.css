@@ -1,0 +1,46 @@
+/* days.razor */
+.day-wrapper {
+    width: 80%;
+    display: inline-block;
+    border-radius: 1rem;
+    overflow: auto;
+}
+.day-header {
+    font-size: 1.8rem;
+    background: rgba(114, 136, 96, 0.9);
+    color: #fff;
+    margin: 0;
+    padding: .8rem 0 .6rem 0;
+    border: 5px #bbb09087;
+    border-style: solid none;
+}
+
+.day-content {
+    background-color: #f7e7c9bf;
+    padding: 1.5rem 1rem;
+    font-size: 1.2rem;
+}
+
+/* button */
+.linkbtn {
+    margin: 1.2rem .2rem .35rem .2rem;
+    display: inline-block;
+    border-radius: 10px;
+    background: #2d3375;
+    color: #fff;
+    padding: .7rem .95rem;
+    text-decoration: none;
+}
+    .linkbtn:hover {
+        background-color: #863e98;
+        cursor:pointer;
+    }
+
+/* for mobile and vertical screen */
+@media screen and (max-width:800px)
+{
+    .day-wrapper {
+        width: 100%;
+        display:block;
+    }
+}
