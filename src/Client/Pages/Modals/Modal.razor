@@ -7,7 +7,7 @@
         <h3>@(DayInfo?.Title)</h3>
         <p>@(DayInfo?.Summary)</p>
         @if (DayInfo.Exists) {
-            <a class="linkbtn" href="/day/@(DayInfo?.Day)">See more</a>
+            <a class="linkbtn" href="day/@(DayInfo?.Day)">See more</a>
         }
          <a class="linkbtn closebtn" @onclick="(async ()=>await Close())">Close</a>
     </div>

@@ -11,7 +11,7 @@
             <ul>
                 @for (int day = 1; day <= appSettings.Days; day++)
                 {
-                    <li><a href="/archive/@Year/@day">Day @day</a></li>
+                    <li><a href="archive/@Year/@day">Day @day</a></li>
                 }
             </ul>
         </div>
@@ -20,7 +20,7 @@
     {
         <p>This year is not available.</p>
     }
-    <a href="/archive/" class="archive-back">Back to the list</a>
+    <a href="archive/" class="archive-back">Back to the list</a>
 
 @code{
     [Parameter]

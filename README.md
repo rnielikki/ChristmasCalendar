@@ -48,7 +48,7 @@ Also, you can set baseUri to `appsettings.json` file and define where is server-
 
 ## Can I see example?
 
-OK, let's see in this year!
+[Here you are](https://rnielikki.github.io/AdventOfCSS/).
 
 ## Why it's 1-24, not 1-25?
 

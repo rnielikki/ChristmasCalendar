@@ -2,7 +2,7 @@
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin:0; padding:0;
     overflow: auto; /* css is weird. really weird. */
-    background: url('/imgs/cshrap_blazor_nuget.svg') right bottom no-repeat fixed, url("/imgs/snowflakes.svg") repeat fixed, linear-gradient(#cd66af, #9faaff) fixed;
+    background: url('imgs/cshrap_blazor_nuget.svg') right bottom no-repeat fixed, url("imgs/snowflakes.svg") repeat fixed, linear-gradient(#cd66af, #9faaff) fixed;
     background-size: 40%, auto auto, 100%;
     background-size: 40%;
 }
